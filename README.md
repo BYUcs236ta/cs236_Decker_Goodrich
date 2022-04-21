@@ -1,5 +1,5 @@
 # cs236Labs_Decker
-1. [Lab1]
+[[Lab1]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab1.md)
 2. 
 	a. [[Lab2a]]
 	b. [[Lab2b]]
