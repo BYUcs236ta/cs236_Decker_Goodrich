@@ -149,7 +149,7 @@ int main() {
 ~~~
 
 3. Test idList with bad input (main.cpp)
-==TODO: Write a test case that fails by changing the tokens in the "tokens" vector. Take a screenshot of your code. (s3)==
+__TODO: Write a test case that fails by changing the tokens in the "tokens" vector. Take a screenshot of your code. (s3)__
 
 4. Write the parsing function for the following grammar rule:
 
