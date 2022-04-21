@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lab2a.md",
+            "file": "README.md",
             "mode": "source"
           }
         },
@@ -21,8 +21,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lab2a.md",
-            "mode": "source"
+            "file": "README.md",
+            "mode": "preview"
           }
         },
         "group": "910c5d1401e58b05"
@@ -81,7 +81,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lab2a.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -101,10 +101,10 @@
   },
   "active": "2f6e90001eedab87",
   "lastOpenFiles": [
+    "README.md",
     "Lab2a.md",
     "Lab2b.md",
     "Lab1.md",
-    "README.md",
     "Lab5.md",
     "Lab4.md",
     "Lab3.md"

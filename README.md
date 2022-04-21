@@ -1,8 +1,12 @@
 # cs236Labs_Decker
-1. [[Lab1]]
-2. 
-	a. [[Lab2a]]
-	b. [[Lab2b]]
-3. [[Lab3]]
-4. [[Lab4]]
-5. [[Lab5]]
+[[Lab1]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab1.md)
+
+[[Lab2a]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab2a.md)
+
+[[Lab2b]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab2b.md)
+
+[[Lab3]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab3.md)
+
+[[Lab4]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab4.md)
+
+[[Lab5]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab5.md)

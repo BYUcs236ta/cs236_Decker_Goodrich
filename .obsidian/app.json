@@ -13,5 +13,6 @@
     "iostream",
     "datalog",
     "idList"
-  ]
+  ],
+  "showLineNumber": true
 }

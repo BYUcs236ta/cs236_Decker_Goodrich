@@ -12,14 +12,14 @@
 ---
 ### Part 1: Tokens
 1. Make a "TokenType" enum (Token.h). You will need to add more to this list later but 
-```
+```c++
 enum TokenType {
   COMMA, COLON, COLON_DASH, ...
 };
 ```
 
 2. Make a "Token" class (Token.h). A token is comprised of 3 things (Type, Contents, LineNum)
-```
+```c++
 class Token {
  private:
   TokenType type;
@@ -32,7 +32,7 @@ class Token {
 __TODO: Write the constructor yourself. Take a screenshot of the constructor you wrote and turn it in (s1)__ Feel free to use your IDE to generate it. Your constructor should initialize the "type", "contents", and "line" variables using its arguments.
 
 4. Write "toString" function for the "Token" class
-~~~
+~~~c++
   string toString() const {
     stringstream out;
     out << "(" << type << "," << "\"" << value << "\"" << "," << line << ")";
@@ -47,7 +47,7 @@ line=42
 __TODO: Take a screenshot of the code you wrote to test this and the resulted print (s2)__
 
 6. Notice how the output has a number in place of the COMMA enum-type. We need to fix this. Add the following function to "Token.h". 
-```
+```c++
 string typeName(TokenType type) const {
   switch (type) {
   case COMMA:
@@ -62,7 +62,7 @@ __TODO: Add cases for COLON and COLON_DASH types, take a screenshot (s3)__
 ### Part 2: Automata
 1. Here we will create an Automaton.h file. This will be the base class for all of our Automata.
 
-```
+```c++
 #include <string>
 
 class Automaton

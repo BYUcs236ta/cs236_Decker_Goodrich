@@ -1,4 +1,4 @@
-# Lab 1
+# Lab 2a
 ---
 ### Part 0: Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens"
