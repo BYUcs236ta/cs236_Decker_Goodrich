@@ -4,7 +4,7 @@
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the code is valid.
 2. This is an important step in a programming languages evaluation. Labs 1, 2a, 2b focus of defining a syntax for our programming language. 
 3. Here we will use create an internal representation of the program. This will be done using a "DatalogProgram" class.
-4. The output for the project will either be `Success! [the toString() of your dtalogProgram object]` or `Failure! [token we failed on]`
+4. The output for the project will either be `Success! [the toString() of your datalogProgram object]` or `Failure! [token we failed on]`
 5. This lab will walk through the needed data-structures and have you create them.
 6. You can do this!
 
@@ -35,7 +35,7 @@ A Datalog Program has:
 	vector<Predicate> facts
 	vector<Rule> rules
 	vector<Predicate> queries
-	set<
+	set<string> domain
 ```
 	
 ```
@@ -71,6 +71,9 @@ body: {apple(e, f, g), orange(A, B, C, f)}
 __TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes must include an empty constructor, setter, getter, adder, and toString() methods. Take 3 screenshots of your code(s1, s2, s3)__
 
 ##### Hint: Use your IDE to generate the setters, getters, and constructor
+##### Hint: DatalogProgram should have addFact, addScheme, addRule, addQuery, addDomainItem methods.
+##### [For details on how to use sets please refrence c++.com] (https://www.cplusplus.com/reference/set/set/)
+
 To get you started here is Predicate
 ```c++
 class Predicate {
