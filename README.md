@@ -1,5 +1,5 @@
 # cs236Labs_Decker
-1. [[Lab1]]
+1. [Lab1]
 2. 
 	a. [[Lab2a]]
 	b. [[Lab2b]]
