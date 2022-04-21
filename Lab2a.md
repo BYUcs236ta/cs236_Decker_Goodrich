@@ -62,7 +62,7 @@ int main() {
   }
 }
 ~~~
-__TODO: Take a screenshot of this output (s1)__
+<style="color:red">TODO: Take a screenshot of this output (s1)</style>
 
 4. Add match function to Parser class (Parser.h)
 ~~~c++
