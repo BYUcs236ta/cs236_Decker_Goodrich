@@ -62,8 +62,9 @@ int main() {
   }
 }
 ~~~
-<style="color:red">TODO: Take a screenshot of this output (s1)</style>
-
+```diff
++ TODO: Take a screenshot of this output (s1)
+```
 4. Add match function to Parser class (Parser.h)
 ~~~c++
   void match(TokenType t) {
