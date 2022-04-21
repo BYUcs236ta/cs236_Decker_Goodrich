@@ -61,7 +61,6 @@ int main() {
     cout << errorToken.toString()
   }
 }
-~~~
 __TODO: Take a screenshot of this output (s1)__
 
 4. Add match function to Parser class (Parser.h)
