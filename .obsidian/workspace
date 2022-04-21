@@ -1,0 +1,112 @@
+{
+  "main": {
+    "id": "cb8bb75f92a3d791",
+    "type": "split",
+    "children": [
+      {
+        "id": "2f6e90001eedab87",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Lab2a.md",
+            "mode": "source"
+          }
+        },
+        "group": "910c5d1401e58b05"
+      },
+      {
+        "id": "a5f8ba476cc864ed",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Lab2a.md",
+            "mode": "preview"
+          }
+        },
+        "group": "910c5d1401e58b05"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "aae43c7d92ef1a8e",
+    "type": "split",
+    "children": [
+      {
+        "id": "54b31870c13de56d",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c7a47a3058e26030",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "72a6a979bcbc3b90",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "97e080093cf9726e",
+    "type": "split",
+    "children": [
+      {
+        "id": "5a87ce54fbbffb03",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "204326ddd11f54c9",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Lab2a.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "2f6e90001eedab87",
+  "lastOpenFiles": [
+    "Lab2a.md",
+    "Lab1.md",
+    "Lab5.md",
+    "Lab4.md",
+    "README.md",
+    "Lab3.md",
+    "Lab2b.md"
+  ]
+}

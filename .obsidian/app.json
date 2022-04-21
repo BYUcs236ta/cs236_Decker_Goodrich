@@ -1,0 +1,17 @@
+{
+  "spellcheck": true,
+  "spellcheckDictionary": [
+    "enum",
+    "TokenType",
+    "toString",
+    "ints",
+    "cpp",
+    "Automata",
+    "LineNum",
+    "txt",
+    "throwError",
+    "iostream",
+    "datalog",
+    "idList"
+  ]
+}
