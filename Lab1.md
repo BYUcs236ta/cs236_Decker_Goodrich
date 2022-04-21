@@ -29,7 +29,7 @@ class Token {
 ```
 
 3. Create a constructor (Token.h)
-==TODO: Write the constructor yourself. Take a screenshot of the constructor you wrote and turn it in (s1)== Feel free to use your IDE to generate it. Your constructor should initialize the "type", "contents", and "line" variables using its arguments.
+__TODO: Write the constructor yourself. Take a screenshot of the constructor you wrote and turn it in (s1)__ Feel free to use your IDE to generate it. Your constructor should initialize the "type", "contents", and "line" variables using its arguments.
 
 4. Write "toString" function for the "Token" class
 ~~~
@@ -44,7 +44,7 @@ class Token {
 type=COMMA
 value=","
 line=42
-==TODO: Take a screenshot of the code you wrote to test this and the resulted print (s2)==
+__TODO: Take a screenshot of the code you wrote to test this and the resulted print (s2)__
 
 6. Notice how the output has a number in place of the COMMA enum-type. We need to fix this. Add the following function to "Token.h". 
 ```
@@ -56,7 +56,7 @@ string typeName(TokenType type) const {
   }
 }
 ```
-==TODO: Add cases for COLON and COLON_DASH types, take a screenshot (s3)==
+__TODO: Add cases for COLON and COLON_DASH types, take a screenshot (s3)__
 
 ---
 ### Part 2: Automata
@@ -85,7 +85,7 @@ protected:
     // Helper functions
     void next()
     {
-        if (curr() == '\n')
+        if (curr() __ '\n')
             newLinesRead++;
         numCharRead++;
         currCharIndex++;
@@ -98,7 +98,7 @@ protected:
 
     bool match(char c)
     {
-        return (curr() == c);
+        return (curr() __ c);
     }
 
     //Call this function to check if you have reached the end of file

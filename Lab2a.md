@@ -62,14 +62,14 @@ int main() {
   }
 }
 ~~~
-==TODO: Take a screenshot of this output (s1)==
+__TODO: Take a screenshot of this output (s1)__
 
 4. Add match function to Parser class (Parser.h)
 ~~~
   void match(TokenType t) {
     //the cout can be removed for the final project
     cout << "match: " << t << endl;
-    if (tokenType() == t)
+    if (tokenType() __ t)
       advanceToken();
     else
       throwError();
@@ -98,7 +98,7 @@ int main() {
   }
 }
 ~~~
-==TODO: Take a screenshot of this output (s2)==
+__TODO: Take a screenshot of this output (s2)__
 
 ---
 ### Part 2: Parsing
@@ -111,7 +111,7 @@ int main() {
 *Parsing Function:*
 ~~~
   void idList() {
-    if (tokenType() == COMMA) {
+    if (tokenType() __ COMMA) {
       match(COMMA);
       match(ID);
       idList();
@@ -157,7 +157,7 @@ __TODO: Write a test case that fails by changing the tokens in the "tokens" vect
 `scheme -> ID LEFT_PAREN ID idList RIGHT_PAREN`
 
 ##### Hint: you do not need to wrap the function in an if statement b/c there is only one case for this particular grammar
-==TODO: Take a screenshot of your code for the scheme parsing function (s4)==
+__TODO: Take a screenshot of your code for the scheme parsing function (s4)__
 
 5. You should pass the following test case
 ~~~
