@@ -5,7 +5,8 @@
 2. This is an important step in a programming languages evaluation. Labs 1, 2a, 2b focus of defining a syntax for our programming language. 
 3. Here we will use a grammar to verify if the tokens created represent valid datalog code. 
 4. The output for the project will either be `Success!` or `Failure! [token we failed on]`
-5. Keep up the good work!
+5.  If you haven't done it yet write getters for the token.h class
+6. Keep up the good work!
 
 ---
 ### Part 1: Parser class and helper functions
@@ -62,16 +63,19 @@ int main() {
   }
 }
 __TODO: Take a screenshot of this output (s1)__
+~~~
 
 4. Add match function to Parser class (Parser.h)
 ~~~c++
-  void match(TokenType t) {
+  string match(TokenType t) {
     //the cout can be removed for the final project
     cout << "match: " << t << endl;
-    if (tokenType() __ t)
-      advanceToken();
+    string out = "DATA UNCAUGHT"
+	if (tokenType() __ t)
+		out = tokens.at(0).getValue();
+		advanceToken();
     else
-      throwError();
+		throwError();
   }
 ~~~
 

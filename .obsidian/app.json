@@ -12,7 +12,11 @@
     "throwError",
     "iostream",
     "datalog",
-    "idList"
+    "idList",
+    "DatalogProgram",
+    "getters",
+    "getter",
+    "cout"
   ],
   "showLineNumber": true
 }
