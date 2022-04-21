@@ -14,7 +14,7 @@
 The Parser is given a vector of Tokens that are typically provided by the Scanner.  
 (Don't forget to "#include \<vector\>")  
 (Don't forget to '#include "Token.h"')
-```
+```c++
 class Parser {
  private:
   vector<Token> tokens;
@@ -27,7 +27,7 @@ class Parser {
 The support functions will make the parsing routines simpler and easier to write. The 'tokenType' function returns the type of the current Token. The 'advanceToken' function moves to the next Token. The 'throwError' function is called when the Parser finds an error. You may want to add other support functions in addition to these. Notice how throwError includes the keyword "throw". When this line is reached computation will be halted and your code will return to the nearest "catch block" or halt and report an error.
 (Don't forget to '#include \<iostream\>')
 
-```
+```c++
   TokenType tokenType() const {
     return tokens.at(0).getType();
   }
@@ -40,7 +40,7 @@ The support functions will make the parsing routines simpler and easier to write
 ```
 
 3. Test support functions (main.cpp)
-~~~
+~~~c++
 int main() {
 
   vector<Token> tokens = {
@@ -65,7 +65,7 @@ int main() {
 __TODO: Take a screenshot of this output (s1)__
 
 4. Add match function to Parser class (Parser.h)
-~~~
+~~~c++
   void match(TokenType t) {
     //the cout can be removed for the final project
     cout << "match: " << t << endl;
@@ -77,7 +77,7 @@ __TODO: Take a screenshot of this output (s1)__
 ~~~
 
 5. Test match function (main.cpp)
-~~~
+~~~c++
 int main() {
 
   vector<Token> tokens = {
@@ -109,7 +109,7 @@ __TODO: Take a screenshot of this output (s2)__
 `idList -> COMMA ID idList | lambda`
 
 *Parsing Function:*
-~~~
+~~~c++
   void idList() {
     if (tokenType() __ COMMA) {
       match(COMMA);
@@ -125,7 +125,7 @@ __TODO: Take a screenshot of this output (s2)__
 (Compile and test)  
 (No errors should be reported.)
 
-~~~
+~~~c++
 int main() {
 
   vector<Token> tokens = {
@@ -160,7 +160,7 @@ __TODO: Write a test case that fails by changing the tokens in the "tokens" vect
 __TODO: Take a screenshot of your code for the scheme parsing function (s4)__
 
 5. You should pass the following test case
-~~~
+~~~c++
 int main() {
 
   vector<Token> tokens = {
