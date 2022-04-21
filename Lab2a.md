@@ -101,7 +101,7 @@ int main() {
   }
 }
 ~~~
-__TODO: Take a screenshot of this output (s2)__
+## __TODO: Take a screenshot of this output (s2)__
 
 ---
 ### Part 2: Parsing
