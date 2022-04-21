@@ -61,10 +61,8 @@ int main() {
     cout << errorToken.toString()
   }
 }
-~~~
-```diff
-+ TODO: Take a screenshot of this output (s1)
-```
+__TODO: Take a screenshot of this output (s1)__
+
 4. Add match function to Parser class (Parser.h)
 ~~~c++
   void match(TokenType t) {
