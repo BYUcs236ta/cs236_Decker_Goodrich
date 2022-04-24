@@ -1,4 +1,4 @@
-# Lab 1
+# Lab1
 ---
 ### Part 0: Walter's Best Practice
 1. This is advice, please take it as such
@@ -18,7 +18,7 @@ enum TokenType {
 };
 ```
 
-2. Make a "Token" class (Token.h). A token is comprised of 3 things (Type, Contents, LineNum)
+2. Make a `Token` class (Token.h). A token is comprised of 3 things (Type, Contents, LineNum)
 ```c++
 class Token {
  private:
@@ -29,7 +29,7 @@ class Token {
 ```
 
 3. Create a constructor (Token.h)
-__TODO: Write the constructor yourself. Take a screenshot of the constructor you wrote and turn it in (s1)__ Feel free to use your IDE to generate it. Your constructor should initialize the "type", "contents", and "line" variables using its arguments.
+`TODO: Write the constructor yourself. Take a screenshot of the constructor you wrote and turn it in (s1)` Feel free to use your IDE to generate it. Your constructor should initialize the "type", "contents", and "line" variables using its arguments.
 
 4. Write "toString" function for the "Token" class
 ~~~c++
@@ -40,7 +40,7 @@ __TODO: Write the constructor yourself. Take a screenshot of the constructor you
   }
 ~~~
 
-5. Create and print a 'Token' in the 'main' function (main.cpp) with the following values
+5. Create and print a `Token` in the `main` function (main.cpp) with the following values
 type=COMMA
 value=","
 line=42
@@ -98,7 +98,7 @@ protected:
 
     bool match(char c)
     {
-        return (curr() __ c);
+        return (curr() == c);
     }
 
     //Call this function to check if you have reached the end of file

@@ -1,4 +1,4 @@
-# Lab 3
+# Lab3
 ---
 ### Part 0: Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the code is valid. We then used those tokens to create a DatalogProgram object.

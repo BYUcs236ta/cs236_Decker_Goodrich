@@ -1,4 +1,4 @@
-# Lab 2b
+# Lab2b
 ---
 ### Part 0: Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the code is valid.
@@ -72,6 +72,7 @@ __TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes must in
 
 ##### Hint: Use your IDE to generate the setters, getters, and constructor
 ##### Hint: DatalogProgram should have addFact, addScheme, addRule, addQuery, addDomainItem methods.
+
 ##### [For details on how to use sets please refrence c++.com] (https://www.cplusplus.com/reference/set/set/)
 
 To get you started here is Predicate
@@ -82,7 +83,7 @@ private:
 	vector<Parameter> parameters;
 	string name;
 public:
-	//setters
+	// setters
 	void setName(string newName) { 
 		name = newName; 
 	}
@@ -90,7 +91,7 @@ public:
 		parameters = newParameters;
 	}
 	
-	//getters
+	// getters
 	string getName() { 
 		return name; 
 	}
@@ -98,18 +99,19 @@ public:
 		return parameters;
 	}
 	
-	//adder
+	// adder
 	void addParameter(Parameter parameter) {
 		parameters.push_back(parameter);
 	}
-	//helper string adder
+	
+	// helper string adder
 	void addParameter(String paramValue) {
 		Parameter param;
 		param.setValue(paramValue);
 		addParameter(param);
 	}
 	
-	//toString
+	// toString
 	string toString() {
 		string sep = "";
 		stringstream out;
@@ -173,5 +175,4 @@ __TODO: Take a screenshot of main (s4)__
 1.  Import your code from project 2a
 2. Add code to produce the datalog program into your parser. This will necessitate changing your existing functions for the various productions
 	1. For this step start with schemes, test, the go onto facts, test, then queries, test, then finally rules. 
-3. In the try catch in main (after you call parser.run()) cout the created DatalogProgram object.
-4. Good Luck!
+3. Good Luck!

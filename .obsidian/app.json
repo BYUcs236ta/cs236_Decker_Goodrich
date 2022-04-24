@@ -1,9 +1,20 @@
 {
-  "legacyEditor": true,
   "spellcheck": true,
   "spellcheckDictionary": [
-    "DatalogProgram",
-    "datalog",
-    "txt"
-  ]
+    "Hominem",
+    "Falsidical",
+    "Stratigraphy",
+    "Processual",
+    "processualism",
+    "Seriation",
+    "Dendochronology",
+    "Ethnoarchaeology",
+    "Levantine",
+    "Zagros"
+  ],
+  "alwaysUpdateLinks": true,
+  "promptDelete": false,
+  "showFrontmatter": false,
+  "legacyEditor": false,
+  "livePreview": true
 }

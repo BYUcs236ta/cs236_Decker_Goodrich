@@ -1,4 +1,4 @@
-# Lab 2a
+# Lab2a
 ---
 ### Part 0: Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens"
@@ -11,7 +11,7 @@
 ---
 ### Part 1: Parser class and helper functions
 
-1. Make a 'Parser' class (Parser.h)  
+1. Make a `Parser` class (Parser.h)  
 The Parser is given a vector of Tokens that are typically provided by the Scanner.  
 (Don't forget to "#include \<vector\>")  
 (Don't forget to '#include "Token.h"')
@@ -70,12 +70,12 @@ __TODO: Take a screenshot of this output (s1)__
   string match(TokenType t) {
     //the cout can be removed for the final project
     cout << "match: " << t << endl;
-    string out = "DATA UNCAUGHT"
-	if (tokenType() __ t)
-		out = tokens.at(0).getValue();
-		advanceToken();
+    string tokenValue = "DATA UNCAUGHT"
+	if (tokenType() == t)
+		// TODO
     else
-		throwError();
+		// TODO
+	return tokenValueout;
   }
 ~~~
 

@@ -1,45 +1,59 @@
 {
   "main": {
-    "id": "1b2aa315f427eaad",
+    "id": "70a48740f22e99ca",
     "type": "split",
     "children": [
       {
-        "id": "c5469aa2673a5f1d",
+        "id": "7f1e2773cb7e00d1",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lab3.md",
-            "mode": "source"
+            "file": "README.md",
+            "mode": "source",
+            "source": false
           }
         },
-        "group": "e13a08a100868019"
+        "group": "71388f01c8ed8bc1"
       },
       {
-        "id": "c290194ea5204582",
+        "id": "78ffaabea5678483",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lab3.md",
-            "mode": "preview"
+            "file": "Lab0.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      },
+      {
+        "id": "285ae148c5c6379f",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "README.md",
+            "mode": "source",
+            "source": false
           }
         },
-        "group": "e13a08a100868019"
+        "group": "71388f01c8ed8bc1"
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "d9ffc9f2b4e0e0c7",
+    "id": "87495e71b5e0439a",
     "type": "split",
     "children": [
       {
-        "id": "06e171afa8b377a9",
+        "id": "3ae8971cc8a82403",
         "type": "tabs",
         "children": [
           {
-            "id": "ef02f7e58ec54028",
+            "id": "8879194a0c0ff259",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -47,7 +61,7 @@
             }
           },
           {
-            "id": "84bc0a95527f191d",
+            "id": "b62f8be3216b52e8",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -65,23 +79,23 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 269
   },
   "right": {
-    "id": "19003de9fa35d5e3",
+    "id": "14bc6c6058beaca2",
     "type": "split",
     "children": [
       {
-        "id": "1e56b70a8dec2d9a",
+        "id": "c78e1dcdebef9e83",
         "type": "tabs",
         "children": [
           {
-            "id": "17365f276e1fd1de",
+            "id": "1f5a4f0e860bdc6d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lab3.md",
+                "file": "Lab0.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -91,17 +105,34 @@
                 "unlinkedCollapsed": true
               }
             }
+          },
+          {
+            "id": "62700378c3941e65",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
+            }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "c5469aa2673a5f1d",
+  "active": "78ffaabea5678483",
   "lastOpenFiles": [
+    "Lab0.md",
+    "README.md",
     "Lab3.md",
-    "Lab2b.md"
+    "Lab4.md",
+    "Lab5.md",
+    "Lab2b.md",
+    "Lab2a.md",
+    "Lab1.md",
+    "Relation.md",
+    "Type System Example.md"
   ]
 }
