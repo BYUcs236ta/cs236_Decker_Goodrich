@@ -6,10 +6,11 @@
       {
         "id": "7f1e2773cb7e00d1",
         "type": "leaf",
+        "dimension": 50.16556291390728,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lab3.md",
+            "file": "Lab1.md",
             "mode": "source",
             "source": false
           }
@@ -19,11 +20,12 @@
       {
         "id": "285ae148c5c6379f",
         "type": "leaf",
+        "dimension": 49.83443708609271,
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lab3.md",
-            "mode": "preview",
+            "file": "Lab1.md",
+            "mode": "source",
             "source": false
           }
         },
@@ -83,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lab3.md",
+                "file": "Lab1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,15 +114,15 @@
   },
   "active": "7f1e2773cb7e00d1",
   "lastOpenFiles": [
-    "Lab3.md",
     "Lab1.md",
-    "Lab4.md",
-    "Lab5.md",
-    "Lab2b.md",
     "Lab2a.md",
     "Lab0.md",
     "README.md",
-    "Relation.md",
-    "Type System Example.md"
+    "Lab5.md",
+    "assets/images/colon_fsa.png.png",
+    "Lab3.md",
+    "Lab4.md",
+    "assets/images/tux.png.md",
+    "Untitled.md"
   ]
 }
