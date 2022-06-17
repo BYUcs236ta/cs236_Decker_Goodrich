@@ -1,4 +1,5 @@
 # Lab1
+ # Lab1
 ---
 ### Part 0: Walter's Best Practice
 1. This is advice, please take it as such
@@ -11,7 +12,7 @@
 8. Write a toString for every class (Except maybe the automaton classes). This will be helpful during testing and debugging.
 ---
 ### Part 1: Tokens
-1. Make a "TokenType" enum (Token.h). You will need to add more to this list later but 
+1. Make a `TokenType` enum (Token.h). You will need to add more to this list later but 
 ```c++
 enum TokenType {
   COMMA, COLON, COLON_DASH, ...
@@ -46,7 +47,7 @@ value=","
 line=42
 __TODO: Take a screenshot of the code you wrote to test this and the resulted print (s2)__
 
-6. Notice how the output has a number in place of the COMMA enum-type. We need to fix this. Add the following function to "Token.h". 
+6. Notice how the output has a number in place of the COMMA enum-type. We need to fix this. Add the following function to Token.h. You will need to call this function in `Token::toString()` 
 ```c++
 string typeName(TokenType type) const {
   switch (type) {
@@ -85,7 +86,7 @@ protected:
     // Helper functions
     void next()
     {
-        if (curr() __ '\n')
+        if (curr() == '\n')
             newLinesRead++;
         numCharRead++;
         currCharIndex++;

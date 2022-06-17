@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
+            "file": "Lab3.md",
             "mode": "source",
             "source": false
           }
@@ -17,25 +17,13 @@
         "group": "71388f01c8ed8bc1"
       },
       {
-        "id": "78ffaabea5678483",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Lab0.md",
-            "mode": "source",
-            "source": false
-          }
-        }
-      },
-      {
         "id": "285ae148c5c6379f",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "README.md",
-            "mode": "source",
+            "file": "Lab3.md",
+            "mode": "preview",
             "source": false
           }
         },
@@ -95,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lab0.md",
+                "file": "Lab3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -122,16 +110,16 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "78ffaabea5678483",
+  "active": "7f1e2773cb7e00d1",
   "lastOpenFiles": [
-    "Lab0.md",
-    "README.md",
     "Lab3.md",
+    "Lab1.md",
     "Lab4.md",
     "Lab5.md",
     "Lab2b.md",
     "Lab2a.md",
-    "Lab1.md",
+    "Lab0.md",
+    "README.md",
     "Relation.md",
     "Type System Example.md"
   ]

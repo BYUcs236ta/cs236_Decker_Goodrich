@@ -25,7 +25,7 @@ class Parser {
 ```
 
 2. Add some support functions to the 'Parser' class (Parser.h)  
-The support functions will make the parsing routines simpler and easier to write. The 'tokenType' function returns the type of the current Token. The 'advanceToken' function moves to the next Token. The 'throwError' function is called when the Parser finds an error. You may want to add other support functions in addition to these. Notice how throwError includes the keyword "throw". When this line is reached computation will be halted and your code will return to the nearest "catch block" or halt and report an error.
+The support functions will make the parsing routines simpler and easier to write. The `tokenType` function returns the type of the current Token. The `advanceToken()` function moves to the next Token. The `throwError()` function is called when the Parser finds an error. You may want to add other support functions in addition to these. Notice how `throwError()` includes the keyword "throw". When this line is reached computation will be halted and your code will return to the nearest "catch block". If no "catch block" is available it will halt and report an error.
 (Don't forget to '#include \<iostream\>')
 
 ```c++
@@ -40,7 +40,7 @@ The support functions will make the parsing routines simpler and easier to write
   }
 ```
 
-3. Test support functions (main.cpp)
+3. Test support functions (main.cpp). Notice here how the catch block is in main and the "protected code" is surrounded by a try block.
 ~~~c++
 int main() {
 
@@ -62,8 +62,9 @@ int main() {
     cout << errorToken.toString()
   }
 }
-__TODO: Take a screenshot of this output (s1)__
 ~~~
+
+## __TODO: Take a screenshot of this output (s1)__
 
 4. Add match function to Parser class (Parser.h)
 ~~~c++
@@ -162,7 +163,7 @@ __TODO: Write a test case that fails by changing the tokens in the "tokens" vect
 ##### Hint: you do not need to wrap the function in an if statement b/c there is only one case for this particular grammar
 __TODO: Take a screenshot of your code for the scheme parsing function (s4)__
 
-5. You should pass the following test case
+5. Your code should pass the following test case
 ~~~c++
 int main() {
 
@@ -190,7 +191,7 @@ int main() {
 ---
 ### Conclusion
 1. Submit your screenshots in a .zip folder on learning suite
-2. Leave any feedback in the feedback section of the lab quiz
+2. Leave any feedback in notes of your lab submission.
 
 ---
 ### TODO for the project 
