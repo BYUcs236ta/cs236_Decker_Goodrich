@@ -209,20 +209,21 @@ for (unsigned int i = 0; i < automata.size(); i++) {
 	Automaton* currentAutomaton = automata.at(i);
 }
 ```
-3) In our loop call `currentAutomaton`'s run method. If the result of that call is larger than `maxRead` update `maxRead` and `maxAutomaton` to be the new values of those variables. This is the "Max" part of the algorithm because we find the maximum value of that variable. 
+4) In our loop call `currentAutomaton`'s run method. If the result of that call is larger than `maxRead` update `maxRead` and `maxAutomaton` to be the new values of those variables. This is the "Max" part of the algorithm because we find the maximum value of that variable. 
 `TODO: Write the code described in this step and take a screenshot (s4).`
 Hint 1: `currentAutomaton.run()` takes a string and returns an int. The string represents the input you want to validate, the int is how many characters the Automaton read (0 represents a failure). 
 Hint 2: When if maxRead and currentAutomaton.run() are the same *do not* update maxRead and maxAutomaton
 
- 4) Create a token and delete the read section from the input.
+ 5) Create a token and delete the read section from the input.
 ```c++
-Token currToken = Token(maxAutomaton.getType(), input.substring(0, maxRead), 0);
+Token currToken = Token(maxAutomaton.getType(), input.substring(0, maxRead), 0/*the line number is being set to 0, which is fine for the lab but you will need to fix this for the full project*/);
 cout << currToken.toString() << endl;
 input = input.substring(maxRead);
+tokens.push_back(currToken);
 ```
 
- 5) Surround the loop wrap all the code in a while loop your condition should check to see if `input.size() > 0`. This will repeat steps 1-4 until it has consumed the entire input string.
- 6) After the while loop return tokens to close off the function.
+ 6) Wrap the code written for steps 1-5 code in a while loop. Your condition should check to see if `input.size() > 0`. This will repeat steps 1-5 until it has consumed the entire input string.
+ 7) After the while loop returns tokens to close off the function.
 
 ---
 ### Part 5: Create Automata
@@ -351,15 +352,10 @@ Hint 3: The following site may be helpful: [Finite State Machine Designer](https
 2) in the Lexer's initilizeAutomata method `Lexer::initilizeAutomata()` add the following code:
 ```c++
 void initializeAutomata() {
-	// Simple matcher automata
 	automata.push_back(new ColonAutomaton());
 	automata.push_back(new ColonDashAutomaton());
-	
-	// undefined automata
-	automata.push_back(new UndefinedCharAutomaton());
-	
-	// More complex automata 
 	automata.push_back(new IDAutomaton());
+	automata.push_back(new UndefinedCharAutomaton());
 }
 ```
 The order you choose to write these matters. This is your tie breaker. If an Automaton is earlier in the list it will have higher precedence when both return the same value.
@@ -398,4 +394,6 @@ It should produce the following as output:
 	3. Draw the automaton before writing code
 	4. When you have problems make sure your drawing matches your code and that your automaton drawing is correct
 2. Write separate Automata for SingleLineComment, BlockComment, UndefinedBlockComment, String and UndefinedString tokens.
-3. Good Luck!
+3. Add newline tracking
+4. Read in input from a file whose name is passed in from a command line argument and print output to the standard output (cout)
+5. Good Luck!
