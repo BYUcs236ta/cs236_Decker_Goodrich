@@ -30,7 +30,8 @@ class Token {
 ```
 
 3. Create a constructor (`Token.h`)
-`TODO: Write the constructor yourself. Take a screenshot of the constructor you wrote and turn it in (s1)` Feel free to use your IDE to generate it. Your constructor should initialize the "type", "contents", and "line" variables using its arguments.
+`TODO: Write the constructor yourself. Take a screenshot of the constructor you wrote and turn it in (s1)`
+Feel free to use your IDE to generate it. Your constructor should initialize the "type", "contents", and "line" variables using its arguments.
 
 4. Write "toString" function for the "Token" class
 ~~~c++
@@ -45,7 +46,7 @@ class Token {
 type=COMMA
 value=","
 line=42
-__TODO: Take a screenshot of the code you wrote to test this and the resulted print (s2)__
+`TODO: Take a screenshot of the code you wrote to test this and the resulted print (s2)`
 
 6. Notice how the output has a number in place of the COMMA enum-type. We need to fix this. Add the following function to Token.h. You will need to call this function in `Token::toString()` 
 ```c++
@@ -57,7 +58,7 @@ string typeName(TokenType type) const {
   }
 }
 ```
-__TODO: Add cases for COLON and COLON_DASH types, take a screenshot (s3)__
+`TODO: Add cases for COLON and COLON_DASH types, take a screenshot (s3)`
 
 ---
 ### Part 2: Automaton Base Class
@@ -70,15 +71,15 @@ __TODO: Add cases for COLON and COLON_DASH types, take a screenshot (s3)__
 class Automaton {
 protected:
 	
-    //This tracks where in the input we are
+    // This tracks where in the input we are
     unsigned int currCharIndex = 0;
 	
-    //This tracks the number of newLines we have read
+    // This tracks the number of newLines we have read
     unsigned int newLinesRead = 0;
 
 	TokenType type = TokenType::UNDEFINED;
-	//This tracks the total number of characters consumbed
-	//This is different from currCharIndex to let you "peek" at the next input without consiming it
+	// This tracks the total number of characters consumbed
+	// This is different from currCharIndex to let you "peek" at the next input without consiming it
     unsigned int numCharRead = 0;
     std::string input = "";
 
@@ -101,12 +102,12 @@ protected:
         return (curr() == c);
     }
 
-    //Call this function to check if you have reached the end of file
+    // Call this function to check if you have reached the end of file
     bool endOfFile() {
         return (currCharIndex >= input.size());
     }
 
-    //this is the error state call it when the token is invalid
+    // This is the error state call it when the token is invalid
     void sError() {
         numCharRead = 0;
     }
@@ -209,7 +210,7 @@ for (unsigned int i = 0; i < automata.size(); i++) {
 }
 ```
 3) In our loop call `currentAutomaton`'s run method. If the result of that call is larger than `maxRead` update `maxRead` and `maxAutomaton` to be the new values of those variables. This is the "Max" part of the algorithm because we find the maximum value of that variable. 
-`TODO: Write the code described in this step and take a screenshot (s2).`
+`TODO: Write the code described in this step and take a screenshot (s4).`
 Hint 1: `currentAutomaton.run()` takes a string and returns an int. The string represents the input you want to validate, the int is how many characters the Automaton read (0 represents a failure). 
 Hint 2: When if maxRead and currentAutomaton.run() are the same *do not* update maxRead and maxAutomaton
 
@@ -228,7 +229,6 @@ input = input.substring(maxRead);
 1) Colon Automaton
 
 As a reminder it looks like the following:
-![Colon_FSA]: (https://prnt.sc/CFoJ8Mtg6S8k)
 ![](assets/images/colon_fsa.png)
 
 Here is how that turns into code:
@@ -253,7 +253,6 @@ private:
 
 2) Colon_Dash Automaton
 As a reminder it looks like the following:
-![ColonDash_FSA]: (https://prnt.sc/WPapnjtnTjHK)
 ![](assets/images/colondash_fsa.png)
 
 and the code:
@@ -287,8 +286,6 @@ private:
 every state has a function, and each transition is a case on the if/else chain (remember that every diagram implicitly has a fail transition if none of the others pass)
 
 3) Undefined Character Automaton
-
-![UndefinedChar_FSA]: (https://prnt.sc/sSFbWYDyUhZT)
 ![](assets/images/undefined_fsa.png)
 Create the UndefinedCharAutomaton.h
 ```c++
@@ -337,8 +334,10 @@ private:
 }
 ```
 
-`TODO: draw the FSA based on the following code. Take a screenshot or picture (s3)`
-Hint: there is a self loop, it may be helpful to include sError in your diagram but you are not required to do so. If you do write "error" as the state name to denote it. An error state has no outgoing transitions. The following site may be helpful: [Finite State Machine Designer](https://www.madebyevan.com/fsm/)
+`TODO: draw the FSA based on the following code. Take a screenshot or picture (s5)`
+Hint 1: There is a self loop. 
+Hint 2: It may be helpful to include sError in your diagram but you are not required to do so. If you do write "error" as the state name to denote it. An error state has no outgoing transitions. 
+Hint 3: The following site may be helpful: [Finite State Machine Designer](https://www.madebyevan.com/fsm/)
 
 ### Part 6: Add Automata to Lexer
 1) add the following includes to `Lexer.h`

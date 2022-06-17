@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lab1.md",
+            "file": "Lab3.md",
             "mode": "source",
             "source": false
           }
@@ -24,7 +24,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lab1.md",
+            "file": "Lab3.md",
             "mode": "source",
             "source": false
           }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lab1.md",
+                "file": "Lab3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,15 +114,15 @@
   },
   "active": "7f1e2773cb7e00d1",
   "lastOpenFiles": [
+    "Lab3.md",
+    "Lab2b.md",
+    "Lab4.md",
     "Lab1.md",
     "Lab2a.md",
     "Lab0.md",
     "README.md",
     "Lab5.md",
     "assets/images/colon_fsa.png.png",
-    "Lab3.md",
-    "Lab4.md",
-    "assets/images/tux.png.md",
-    "Untitled.md"
+    "assets/images/tux.png.md"
   ]
 }

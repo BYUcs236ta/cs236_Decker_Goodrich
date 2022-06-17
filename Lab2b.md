@@ -68,7 +68,7 @@ body: {apple(e, f, g), orange(A, B, C, f)}
 ```
 
 
-__TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes must include an empty constructor, setter, getter, adder, and toString() methods. Take 3 screenshots of your code(s1, s2, s3)__
+`TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes must include an empty constructor, setter, getter, adder, and toString() methods. Take 3 screenshots of your code(s1, s2, s3)`
 
 ##### Hint: Use your IDE to generate the setters, getters, and constructor
 ##### Hint: DatalogProgram should have addFact, addScheme, addRule, addQuery, addDomainItem methods.
@@ -162,7 +162,7 @@ int main() {
 	return 0;
 }
 ```
-__TODO: Take a screenshot of main (s4)__
+`TODO: Take a screenshot of main (s4)`
 
 ---
 ### Conclusion

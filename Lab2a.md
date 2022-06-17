@@ -64,7 +64,7 @@ int main() {
 }
 ~~~
 
-## __TODO: Take a screenshot of this output (s1)__
+`TODO: Take a screenshot of this output (s1)`
 
 4. Add match function to Parser class (Parser.h)
 ~~~c++
@@ -102,7 +102,7 @@ int main() {
   }
 }
 ~~~
-## __TODO: Take a screenshot of this output (s2)__
+`TODO: Take a screenshot of this output (s2)`
 
 ---
 ### Part 2: Parsing
@@ -153,15 +153,16 @@ int main() {
 ~~~
 
 3. Test idList with bad input (main.cpp)
-__TODO: Write a test case that fails by changing the tokens in the "tokens" vector. Take a screenshot of your code. (s3)__
+`TODO: Write a test case that fails by changing the tokens in the "tokens" vector. Take a screenshot of your code. (s3)`
 
 4. Write the parsing function for the following grammar rule:
 
 *Grammar Rule:*
 `scheme -> ID LEFT_PAREN ID idList RIGHT_PAREN`
 
-##### Hint: you do not need to wrap the function in an if statement b/c there is only one case for this particular grammar
-__TODO: Take a screenshot of your code for the scheme parsing function (s4)__
+Hint: you do not need to wrap the function in an if statement b/c there is only one case for this particular grammar
+
+`TODO: Take a screenshot of your code for the scheme parsing function (s4)`
 
 5. Your code should pass the following test case
 ~~~c++
