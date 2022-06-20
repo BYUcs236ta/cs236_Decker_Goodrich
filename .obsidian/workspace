@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lab0.md",
+            "file": "Lab2b.md",
             "mode": "source",
             "source": false
           }
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lab0.md",
+            "file": "Lab2b.md",
             "mode": "source",
             "source": false
           }
@@ -83,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lab0.md",
+                "file": "Lab2b.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,15 +112,15 @@
   },
   "active": "b88ab662c2b96773",
   "lastOpenFiles": [
+    "Lab2b.md",
+    "assets/images/project-2-data-structures.png",
+    "Lab2a.md",
     "Lab0.md",
     "assets/images.md",
     "assets/images_1.md",
     "Lab1.md",
     "assets/images/Wrong_CMake_version_--_before.png",
     "assets/images/Opening_CmakeList_txt.png",
-    "assets/images/Wrong CMake version -- after.png",
-    "assets/images/Where_Is_Settings_Menu.png",
-    "assets/images 1.md",
-    "Lab5.md"
+    "assets/images/Wrong CMake version -- after.png"
   ]
 }

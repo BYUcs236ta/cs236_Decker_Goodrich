@@ -58,13 +58,18 @@ It is best to have a simple main.cpp file open in CLion before you begin these s
 14.  Click on the Remote Host Profile and set the Root Path. (Mike G. had to close the settings and reopen them to see the option for choosing the remote host. If you can't see the option, click ok and then reopen the settings-->preferences.) This must take you to the home directory of your account on the CS Department Lab Machines. The Auto Detect Button should work but if not the path is  _user/guest/[first letter of netID]/[netID]_
 
 ![](assets/images/02_LI.jpg)
+
 15.  Click on the Mappings Tab and Verify that your Local Path takes you to the location that your project is stored on your _Local Machine_. Then adjust the deployment path, which is where your project is stored on the _Remote Host_. The deployment path MUST point to an empty folder on the Remote Host. You can add a new folder by right-clicking and selecting the new->Directory. (Mike G couldn't get the right-clicking to work from his Mac, but he was able to just type in a path.) Highlight the location of an empty blue folder by clicking on it. Then hit OK. This is where your code will be stored on the lab machines. Clion will copy it from your _local machine_ to the _remote host_ on the department lab computers whenever you build.
 ![](assets/images/05_LI.jpg)
+
 ![](assets/images/04.png)
+
 ![](assets/images/03.png)
+
 16.  Once you click OK to save changes to your settings, you should see messages about uploads and such (CLion is getting things set up on the lab machine). You may need to wait a few minutes for this to finish.
 
 ![](assets/images/07-Syncing.png)
+
 17.  When the syncing is finished, you should see messages saying so, and be able to run your code using the green play buttons or the debug button. If you don't see a green play button next to the main method of your program, you might have one of the problems listed in the section below.
 ![](assets/images/08-Finished.png)
 ---
@@ -72,11 +77,16 @@ It is best to have a simple main.cpp file open in CLion before you begin these s
 **Useful Tips, plus Common Problems and their solutions**
 
 1.  "_CMake 3.17 or higher is required._" Once you have completed this tutorial, you may get an error that looks like this:
+
 ![](assets/images/CLion_Error_Message.PNG)
   
+
 To resolve this error, navigate to the CMakeLists.txt file by clicking on the down arrow next to the name of your project.
+
 ![](assets/images/Finding_CmakeList_txt.png)
+
 Click on the link to open the file.
+
 ![](assets/images/Opening_CmakeList_txt.png)
 On the first line of the file, change the required version to be the same as the version you are running.  Save the file.
 
