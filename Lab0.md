@@ -80,9 +80,13 @@ Click on the link to open the file.
 ![](assets/images/Opening_CmakeList_txt.png)
 On the first line of the file, change the required version to be the same as the version you are running.  Save the file.
 
+
 **Before** making the change.
+
 ![](assets/images/Wrong_CMake_version_--_before.png)
+
 **After** making the change. 
+
 ![](assets/images/Wrong_CMake_version_--_after.png)
 
 You might need to click "reload changes" before you'll see the green arrow next to main.
