@@ -7,8 +7,12 @@
         "id": "b88ab662c2b96773",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Lab0.md",
+            "mode": "source",
+            "source": false
+          }
         },
         "group": "a315d28c80983c3e"
       },
@@ -16,8 +20,12 @@
         "id": "f249b0c77b67e0e0",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "Lab0.md",
+            "mode": "source",
+            "source": false
+          }
         },
         "group": "a315d28c80983c3e"
       }
@@ -46,7 +54,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "find and repla",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -55,7 +63,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -75,6 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Lab0.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,9 +113,9 @@
   },
   "active": "b88ab662c2b96773",
   "lastOpenFiles": [
+    "Lab0.md",
     "assets/images.md",
     "assets/images_1.md",
-    "Lab0.md",
     "Lab1.md",
     "assets/images/Wrong_CMake_version_--_before.png",
     "assets/images/Opening_CmakeList_txt.png",
