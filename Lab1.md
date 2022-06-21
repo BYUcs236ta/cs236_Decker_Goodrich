@@ -226,9 +226,10 @@ Hint 2: When maxRead and currentAutomaton.run() are the same *do not* update max
 
  5) Create a token and delete the read section from the input.
 ```c++
-Token currToken = Token(maxAutomaton.getType(), input.substring(0, maxRead), 0/*the line number is being set to 0, which is fine for the lab but you will need to fix this for the full project*/);
-cout << currToken.toString() << endl;
-input = input.substring(maxRead);
+
+Token currToken = Token(maxAutomaton->getType(), input = input.substr(0, maxRead), 0/*defaults to 0 you will need to fix later*/); 
+cout << currToken.toString() << endl;  
+input = input.substr(maxRead);  
 tokens.push_back(currToken);
 ```
 
@@ -261,7 +262,7 @@ private:
 		else
 			sError(); // this calls the error state
 	}
-}
+};
 ```
 
 2) Colon_Dash Automaton
@@ -287,14 +288,17 @@ private:
 			sError(); // this calls the error state
 	}
 	void s1() {
-		if (match('-')) {
+		if (endOfFile()) {  
+		    sError();  
+		}  
+		else if (match('-')) {
 			next();
 			return; // this represents accepting the input
 		}
 		else
 			sError(); // this calls the error state
 	}
-}
+};
 ```
 
 every state has a function, and each transition is a case on the if/else chain (remember that every diagram implicitly has a fail transition if none of the others pass)
@@ -314,7 +318,7 @@ private:
 		next(); // read next character
 		return; // accept the input
 	}
-}
+};
 ```
 
 4) Identifier Automaton
@@ -326,6 +330,7 @@ Create IDAutomaton.h
 #include <stdio.h> 
 #include <ctype.h>
 class IDAutomaton : public Automaton {
+public:	
 	IDAutomaton() {
 		type = TokenType::ID; // set the type
 	}
@@ -346,7 +351,7 @@ private:
 		else
 			return; //accept
 	}
-}
+};
 ```
 
 `TODO: draw the FSA based on the following code. Take a screenshot or picture (s5)`
