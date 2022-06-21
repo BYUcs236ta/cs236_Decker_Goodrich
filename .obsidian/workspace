@@ -13,21 +13,7 @@
             "mode": "source",
             "source": false
           }
-        },
-        "group": "a315d28c80983c3e"
-      },
-      {
-        "id": "f249b0c77b67e0e0",
-        "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Lab1.md",
-            "mode": "source",
-            "source": false
-          }
-        },
-        "group": "a315d28c80983c3e"
+        }
       }
     ],
     "direction": "vertical"

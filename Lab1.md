@@ -77,7 +77,6 @@ string typeName(TokenType type) const {
 
 class Automaton {
 protected:
-	
     // This tracks where in the input we are
     unsigned int currCharIndex = 0;
 	
@@ -86,7 +85,7 @@ protected:
 
 	TokenType type = TokenType::UNDEFINED;
 	// This tracks the total number of characters consumed
-	// This is different from currCharIndex to let you "peek" at the next input without consiming it
+	// This is different from currCharIndex to let you "peek" at the next input without consuming it
     unsigned int numCharRead = 0;
     std::string input = "";
 
@@ -102,10 +101,14 @@ protected:
     }
 
     char curr() {
+	    if (endOfFile())
+		    throw "Tried to read past the file, does your automaton state check for it as a transition?"
         return input.at(currCharIndex);
     }
 
     bool match(char c) {
+	    if (endOfFile())
+			    throw "Tried to read past the file, does your automaton state check for it as a transition?"
         return (curr() == c);
     }
 
@@ -152,7 +155,7 @@ public:
 class Lexer {
 
 
-}
+};
 ```
 
 2. Add 2 private members
@@ -227,7 +230,7 @@ Hint 2: When maxRead and currentAutomaton.run() are the same *do not* update max
  5) Create a token and delete the read section from the input.
 ```c++
 
-Token currToken = Token(maxAutomaton->getType(), input.substr(0, maxRead), 0/*defaults to 0 you will need to fix later*/); 
+Token currToken = Token(maxAutomaton->getType(), input.substr(0, maxRead), 0/*defaults to 0, you will need to fix for the project*/); 
 cout << currToken.toString() << endl;  
 input = input.substr(maxRead);  
 tokens.push_back(currToken);
