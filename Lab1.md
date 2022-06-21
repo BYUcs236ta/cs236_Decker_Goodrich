@@ -162,7 +162,7 @@ void initializeAutomata() {
 }
 vector<Token> run(string input) {
 	initializeAutomata()
-	// TODO:: write the parralel and max logic
+	// TODO:: write the parallel and max logic
 	return tokens;
 }
 
