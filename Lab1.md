@@ -145,7 +145,7 @@ public:
 class Lexer {
 
 
-}
+};
 ```
 
 2. Add 2 private members
@@ -335,7 +335,7 @@ private:
 		else
 			return; //accept
 	}
-}
+};
 ```
 
 `TODO: draw the FSA based on the following code. Take a screenshot or picture (s5)`
