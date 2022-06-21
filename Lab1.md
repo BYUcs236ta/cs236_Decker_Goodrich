@@ -14,17 +14,21 @@
 ### Part 1: Tokens
 1. Make a `TokenType` enum (`Token.h`). You will need to add more to this list later but 
 ```c++
+#include <string>
+#include <sstream>
+using namespace std;
 enum TokenType {
-  COMMA, COLON, COLON_DASH, UNDEFINED, ...
+  COMMA, COLON, COLON_DASH, UNDEFINED, ID // add more here
 };
 ```
 
 2. Make a `Token` class (`Token.h`). A token is comprised of 3 things (Type, Contents, LineNum)
 ```c++
+
 class Token {
  private:
   TokenType type;
-  String contents;
+  string contents;
   unsigned int line;
 };
 ```
@@ -33,7 +37,7 @@ class Token {
 `TODO: Write the constructor yourself. Take a screenshot of the constructor you wrote and turn it in (s1)`
 Feel free to use your IDE to generate it. Your constructor should initialize the "type", "contents", and "line" variables using its arguments.
 
-4. Write "toString" function for the "Token" class
+4. Write "toString" function for the "Token" class. *Make sure it is in public*
 ~~~c++
   string toString() const {
     stringstream out;
@@ -42,10 +46,13 @@ Feel free to use your IDE to generate it. Your constructor should initialize the
   }
 ~~~
 
-5. Create and print a `Token` in the `main` function (main.cpp) with the following values
-type=COMMA
-value=","
-line=42
+5. Create and print a `Token` in the `main` function (main.cpp) with the following values:
+
+`type`=COMMA
+
+`contents`=","
+
+`line`=42
 `TODO: Take a screenshot of the code you wrote to test this and the resulted print (s2)`
 
 6. Notice how the output has a number in place of the COMMA enum-type. We need to fix this. Add the following function to Token.h. You will need to call this function in `Token::toString()` 
@@ -58,7 +65,7 @@ string typeName(TokenType type) const {
   }
 }
 ```
-`TODO: Add cases for COLON and COLON_DASH types, take a screenshot (s3)`
+`TODO: Add cases for COLON, UNDEFINED, ID and COLON_DASH types, take a screenshot (s3)`
 
 ---
 ### Part 2: Automaton Base Class
@@ -78,7 +85,7 @@ protected:
     unsigned int newLinesRead = 0;
 
 	TokenType type = TokenType::UNDEFINED;
-	// This tracks the total number of characters consumbed
+	// This tracks the total number of characters consumed
 	// This is different from currCharIndex to let you "peek" at the next input without consiming it
     unsigned int numCharRead = 0;
     std::string input = "";
@@ -138,7 +145,7 @@ public:
 ### Part 3: Lexer
 1. Create a Lexer.h file.
 ```c++
-#include <string>
+#include <vector>
 #include "Token.h"
 #include "Automaton.h"
 
@@ -150,18 +157,18 @@ class Lexer {
 
 2. Add 2 private members
 ```c++
-vector<Automaton*> automata
-vector<Token> tokens
+vector<Automaton*> automata;
+vector<Token> tokens;
 ```
 
 3. Write a getter for the "tokens" member
-4. You will need to following methods:
+4. You will need to following methods (Make sure run is in public):
 ```c++
 void initializeAutomata() {
 	// Here you will create and add each automaton to your automata vector
 }
 vector<Token> run(string input) {
-	initializeAutomata()
+	initializeAutomata();
 	// TODO:: write the parallel and max logic
 	return tokens;
 }
@@ -199,8 +206,8 @@ By those rules it should become the following tokens:
 Parallel and Max Algorithm (this goes in the run method of Lexer.h):
 1) Initialize Max Variables
 ```c++
-Automaton* maxAutomaton = automata.at(0) 
-unsigned int maxRead = 0
+Automaton* maxAutomaton = automata.at(0);
+unsigned int maxRead = 0;
 ```
 2) Handle whitespace and count newlines (not required for the lab, but will be required for the project leave a TODO comment in your code for you to come back to so you know where to put this logic)
 3) Iterate through each automaton
@@ -209,10 +216,13 @@ for (unsigned int i = 0; i < automata.size(); i++) {
 	Automaton* currentAutomaton = automata.at(i);
 }
 ```
-4) In our loop call `currentAutomaton`'s run method. If the result of that call is larger than `maxRead` update `maxRead` and `maxAutomaton` to be the new values of those variables. This is the "Max" part of the algorithm because we find the maximum value of that variable. 
+4) In step 3's loop call `currentAutomaton`'s run method. If the result of that call is larger than `maxRead` update `maxRead` and `maxAutomaton` to be the new values of those variables. This is the "Max" part of the algorithm because we find the maximum value of that variable. 
+
 `TODO: Write the code described in this step and take a screenshot (s4).`
-Hint 1: `currentAutomaton.run()` takes a string and returns an int. The string represents the input you want to validate, the int is how many characters the Automaton read (0 represents a failure). 
-Hint 2: When if maxRead and currentAutomaton.run() are the same *do not* update maxRead and maxAutomaton
+
+Hint 1: `currentAutomaton->run()` takes a string and returns an int. The string represents the input you want to validate, the int is how many characters the Automaton read (0 represents a failure). 
+
+Hint 2: When maxRead and currentAutomaton.run() are the same *do not* update maxRead and maxAutomaton.
 
  5) Create a token and delete the read section from the input.
 ```c++
@@ -223,7 +233,8 @@ tokens.push_back(currToken);
 ```
 
  6) Wrap the code written for steps 1-5 code in a while loop. Your condition should check to see if `input.size() > 0`. This will repeat steps 1-5 until it has consumed the entire input string.
- 7) After the while loop returns tokens to close off the function.
+
+ 7) After the while loop, return tokens to close off the function.
 
 ---
 ### Part 5: Create Automata
@@ -276,7 +287,7 @@ private:
 			sError(); // this calls the error state
 	}
 	void s1() {
-		if (match(':')) {
+		if (match('-')) {
 			next();
 			return; // this represents accepting the input
 		}
