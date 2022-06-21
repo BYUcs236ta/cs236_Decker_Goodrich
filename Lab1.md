@@ -150,8 +150,8 @@ class Lexer {
 
 2. Add 2 private members
 ```c++
-vector<Automaton*> automata
-vector<Token> tokens
+vector<Automaton*> automata;
+vector<Token> tokens;
 ```
 
 3. Write a getter for the "tokens" member
@@ -162,7 +162,7 @@ void initializeAutomata() {
 }
 vector<Token> run(string input) {
 	initializeAutomata()
-	// TODO:: write the parralel and max logic
+	// TODO:: write the parallel and max logic
 	return tokens;
 }
 
@@ -216,9 +216,9 @@ Hint 2: When if maxRead and currentAutomaton.run() are the same *do not* update 
 
  5) Create a token and delete the read section from the input.
 ```c++
-Token currToken = Token(maxAutomaton.getType(), input.substring(0, maxRead), 0/*the line number is being set to 0, which is fine for the lab but you will need to fix this for the full project*/);
+Token currToken = Token(maxAutomaton->getType(), input.substr(0, maxRead), 0/*the line number is being set to 0, which is fine for the lab, but you will need to fix this for the full project*/);
 cout << currToken.toString() << endl;
-input = input.substring(maxRead);
+input = input.substr(maxRead);
 tokens.push_back(currToken);
 ```
 
