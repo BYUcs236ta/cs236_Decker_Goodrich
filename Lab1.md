@@ -150,7 +150,7 @@ class Lexer {
 
 2. Add 2 private members
 ```c++
-vector<Automanon*> automata
+vector<Automaton*> automata
 vector<Token> tokens
 ```
 
