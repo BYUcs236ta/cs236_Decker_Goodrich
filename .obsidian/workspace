@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lab2b.md",
+            "file": "Lab1.md",
             "mode": "source",
             "source": false
           }
@@ -22,7 +22,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Lab2b.md",
+            "file": "Lab1.md",
             "mode": "source",
             "source": false
           }
@@ -67,7 +67,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269
+    "width": 269,
+    "collapsed": true
   },
   "right": {
     "id": "14bc6c6058beaca2",
@@ -83,7 +84,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Lab2b.md",
+                "file": "Lab1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -112,13 +113,13 @@
   },
   "active": "b88ab662c2b96773",
   "lastOpenFiles": [
+    "Lab1.md",
     "Lab2b.md",
     "assets/images/project-2-data-structures.png",
     "Lab2a.md",
     "Lab0.md",
     "assets/images.md",
     "assets/images_1.md",
-    "Lab1.md",
     "assets/images/Wrong_CMake_version_--_before.png",
     "assets/images/Opening_CmakeList_txt.png",
     "assets/images/Wrong CMake version -- after.png"

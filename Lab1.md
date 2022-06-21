@@ -37,7 +37,7 @@ Feel free to use your IDE to generate it. Your constructor should initialize the
 ~~~c++
   string toString() const {
     stringstream out;
-    out << "(" << type << "," << "\"" << value << "\"" << "," << line << ")";
+    out << "(" << type << "," << "\"" << contents << "\"" << "," << line << ")";
     return out.str();
   }
 ~~~
