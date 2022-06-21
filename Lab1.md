@@ -250,7 +250,7 @@ private:
 		else
 			sError(); // this calls the error state
 	}
-}
+};
 ```
 
 2) Colon_Dash Automaton
@@ -283,7 +283,7 @@ private:
 		else
 			sError(); // this calls the error state
 	}
-}
+};
 ```
 
 every state has a function, and each transition is a case on the if/else chain (remember that every diagram implicitly has a fail transition if none of the others pass)
@@ -296,14 +296,14 @@ Create the UndefinedCharAutomaton.h
 class UndefinedCharAutomaton : public Automaton {
 public:
 	UndefinedCharAutomaton() {
-		type = TokenType::COLON_DASH; // set the type
+		type = TokenType::UNDEFINED; // set the type
 	}
 private:
 	void s0() {
 		next(); // read next character
 		return; // accept the input
 	}
-}
+};
 ```
 
 4) Identifier Automaton
@@ -315,8 +315,8 @@ Create IDAutomaton.h
 #include <stdio.h> 
 #include <ctype.h>
 class IDAutomaton : public Automaton {
-	UndefinedCharAutomaton() {
-		type = TokenType::COLON_DASH; // set the type
+	IDAutomaton() {
+		type = TokenType::ID; // set the type
 	}
 private:
 	void s0() {
