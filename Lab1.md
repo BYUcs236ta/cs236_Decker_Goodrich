@@ -343,20 +343,26 @@ private:
 		else 
 			sError();
 	}
-	void s1() {
-		if (isalnum(curr())) {
-			next();
-			s1();
-		}
-		else
-			return; //accept
+	void s1() {  
+	    if (endOfFile()) {  
+	        return; // accept  
+	    }  
+	    else if (isalnum(curr())) {  
+	        next();  
+	        s1();  
+	    }  
+	    else  
+	        return; //accept  
 	}
 };
 ```
 
-`TODO: draw the FSA based on the following code. Take a screenshot or picture (s5)`
+`TODO: draw the FSA diagram based on the following code. Take a screenshot or picture (s5)`
+
 Hint 1: There is a self loop. 
+
 Hint 2: It may be helpful to include sError in your diagram but you are not required to do so. If you do write "error" as the state name to denote it. An error state has no outgoing transitions. 
+
 Hint 3: The following site may be helpful: [Finite State Machine Designer](https://www.madebyevan.com/fsm/)
 
 ### Part 6: Add Automata to Lexer
