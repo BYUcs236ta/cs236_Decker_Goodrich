@@ -315,6 +315,7 @@ Create IDAutomaton.h
 #include <stdio.h> 
 #include <ctype.h>
 class IDAutomaton : public Automaton {
+public:
 	IDAutomaton() {
 		type = TokenType::ID; // set the type
 	}
