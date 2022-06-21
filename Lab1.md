@@ -95,11 +95,14 @@ protected:
     }
 
     char curr() {
+    	if (endOfFile()) {
+    		return NULL;
+	}
         return input.at(currCharIndex);
     }
 
     bool match(char c) {
-        return (curr() == c);
+        return !endOfFile() && (curr() == c);
     }
 
     // Call this function to check if you have reached the end of file
