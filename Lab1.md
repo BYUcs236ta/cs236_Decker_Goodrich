@@ -307,7 +307,7 @@ Create the UndefinedCharAutomaton.h
 class UndefinedCharAutomaton : public Automaton {
 public:
 	UndefinedCharAutomaton() {
-		type = TokenType::COLON_DASH; // set the type
+		type = TokenType::UNDEFINED; // set the type
 	}
 private:
 	void s0() {
@@ -326,8 +326,8 @@ Create IDAutomaton.h
 #include <stdio.h> 
 #include <ctype.h>
 class IDAutomaton : public Automaton {
-	UndefinedCharAutomaton() {
-		type = TokenType::COLON_DASH; // set the type
+	IDAutomaton() {
+		type = TokenType::ID; // set the type
 	}
 private:
 	void s0() {
