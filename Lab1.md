@@ -237,10 +237,11 @@ Create ColonAutomaton.h
 ```c++
 #include "Automaton.h"
 class ColonAutomaton : public Automaton {
-private:
+public:
 	ColonAutomaton() {
 		type = TokenType::COLON; // set the type
 	}
+private:
 	void s0() {
 		if (match(':')) {
 			next();
@@ -261,10 +262,11 @@ Create ColonDashAutomaton.h
 ```c++
 #include "Automaton.h"
 class ColonDashAutomaton : public Automaton {
-private:
+public:
 	ColonDashAutomaton() {
 		type = TokenType::COLON_DASH; // set the type
 	}
+private:
 	void s0() {
 		if (match(':')) {
 			next();
@@ -292,10 +294,11 @@ Create the UndefinedCharAutomaton.h
 ```c++
 #include "Automaton.h"
 class UndefinedCharAutomaton : public Automaton {
-private:
+public:
 	UndefinedCharAutomaton() {
 		type = TokenType::COLON_DASH; // set the type
 	}
+private:
 	void s0() {
 		next(); // read next character
 		return; // accept the input
@@ -312,10 +315,10 @@ Create IDAutomaton.h
 #include <stdio.h> 
 #include <ctype.h>
 class IDAutomaton : public Automaton {
-private:
 	UndefinedCharAutomaton() {
 		type = TokenType::COLON_DASH; // set the type
 	}
+private:
 	void s0() {
 		if (isalpha(curr())) {
 			next();
@@ -366,7 +369,6 @@ Run the following code in main:
 ```c++
 #include "Lexer.h"
 int main() {
-
 	Lexer lexer;
 	lexer.run("::-onePerson");
 	return 0;
