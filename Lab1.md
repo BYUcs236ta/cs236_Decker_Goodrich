@@ -227,7 +227,7 @@ Hint 2: When maxRead and currentAutomaton.run() are the same *do not* update max
  5) Create a token and delete the read section from the input.
 ```c++
 
-Token currToken = Token(maxAutomaton->getType(), input = input.substr(0, maxRead), 0/*defaults to 0 you will need to fix later*/); 
+Token currToken = Token(maxAutomaton->getType(), input.substr(0, maxRead), 0/*defaults to 0 you will need to fix later*/); 
 cout << currToken.toString() << endl;  
 input = input.substr(maxRead);  
 tokens.push_back(currToken);
