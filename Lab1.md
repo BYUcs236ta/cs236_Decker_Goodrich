@@ -276,7 +276,7 @@ private:
 			sError(); // this calls the error state
 	}
 	void s1() {
-		if (match(':')) {
+		if (match('-')) {
 			next();
 			return; // this represents accepting the input
 		}
