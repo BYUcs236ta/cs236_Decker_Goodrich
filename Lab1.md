@@ -78,8 +78,8 @@ protected:
     unsigned int newLinesRead = 0;
 
 	TokenType type = TokenType::UNDEFINED;
-	// This tracks the total number of characters consumbed
-	// This is different from currCharIndex to let you "peek" at the next input without consiming it
+	// This tracks the total number of characters consumed
+	// This is different from currCharIndex to let you "peek" at the next input without consuming it
     unsigned int numCharRead = 0;
     std::string input = "";
 
