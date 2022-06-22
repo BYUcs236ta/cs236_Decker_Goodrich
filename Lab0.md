@@ -104,7 +104,7 @@ You might need to click "reload changes" before you'll see the green arrow next 
 ![](assets/images/Reload_Changes.png)
 
 
-`TODO: Take a screenshot of the hello-world program running! (s1)`
+`TODO: Take a screenshot of the hello-world program running! (name your file "s1" for screenshot 1 so it is easier for the TAs to grade)`
 ```c++
 #include <iostream>  
   
