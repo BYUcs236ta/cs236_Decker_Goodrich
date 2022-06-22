@@ -1,5 +1,9 @@
 # Lab0
+---
+### Part 0: TA Recommendations
+We advise students to use CLion. The reason for this is that is has good debugging tools and the TAs are familiar with it. You may choose to use a different IDE if you wish but be warned that the TAs won't be able to help with IDE specific issues as effectively. If you are making this choice submit a screenshot of the hello-world program (the one you should be familiar with, shown in Part 3) running in your IDE/programming environment and you will receive full credit for this lab!
 
+---
 ### Part 1: Installing Clion
 ---
 ##### Part 1a: License Creation
@@ -105,6 +109,11 @@ You might need to click "reload changes" before you'll see the green arrow next 
 
 
 `TODO: Take a screenshot of the hello-world program running! (name your file "s1" for screenshot 1 so it is easier for the TAs to grade)`
+
+Grading note: We advise students to use CLion. The reason for this is that is has good debugging tools and the TAs are familiar with it. You may choose to use a different IDE if you wish but be warned that the TAs won't be able to help with IDE specific issues as effectively. If you are making this choice submit a screenshot of the hello-world program running in your IDE/programming environment and you will receive full credit for this lab!
+
+---
+### Part 3: Hello World Program
 ```c++
 #include <iostream>  
   
@@ -113,7 +122,6 @@ int main() {
     return 0;  
 }
 ```
-
 ---
 ### Conclusion
 1. Submit your screenshots in a .zip folder on learning suite
