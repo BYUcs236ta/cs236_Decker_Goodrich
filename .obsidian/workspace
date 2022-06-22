@@ -53,8 +53,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 269,
-    "collapsed": true
+    "width": 269
   },
   "right": {
     "id": "14bc6c6058beaca2",
@@ -100,10 +99,10 @@
   "active": "b88ab662c2b96773",
   "lastOpenFiles": [
     "Lab1.md",
+    "Lab0.md",
+    "Lab2a.md",
     "Lab2b.md",
     "assets/images/project-2-data-structures.png",
-    "Lab2a.md",
-    "Lab0.md",
     "assets/images.md",
     "assets/images_1.md",
     "assets/images/Wrong_CMake_version_--_before.png",

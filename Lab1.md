@@ -34,7 +34,7 @@ class Token {
 ```
 
 3. Create a constructor (`Token.h`)
-`TODO: Write the constructor yourself. Take a screenshot of the constructor you wrote and turn it in (s1)`
+`TODO: Write the constructor yourself. Take a screenshot of the constructor you wrote and turn it in (name your file "s1" for screenshot 1 so it is easier for the TAs to grade)``
 Feel free to use your IDE to generate it. Your constructor should initialize the "type", "contents", and "line" variables using its arguments.
 
 4. Write "toString" function for the "Token" class. *Make sure it is in public*
@@ -53,7 +53,7 @@ Feel free to use your IDE to generate it. Your constructor should initialize the
 `contents`=","
 
 `line`=42
-`TODO: Take a screenshot of the code you wrote to test this and the resulted print (s2)`
+`TODO: Take a screenshot of the code you wrote to test this and the resulted print (name your file "s2" for screenshot 2 so it is easier for the TAs to grade)
 
 6. Notice how the output has a number in place of the COMMA enum-type. We need to fix this. Add the following function to Token.h. You will need to call this function in `Token::toString()` 
 ```c++
@@ -65,7 +65,7 @@ string typeName(TokenType type) const {
   }
 }
 ```
-`TODO: Add cases for COLON, UNDEFINED, ID and COLON_DASH types, take a screenshot (s3)`
+`TODO: Add cases for COLON, UNDEFINED, ID and COLON_DASH types, take a screenshot (name your file "s3" for screenshot 3 so it is easier for the TAs to grade)`
 
 ---
 ### Part 2: Automaton Base Class
@@ -221,7 +221,7 @@ for (unsigned int i = 0; i < automata.size(); i++) {
 ```
 4) In step 3's loop call `currentAutomaton`'s run method. If the result of that call is larger than `maxRead` update `maxRead` and `maxAutomaton` to be the new values of those variables. This is the "Max" part of the algorithm because we find the maximum value of that variable. 
 
-`TODO: Write the code described in this step and take a screenshot (s4).`
+`TODO: Write the code described in this step and take a screenshot (name your file "s4" for screenshot 4 so it is easier for the TAs to grade, we will not this as just "(s4)" in future).`
 
 Hint 1: `currentAutomaton->run()` takes a string and returns an int. The string represents the input you want to validate, the int is how many characters the Automaton read (0 represents a failure). 
 
