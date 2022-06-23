@@ -225,7 +225,7 @@ for (unsigned int i = 0; i < automata.size(); i++) {
 ```
 4) In step 3's loop call `currentAutomaton`'s run method. If the result of that call is larger than `maxRead` update `maxRead` and `maxAutomaton` to be the new values of those variables. This is the "Max" part of the algorithm because we find the maximum value of that variable. 
 
-`TODO: Write the code described in this step and take a screenshot (name your file "s4" for screenshot 4 so it is easier for the TAs to grade, we will not this as just "(s4)" in future).`
+`TODO: Write the code described in this step and take a screenshot (name your file "s4" for screenshot 4 so it is easier for the TAs to grade, we will note this as just "(s4)" in future).`
 
 Hint 1: `currentAutomaton->run()` takes a string and returns an int. The string represents the input you want to validate, the int is how many characters the Automaton read (0 represents a failure). 
 
