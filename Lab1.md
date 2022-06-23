@@ -1,5 +1,7 @@
 # Lab1
 ---
+Make sure to read the Project 1 specs so that you have the big picture for the entire Lexer.
+
 ### Part 0: Walter's Best Practice
 1. This is advice, please take it as such
 2. Stay organized
