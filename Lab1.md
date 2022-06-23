@@ -81,7 +81,7 @@ protected:
     // This tracks where in the input we are
     unsigned int currCharIndex = 0;
 	
-    // This tracks the number of newLines we have read
+    // This tracks the number of newLines ('\n') we have read
     unsigned int newLinesRead = 0;
 
 	TokenType type = TokenType::UNDEFINED;
