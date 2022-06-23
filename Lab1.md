@@ -95,21 +95,24 @@ protected:
 
     // Helper functions
     void next() {
-        if (curr() == '\n')
+        if (curr() == '\n') {
             newLinesRead++;
+	}
         numCharRead++;
         currCharIndex++;
     }
 
     char curr() {
-	    if (endOfFile())
-		    throw "Tried to read past the file, does your automaton state check for it as a transition?";
+	if (endOfFile()) {
+            throw "Tried to read past the file, does your automaton state check for it as a transition?";
+	}
         return input.at(currCharIndex);
     }
 
     bool match(char c) {
-	    if (endOfFile())
-			    throw "Tried to read past the file, does your automaton state check for it as a transition?";
+	if (endOfFile()) {
+	    throw "Tried to read past the file, does your automaton state check for it as a transition?";
+	}
         return (curr() == c);
     }
 
@@ -135,13 +138,13 @@ public:
         return numCharRead;
     }
 
-    unsigned int getNewLines() {
+    unsigned int getNewLines() const {
         return newLinesRead;
     }
 
-	TokenType getType() {
-		return type;
-	}
+    TokenType getType() const {
+	return type;
+    }
 };
 ```
 
@@ -263,8 +266,9 @@ private:
 			next();
 			return; // this represents accepting the input
 		}
-		else
+		else {
 			sError(); // this calls the error state
+		}
 	}
 };
 ```
