@@ -33,7 +33,10 @@ class Token {
 ```
 
 3. Create a constructor (`Token.h`)
-`TODO: Write the constructor yourself. Take a screenshot of the constructor you wrote and turn it in (name your file "s1" for screenshot 1 so it is easier for the TAs to grade)``
+
+`TODO: Write the constructor yourself. Take a screenshot of the constructor you wrote and turn it in (name your file "s1" for screenshot 1 so it is easier for the TAs to grade)`
+
+
 Feel free to use your IDE to generate it. Your constructor should initialize the "type", "contents", and "line" variables using its arguments.
 
 4. Write "toString" function for the "Token" class. *Make sure it is in public*
@@ -52,9 +55,11 @@ Feel free to use your IDE to generate it. Your constructor should initialize the
 `contents`=","
 
 `line`=42
+
 `TODO: Take a screenshot of the code you wrote to test this and the resulted print (name your file "s2" for screenshot 2 so it is easier for the TAs to grade)
 
 6. Notice how the output has a number in place of the COMMA enum-type. We need to fix this. Add the following function to Token.h. You will need to call this function in `Token::toString()` 
+
 ```c++
 string typeName(TokenType type) const {
   switch (type) {
@@ -64,6 +69,7 @@ string typeName(TokenType type) const {
   }
 }
 ```
+
 `TODO: Add cases for COLON, UNDEFINED, ID and COLON_DASH types, take a screenshot (name your file "s3" for screenshot 3 so it is easier for the TAs to grade)`
 
 ---
@@ -163,13 +169,12 @@ vector<Automaton*> automata;
 vector<Token> tokens;
 ```
 
-3. Write a getter for the "tokens" member
-4. You will need to following methods (Make sure run is in public):
+3. You will need to following methods:
 ```c++
-void initializeAutomata() {
+void initializeAutomata() { // this should be private
 	// Here you will create and add each automaton to your automata vector
 }
-vector<Token> run(string input) {
+vector<Token> run(string input) { // this should be in public
 	initializeAutomata();
 	// TODO:: write the parallel and max logic
 	return tokens;
