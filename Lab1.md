@@ -1,5 +1,4 @@
 # Lab1
- # Lab1
 ---
 ### Part 0: Walter's Best Practice
 1. This is advice, please take it as such
