@@ -359,7 +359,7 @@ private:
 };
 ```
 
-`TODO: draw the FSA diagram based on the following code. Take a screenshot or picture (s5)`
+`TODO: draw the FSA diagram based on the IDAutomaton code. This diagram should correspond to the code in a similar way that the other code/diagram pairs did. Each function should have a state and each branch (if, else if, else) should have a transition to a new state. Take a screenshot or picture (screenshot name: s5)`
 
 Hint 1: There is a self loop. 
 
