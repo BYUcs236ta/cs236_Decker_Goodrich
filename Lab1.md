@@ -1,5 +1,7 @@
 # Lab1
 ---
+Make sure to read the Project 1 specs so that you have the big picture for the entire Lexer.
+
 ### Part 0: Walter's Best Practice
 1. This is advice, please take it as such
 2. Stay organized
@@ -85,7 +87,7 @@ protected:
     // This tracks where in the input we are
     unsigned int currCharIndex = 0;
 	
-    // This tracks the number of newLines we have read
+    // This tracks the number of newLines ('\n') we have read
     unsigned int newLinesRead = 0;
 
 	TokenType type = TokenType::UNDEFINED;
@@ -99,21 +101,24 @@ protected:
 
     // Helper functions
     void next() {
-        if (curr() == '\n')
+        if (curr() == '\n') {
             newLinesRead++;
+	}
         numCharRead++;
         currCharIndex++;
     }
 
     char curr() {
-	    if (endOfFile())
-		    throw "Tried to read past the file, does your automaton state check for it as a transition?";
+	if (endOfFile()) {
+            throw "Tried to read past the file, does your automaton state check for it as a transition?";
+	}
         return input.at(currCharIndex);
     }
 
     bool match(char c) {
-	    if (endOfFile())
-			    throw "Tried to read past the file, does your automaton state check for it as a transition?";
+	if (endOfFile()) {
+	    throw "Tried to read past the file, does your automaton state check for it as a transition?";
+	}
         return (curr() == c);
     }
 
@@ -139,13 +144,13 @@ public:
         return numCharRead;
     }
 
-    unsigned int getNewLines() {
+    unsigned int getNewLines() const {
         return newLinesRead;
     }
 
-	TokenType getType() {
-		return type;
-	}
+    TokenType getType() const {
+	return type;
+    }
 };
 ```
 
@@ -225,7 +230,7 @@ for (unsigned int i = 0; i < automata.size(); i++) {
 ```
 4) In step 3's loop call `currentAutomaton`'s run method. If the result of that call is larger than `maxRead` update `maxRead` and `maxAutomaton` to be the new values of those variables. This is the "Max" part of the algorithm because we find the maximum value of that variable. 
 
-`TODO: Write the code described in this step and take a screenshot (name your file "s4" for screenshot 4 so it is easier for the TAs to grade, we will not this as just "(s4)" in future).`
+`TODO: Write the code described in this step and take a screenshot (name your file "s4" for screenshot 4 so it is easier for the TAs to grade, we will note this as just "(s4)" in future).`
 
 Hint 1: `currentAutomaton->run()` takes a string and returns an int. The string represents the input you want to validate, the int is how many characters the Automaton read (0 represents a failure). 
 
@@ -266,8 +271,9 @@ private:
 			next();
 			return; // this represents accepting the input
 		}
-		else
+		else {
 			sError(); // this calls the error state
+		}
 	}
 };
 ```
