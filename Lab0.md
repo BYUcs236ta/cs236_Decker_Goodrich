@@ -47,7 +47,7 @@ It is best to have a simple main.cpp file open in CLion before you begin these s
 ![](assets/images/03-NewCredential.png)
 
 8.  For host enter schizo.cs.byu.edu and for port enter 22
-9.  For user name and password, use your CS account credentials. Issues with you CS account can be resolved [here](https://docs.cs.byu.edu/doku.php?id=setting-up-your-account-with-the-cs-authentication-system)
+9.  For user name and password, use your CS account credentials. Issues with your CS account can be resolved [here](https://docs.cs.byu.edu/doku.php?id=setting-up-your-account-with-the-cs-authentication-system)
 10.  Click "Test Connection" to make sure it's connecting to the lab machines (you may need to be using the [CS VPN](https://docs.cs.byu.edu/doku.php?id=VPN-Configuration-and-Use) if you're not on campus).
 
 ![](assets/images/04-CSAccount.png)
