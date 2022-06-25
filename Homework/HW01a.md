@@ -18,7 +18,7 @@ Give a regular expression for the FSA described in Question 1.
 Here are the symbols we would like you to use:
 >() - parenthesis 
 >
->* - Kleene Star 
+>\* - Kleene Star 
 >
  >$\cup$ or | - Union
  >
