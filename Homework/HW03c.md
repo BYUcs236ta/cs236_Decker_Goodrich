@@ -1,8 +1,8 @@
-# HW03b
+# HW03c
 ---
 ### Question 1
 
-Find the FIRST sets for all of the productions with the following non-terminals (on the left-hand side) from Project 2:
+Find the FOLLOW sets for all of the productions with the following non-terminals (on the left-hand side) from Project 2:
 ```
 rule
 query
