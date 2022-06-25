@@ -4,7 +4,7 @@
 
 Draw a finite state automaton (FSA) for a string representing a single time of day. Your FSA should accept times such as: 
 
-`12:36 pm 1:59 am 4:00 pm 2:45 am 
+`12:36 pm 1:59 am 4:00 pm 2:45 am` 
 
 It also should reject times like: 
 
