@@ -10,6 +10,14 @@ It also should reject times like:
 
 `01:00 pm 99999:00 am 13:99 pm 10:60 pm`
 
+Note that there are no leading zeros. Also, am and pm are lowercase and have no periods. A terminal error state is not necessary. 
+
+To make the task easier, you can make up any grouping you want. For example, you may wish to let represent any digit, let <1> represent the digit 1, let <012> represent any digit 0 through 2, and let represent a space. 
+
+Time statements are formatted in many ways, but we want your FSA to only accept the above time format and not military time or any other time format.
+
+A useful site for drawing them digitally: [https://www.madebyevan.com/fsm/](https://www.madebyevan.com/fsm/)
+
 ---
 ### Question 2
 
