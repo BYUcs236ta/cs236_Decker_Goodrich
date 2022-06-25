@@ -308,8 +308,9 @@ private:
 			next();
 			return; // this represents accepting the input
 		}
-		else
+		else {
 			sError(); // this calls the error state
+		}
 	}
 };
 ```
@@ -364,8 +365,9 @@ private:
 	        next();  
 	        s1();  
 	    }  
-	    else  
+	    else {
 	        return; //accept  
+	    }
 	}
 };
 ```
