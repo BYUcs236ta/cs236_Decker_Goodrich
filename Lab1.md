@@ -254,7 +254,7 @@ tokens.push_back(currToken);
 1) Colon Automaton
 
 As a reminder it looks like the following:
-![](assets/images/colon_fsa.png)
+![](/assets/images/colon_fsa.png)
 
 Here is how that turns into code:
 Create ColonAutomaton.h
@@ -280,7 +280,7 @@ private:
 
 2) Colon_Dash Automaton
 As a reminder it looks like the following:
-![](assets/images/colondash_fsa.png)
+![](/assets/images/colondash_fsa.png)
 
 and the code:
 Create ColonDashAutomaton.h
@@ -318,7 +318,7 @@ private:
 every state has a function, and each transition is a case on the if/else chain (remember that every diagram implicitly has a fail transition if none of the others pass)
 
 3) Undefined Character Automaton
-![](assets/images/undefined_fsa.png)
+![](/assets/images/undefined_fsa.png)
 Create the UndefinedCharAutomaton.h
 ```c++
 #include "Automaton.h"

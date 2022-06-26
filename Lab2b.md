@@ -69,7 +69,8 @@ body: {apple(e, f, g), orange(A, B, C, f)}
 
 
 A slide you may find helpful: 
-![](assets/images/project-2-data-structures.png)
+
+![](/assets/images/project-2-data-structures.png)
 
 `TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes must include an empty constructor, setter, getter, adder, and toString() methods. Take 3 screenshots of your code(s1, s2, s3)`
 
