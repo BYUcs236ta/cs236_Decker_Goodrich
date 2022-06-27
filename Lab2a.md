@@ -154,7 +154,7 @@ int main() {
 }
 ~~~
 
-3. Test idList with bad input (main.cpp)
+3. Test 'idList' with bad input (main.cpp)
 `TODO: Write a test case that fails by changing the tokens in the "tokens" vector. Take a screenshot of your code. (s3)`
 
 4. Write the parsing function for the following grammar rule:
@@ -162,7 +162,7 @@ int main() {
 *Grammar Rule:*
 `scheme -> ID LEFT_PAREN ID idList RIGHT_PAREN`
 
-Hint: you do not need to wrap the function in an if statement b/c there is only one case for this particular grammar
+Hint: you do not need to wrap the function in an if statement b/c there is only one case for this particular grammar rule
 
 `TODO: Take a screenshot of your code for the scheme parsing function (s4)`
 
