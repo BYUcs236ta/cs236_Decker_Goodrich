@@ -3,9 +3,9 @@
 ### Part 0: Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens"
 2. This is an important step in a programming languages evaluation. Labs 1, 2a, 2b focus of defining a syntax for our programming language. 
-3. Here we will use a grammar to verify if the tokens created represent valid datalog code. 
+3. Here we will use a grammar to verify if the Tokens created represent valid Datalog program. 
 4. The output for the project will either be `Success!` or `Failure! [token we failed on]`
-5.  If you haven't done it yet write getters for the token.h class
+5. If you haven't done it yet write "getters" for the `Token.h` class
 6. Keep up the good work!
 
 ---
