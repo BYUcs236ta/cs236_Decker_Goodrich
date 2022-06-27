@@ -31,3 +31,8 @@ Demonstrate that the following grammar is ambiguous. Create your own ambiguous c
 <A> -> <S>
 <A> -> s
 ```
+
+---
+### Question 4
+
+Fix the grammar in Problem #2 so that it is not ambiguous. Is your grammar left associative or right associative?
