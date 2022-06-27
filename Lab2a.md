@@ -12,7 +12,7 @@
 ### Part 1: Parser class and helper functions
 
 1. Make a `Parser` class (Parser.h)  
-The Parser is given a vector of Tokens that are typically provided by the Scanner.  
+The `Parser` is given a `vector` of `Tokens` that are typically provided by the `Lexer`.  
 (Don't forget to "#include \<vector\>")  
 (Don't forget to '#include "Token.h"')
 ```c++
