@@ -3,7 +3,7 @@
 ### Part 0: Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens"
 2. This is an important step in a programming languages evaluation. Labs 1, 2a, 2b focus of defining a syntax for our programming language. 
-3. Here we will use a grammar to verify if the Tokens created represent valid Datalog program. 
+3. Here we will use a grammar to verify if the Tokens created represent a valid Datalog program. 
 4. The output for the project will either be `Success!` or `Failure! [token we failed on]`
 5. If you haven't done it yet write "getters" for the `Token.h` class
 6. Keep up the good work!
@@ -24,9 +24,9 @@ class Parser {
 };
 ```
 
-2. Add some support functions to the 'Parser' class (Parser.h)  
-The support functions will make the parsing routines simpler and easier to write. The `tokenType` function returns the type of the current Token. The `advanceToken()` function moves to the next Token. The `throwError()` function is called when the Parser finds an error. You may want to add other support functions in addition to these. Notice how `throwError()` includes the keyword "throw". When this line is reached computation will be halted and your code will return to the nearest "catch block". If no "catch block" is available it will halt and report an error.
-(Don't forget to '#include \<iostream\>')
+2. Add some support functions to the `Parser` class (Parser.h)  
+The support functions will make the parsing routines simpler and easier to write. The `tokenType` function returns the type of the current `Token` being looked at. The `advanceToken()` function moves to the next `Token` in `tokens`. The `throwError()` function is called when the Parser finds an error. You may want to add other support functions in addition to these. Notice how `throwError()` includes the keyword "throw". When this line is reached computation will be halted and your code will return to the nearest "catch block". If no "catch block" is available it will halt and report an error. If you haven't used exceptions in C++, see this tutorial: [https://cplusplus.com/doc/tutorial/exceptions/](https://cplusplus.com/doc/tutorial/exceptions/).
+(Don't forget to `#include <iostream>`)
 
 ```c++
   TokenType tokenType() const {
