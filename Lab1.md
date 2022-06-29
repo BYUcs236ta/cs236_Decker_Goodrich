@@ -134,6 +134,8 @@ protected:
 
 public:
     Automaton() {}
+    // best practice is to create a 'virtual' deconstructor for base classes
+    virtual ~Automaton() {}
 
     unsigned int run(std::string input) {
         this->input = input;
