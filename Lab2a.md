@@ -20,7 +20,7 @@ The `Parser` is given a `vector` of `Tokens` that are typically provided by the 
 class Parser {
  private:
   vector<Token> tokens;
-  unsigned int currToken = 0;
+  unsigned int currTokenIndex = 0;
  public:
   Parser(const vector<Token>& tokens) : tokens(tokens) { }
 };
@@ -32,14 +32,14 @@ The support functions will make the parsing routines simpler and easier to write
 
 ```c++
   TokenType tokenType() const {
-    if (currToken >= tokens.size()) return UNDEFINED;
-    return tokens.at(currToken).getType();
+    if (currTokenIndex >= tokens.size()) return UNDEFINED;
+    return tokens.at(currTokenIndex).getType();
   }
   void advanceToken() {
-    ++currToken;
+    ++currTokenIndex;
   }
   void throwError() {
-    if (currToken >= tokens.size()) throw tokens.at(tokens.size() - 1);
+    if (currTokenIndex >= tokens.size()) throw tokens.at(tokens.size() - 1);
     throw tokens.at(currToken);
   }
 ```
