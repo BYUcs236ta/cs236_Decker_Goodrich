@@ -76,7 +76,7 @@ int main() {
 ~~~c++
   void match(TokenType t) {
     //the cout should be removed for the final project output
-    cout << "token at index " << currTokenIndex << " was type: " << tokenType() << " expected: " << t << endl;
+    cout << "Token at index " << currTokenIndex << " was type: " << tokenType() << " expected: " << t << endl;
     if (tokenType() == t) {
 	// TODO: think about what should happen if the Parser matches an expected Token
     } else {
