@@ -40,7 +40,7 @@ The support functions will make the parsing routines simpler and easier to write
   }
   void throwError() {
     if (currTokenIndex >= tokens.size()) throw tokens.at(tokens.size() - 1);
-    throw tokens.at(currToken);
+    throw tokens.at(currTokenIndex);
   }
 ```
 
