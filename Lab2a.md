@@ -74,10 +74,10 @@ int main() {
 4. Add match function to Parser class (Parser.h)
 
 ~~~c++
-  void match(TokenType t) {
+  void match(TokenType expectedType) {
     //the cout should be removed for the final project output
-    cout << "Token at index " << currTokenIndex << " was type: " << tokenType() << " expected: " << t << endl;
-    if (tokenType() == t) {
+    cout << "Token at index " << currTokenIndex << " was type: " << currTokenType() << " expected: " << expectedType << endl;
+    if (currTokenType() == expectedType) {
 	// TODO: think about what should happen if the Parser matches an expected Token
     } else {
 	// TODO: think about what should happen if the Parser matches an UN-expected Token
