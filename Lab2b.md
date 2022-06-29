@@ -20,15 +20,14 @@
 
 We will represent them using the following 4 classes
 
-DatalogProgram
-Rule
-Predicate
-Parameter
+DatalogProgram, Rule, Predicate, Parameter
 
 Here is how those map onto each other:
 
 A schemes, facts, and queries are Predicates
+
 A rules are represented by our Rule class
+
 ```
 A Datalog Program has:
 	vector<Predicate> schemes
@@ -72,7 +71,7 @@ A slide you may find helpful:
 
 ![](/assets/images/project-2-data-structures.png)
 
-`TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes must include an empty constructor, setter, getter, adder, and toString() methods. Take 3 screenshots of your code(s1, s2, s3)`
+`TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes must include an empty constructor, setter, getter, adder, and toString() methods. Take a screenshot of each class (s1, s2, s3)`
 
 ##### Hint: Use your IDE to generate the setters, getters, and constructor
 ##### Hint: DatalogProgram should have addFact, addScheme, addRule, addQuery, addDomainItem methods.
@@ -80,6 +79,7 @@ A slide you may find helpful:
 ##### [For details on how to use sets please refrence c++.com] (https://www.cplusplus.com/reference/set/set/)
 
 To get you started here is Predicate
+
 ```c++
 class Predicate {
 private:
@@ -131,6 +131,7 @@ public:
 ```
 
 2. Write a test case in main that when you call toString() on the DatalogProgram you get the following:
+
 ```
 Schemes(2):
   snap(S,N,A,P)
@@ -147,6 +148,7 @@ Domain(1):
 You will need to "hard-code" values for the test case.
 
 To get you started here is the beginning of main.cpp
+
 ```
 int main() {
 	DatalogProgram program;
@@ -168,6 +170,63 @@ int main() {
 ```
 `TODO: Take a screenshot of main (s4)`
 
+---
+### Part 2: Modify the Parser
+
+1. Add helper functions into your Lexer, you may consider writing your own custom error messages.
+
+~~~c++
+string getPrevTokenContents() {
+  if (currTokenIndex < 0) throw "CUSTOM ERROR MESSAGE HERE";
+  return tokens.at(currTokenIndex - 1).toString();
+}
+
+string getCurrTokenContents() {
+  if (currTokenIndex >= tokens.size()) throw "CUSTOM ERROR MESSAGE HERE";
+  return tokens.at(currTokenIndex);
+}
+~~~
+
+2. In main you should have code that looks like:
+
+~~~c++
+try {
+  ...
+}
+catch(Token errorToken) {
+  ...
+}
+~~~
+
+3. Add in a catch block for strings:
+
+~~~c++
+try {
+  ...
+}
+catch(Token errorToken) {
+  ...
+}
+catch(const char* errorMsg) {
+  cout << errorMsg;
+}
+~~~
+
+4. Add a private DatalogProgram member to Parser
+
+~~~c++
+private:
+  DatalogProgram program;
+~~~
+
+5. Modify  Parser::run to return a DatalogProgram:
+
+~~~c++
+DatalogProgram run() {
+  ...
+  return program;
+}
+~~~
 ---
 ### Conclusion
 1. Submit your screenshots in a .zip folder on learning suite

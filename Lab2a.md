@@ -14,34 +14,37 @@ Make sure to read the Project 1 Guide (found in Learning Suite) — and the spec
 ### Part 1: Parser class and helper functions
 
 1. Make a `Parser` class (Parser.h)  
-The `Parser` is given a `vector` of `Tokens` that are typically provided by the `Lexer`.  
-(Don't forget to `#include <vector>`)  
-(Don't forget to `#include "Token.h"`)
+The `Parser` is given a `vector` of `Tokens` that are typically provided by the `Lexer`.  (Don't forget to `#include <vector>`) (Don't forget to `#include "Token.h"`)
+
 ```c++
 class Parser {
  private:
   vector<Token> tokens;
+  unsigned int currToken = 0;
  public:
   Parser(const vector<Token>& tokens) : tokens(tokens) { }
 };
 ```
 
 2. Add some support functions to the `Parser` class (Parser.h)  
+
 The support functions will make the parsing routines simpler and easier to write. The `tokenType` function returns the type of the current `Token` being looked at. The `advanceToken()` function moves to the next `Token` in `tokens`. The `throwError()` function is called when the Parser finds an error. You may want to add other support functions in addition to these. Notice how `throwError()` includes the keyword "throw". When this line is reached computation will be halted and your code will return to the nearest "catch block". If no "catch block" is available it will halt and report an error. If you haven't used exceptions in C++, see this tutorial: [https://cplusplus.com/doc/tutorial/exceptions/](https://cplusplus.com/doc/tutorial/exceptions/).
 
 ```c++
   TokenType tokenType() const {
-    return tokens.at(0).getType();
+	if (currToken > tokens.size()) return UNDEFINED;
+    return tokens.at(currToken).getType();
   }
   void advanceToken() {
-    tokens.erase(tokens.begin());
+    ++currToken;
   }
   void throwError() {
-    throw tokens.at(0);
+    throw tokens.at(currToken);
   }
 ```
 
 3. Test support functions (main.cpp). Notice here how the `catch` block is in the `main` function and the "protected code" is surrounded by a `try` block.
+
 ~~~c++
 int main() {
 
@@ -68,6 +71,7 @@ int main() {
 `TODO: Take a screenshot of this output (s1)`
 
 4. Add match function to Parser class (Parser.h)
+
 ~~~c++
   void match(TokenType t) {
     //the cout should be removed for the final project output
@@ -81,6 +85,7 @@ int main() {
 ~~~
 
 5. Test `match` function (main.cpp)
+
 ~~~c++
 int main() {
 
@@ -91,17 +96,18 @@ int main() {
   };
   
   try {
-    Parser p = Parser(tokens);
-    p.match(ID);
-    p.match(LEFT_PAREN);
-    p.match(ID);         // intentional error
-    p.match(RIGHT_PAREN);
+    Parser parser = Parser(tokens);
+    parser.match(ID);
+    parser.match(LEFT_PAREN);
+    parser.match(ID);         // intentional error
+    parser.match(RIGHT_PAREN);
   }
   catch(Token errorToken) {
     cout << errorToken.toString()
   }
 }
 ~~~
+
 `TODO: Take a screenshot of this output (s2)`
 
 ---
@@ -110,9 +116,11 @@ int main() {
 1. Here is the grammar rule for 'idList' from the Project 2a description. Write a parsing function for 'idList' in the `Parser` class (Parser.h)
 
 *Grammar Rule:*
+
 `idList -> COMMA ID idList | lambda`
 
 *Parsing Function:*
+
 ~~~c++
   // Consider having a comment that tells you what the parsing rule is:
   //   idList -> COMMA ID idList | lambda
@@ -143,8 +151,8 @@ int main() {
   };
   
   try {
-    Parser p = Parser(tokens);
-    p.idList();
+    Parser parser = Parser(tokens);
+    parser.idList();
 	cout << "Success!";
   }
   catch(Token errorToken) {
@@ -161,6 +169,7 @@ int main() {
 4. Write the parsing function for the following grammar rule:
 
 *Grammar Rule:*
+
 `scheme -> ID LEFT_PAREN ID idList RIGHT_PAREN`
 
 Hint: you do not need to wrap the function in an if statement because there is only one case for this particular grammar rule
@@ -168,6 +177,7 @@ Hint: you do not need to wrap the function in an if statement because there is o
 `TODO: Take a screenshot of your code for the scheme parsing function (s4)`
 
 5. Your code should pass the following test case
+
 ~~~c++
 int main() {
 
@@ -181,8 +191,8 @@ int main() {
   };
 
   try {
-    Parser p = Parser(tokens);
-    p.scheme();
+    Parser parser = Parser(tokens);
+    parser.scheme();
 	cout << "Success!";
   }
   catch(Token errorToken) {
