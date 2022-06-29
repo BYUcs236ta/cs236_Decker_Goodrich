@@ -32,13 +32,14 @@ The support functions will make the parsing routines simpler and easier to write
 
 ```c++
   TokenType tokenType() const {
-    if (currToken > tokens.size()) return UNDEFINED;
+    if (currToken >= tokens.size()) return UNDEFINED;
     return tokens.at(currToken).getType();
   }
   void advanceToken() {
     ++currToken;
   }
   void throwError() {
+    if (currToken >= tokens.size()) throw tokens.at(tokens.size() - 1);
     throw tokens.at(currToken);
   }
 ```
