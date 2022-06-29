@@ -126,7 +126,7 @@ int main() {
   // Consider having a comment that tells you what the parsing rule is:
   //   idList -> COMMA ID idList | lambda
   void idList() {
-    if (tokenType() __ COMMA) {
+    if (tokenType() == COMMA) {
       match(COMMA);
       match(ID);
       idList();

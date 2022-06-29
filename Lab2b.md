@@ -212,14 +212,14 @@ catch(const char* errorMsg) {
 }
 ~~~
 
-4. Add a private DatalogProgram member to Parser
+4. Add a private `DatalogProgram` member to `Parser`
 
 ~~~c++
 private:
   DatalogProgram program;
 ~~~
 
-5. Modify  Parser::run to return a DatalogProgram:
+5. Modify `Parser::run` to return a `DatalogProgram`:
 
 ~~~c++
 DatalogProgram run() {
