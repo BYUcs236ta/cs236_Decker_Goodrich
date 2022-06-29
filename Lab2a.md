@@ -212,7 +212,6 @@ int main() {
 ### TODO for the project 
 ##### (NOT REQUIRED FOR THE LAB)
 1.  Write and test parsing functions for the remaining grammar rules
-(Hint: this lab only covered terminals. For non-terminals in the grammar call the function associated with the production)
 2. Write a `run` function for the parser
 3. Modify `main` to call the `run` function in the try-catch section
 4. Import your code from project 1 and pass the vector of tokens that code creates into the Parser
