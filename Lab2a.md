@@ -52,7 +52,7 @@ int main() {
   vector<Token> tokens = {
     Token(ID,"Ned",2),
     Token(LEFT_PAREN,"(",2),
-    Token(RIGHT_PAREN,")",2),
+    Token(RIGHT_PAREN,")",2)
   };
   try {
     Parser p = Parser(tokens);
@@ -93,7 +93,7 @@ int main() {
   vector<Token> tokens = {
     Token(ID,"Ned",2),
     Token(LEFT_PAREN,"(",2),
-    Token(RIGHT_PAREN,")",2),
+    Token(RIGHT_PAREN,")",2)
   };
   
   try {
@@ -104,7 +104,7 @@ int main() {
     parser.match(RIGHT_PAREN);
   }
   catch(Token errorToken) {
-    cout << errorToken.toString()
+    cout << errorToken.toString();
   }
 }
 ~~~
@@ -148,7 +148,7 @@ int main() {
     Token(ID,"Ted",2),
     Token(COMMA,",",2),
     Token(ID,"Zed",2),
-    Token(RIGHT_PAREN,")",2),
+    Token(RIGHT_PAREN,")",2)
   };
   
   try {
@@ -188,7 +188,7 @@ int main() {
     Token(ID,"Ted",2),
     Token(COMMA,",",2),
     Token(ID,"Zed",2),
-    Token(RIGHT_PAREN,")",2),
+    Token(RIGHT_PAREN,")",2)
   };
 
   try {
