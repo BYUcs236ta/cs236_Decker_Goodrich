@@ -28,7 +28,7 @@ class Parser {
 
 2. Add some support functions to the `Parser` class (Parser.h)  
 
-The support functions will make the parsing routines simpler and easier to write. The `tokenType` function returns the type of the current `Token` being looked at. The `advanceToken()` function moves to the next `Token` in `tokens`. The `throwError()` function is called when the Parser finds an error. You may want to add other support functions in addition to these. Notice how `throwError()` includes the keyword "throw". When this line is reached computation will be halted and your code will return to the nearest "catch block". If no "catch block" is available it will halt and report an error. If you haven't used exceptions in C++, see this tutorial: [https://cplusplus.com/doc/tutorial/exceptions/](https://cplusplus.com/doc/tutorial/exceptions/).
+The support functions will make the parsing routines simpler and easier to write. The `tokenType` function returns the type of the current `Token` being looked at. The `advanceToken()` function moves to the next `Token` in `tokens`. The `throwError()` function is called when the Parser finds an error. You may want to add other support functions in addition to these. Notice how `throwError()` includes the keyword "throw". When this line is reached computation will be halted and your code will return to the nearest "catch block". If no "catch block" is available it will halt and report an error. If you haven't used exceptions in C++, see this tutorial:[https://cplusplus.com/doc/tutorial/exceptions/](https://cplusplus.com/doc/tutorial/exceptions/).
 
 ```c++
   TokenType currTokenType() const {

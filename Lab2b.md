@@ -74,6 +74,7 @@ A slide you may find helpful:
 `TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes must include an empty constructor, setter, getter, adder, and toString() methods. Take a screenshot of each class (s1, s2, s3)`
 
 ##### Hint: Use your IDE to generate the setters, getters, and constructor
+
 ##### Hint: DatalogProgram should have addFact, addScheme, addRule, addQuery, addDomainItem methods.
 
 ##### [For details on how to use sets please refrence c++.com] (https://www.cplusplus.com/reference/set/set/)
@@ -168,6 +169,7 @@ int main() {
 	return 0;
 }
 ```
+
 `TODO: Take a screenshot of main (s4)`
 
 ---
@@ -227,6 +229,7 @@ DatalogProgram run() {
   return program;
 }
 ~~~
+
 ---
 ### Conclusion
 1. Submit your screenshots in a .zip folder on learning suite
