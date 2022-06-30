@@ -18,5 +18,5 @@ These are the BYU CS 236 Labs for Professor Decker Summer 2022. Full project spe
 
 
 Authors:
-Walter DeGering
-Brett Decker
+- Walter DeGering
+- Brett Decker
