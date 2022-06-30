@@ -67,10 +67,6 @@ body: {apple(e, f, g), orange(A, B, C, f)}
 ```
 
 
-A slide you may find helpful: 
-
-![](/assets/images/project-2-data-structures.png)
-
 `TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes must include an empty constructor, setter, getter, adder, and toString() methods. Take a screenshot of each class (s1, s2, s3)`
 
 ##### Hint: Use your IDE to generate the setters, getters, and constructor
@@ -231,6 +227,81 @@ DatalogProgram run() {
 ~~~
 
 ---
+### Part 3: Update scheme()
+1. Your scheme function should look like the following:
+~~~c++
+void scheme() {
+	match(ID);
+	match(LEFT_PAREN);
+	match(ID);
+	idList();
+	match(RIGHT_PAREN);
+}
+~~~
+
+2. Add in code to create and add a scheme to datalog program:
+~~~c++
+void scheme() {
+	Predicate newScheme;
+	
+	match(ID);
+	match(LEFT_PAREN);
+	match(ID);
+	idList();
+	match(RIGHT_PAREN);
+	
+	program.addScheme(newScheme);
+	
+}
+~~~
+
+3. A scheme looks like the following `snap(s, N, a, P)`. Notice how the first ID is the "name" of the scheme
+
+4. Update scheme to save the "name" into the scheme. We will do this using the `getPrevTokenContents()` helper function we added 
+
+~~~c++
+void scheme() {
+	Predicate newScheme;
+
+	match(ID); // in our example this would be "snap"
+	newScheme.setName(getPrevTokenContents());
+
+	match(LEFT_PAREN);
+	match(ID); // in our example this would be "s"
+	idList(); // in our example this would be the list ["N", "a", "P"]
+	match(RIGHT_PAREN);
+	
+	program.addScheme(newScheme);
+	
+}
+~~~
+
+5. Do the same for the second ID. The second ID represents the first parameter.
+
+~~~c++
+void scheme() {
+	Predicate newScheme;
+
+	match(ID); // in our example this would be "snap"
+	newScheme.setName(getPrevTokenContents());
+
+	match(LEFT_PAREN);
+	match(ID); // in our example this would be "s"
+	
+	Parameter firstParameter;
+	firstParameter.setValue(getPrevTokenContents())
+	newScheme.addParameter(firstParameter);
+	
+	idList(); // in our example this would be the list ["N", "a", "P"]
+	match(RIGHT_PAREN);
+	
+	program.addScheme(newScheme);
+	
+}
+~~~
+
+
+---
 ### Conclusion
 1. Submit your screenshots in a .zip folder on learning suite
 2. Leave any feedback in the feedback section of the lab quiz
@@ -238,7 +309,7 @@ DatalogProgram run() {
 ---
 ### TODO for the project 
 ##### (NOT REQUIRED FOR THE LAB)
-1.  Import your code from project 2a
-2. Add code to produce the datalog program into your parser. This will necessitate changing your existing functions for the various productions
+1. Add code to produce the datalog program into your parser. This will necessitate changing your existing functions for the various productions
 	1. For this step start with schemes, test, the go onto facts, test, then queries, test, then finally rules. 
-3. Good Luck!
+	2. For things like idList think about what type that function will have, figure out how to pass the value of this thing from this function to where it needs to be stored
+2. Good Luck!
