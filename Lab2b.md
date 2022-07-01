@@ -300,6 +300,7 @@ void scheme() {
 }
 ~~~
 
+6. Think about how you would extract the data from the idList() function. Do you need to save it in a member variable of class? Should you change the idList() function to return something? If so what would you change it too?
 
 ---
 ### Conclusion
