@@ -52,14 +52,24 @@ public:
 ~~~
 
 5. Write a toString() method for tuples `Tuple::toString()`, for this to work you must define the following functions in both `Header` and `Tuple`. 
+
 ~~~c++
+// define these:
 unsigned int size();
  
 string at(unsigned int index);
+
+void push_back(string value);
+
+// These function names should be familar to you, they should operate the same way that a vector operates
+// at returns the string at the given index
+// push_back adds the given value to the back of values or attribute vector
+// size returns the size of the vector
 ~~~
 
 
 ~~~c++
+  // This goes in your tuple class
   string toString(Header header) {
     stringstream out;
 	string sep = "";
