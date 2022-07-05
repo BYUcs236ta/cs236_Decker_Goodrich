@@ -76,7 +76,7 @@ body: {apple(e, f, g), orange(A, B, C, f)}
 
 ##### Hint: DatalogProgram should have addFact, addScheme, addRule, addQuery, addDomainItem methods.
 
-##### [For details on how to use sets please refrence c++.com] (https://www.cplusplus.com/reference/set/set/)
+##### [For details on how to use sets please reference c++.com] (https://www.cplusplus.com/reference/set/set/)
 
 To get you started here is `Predicate`
 
@@ -147,14 +147,14 @@ To get you started here is the beginning of `main.cpp`
 int main() {
 	DatalogProgram program;
 	
-	Scheme s1;
-	s1.setName("snap");
-	s1.addParameter("S");
-	s1.addParameter("N");
-	s1.addParameter("A");
-	s1.addParameter("P");
+	Predicate snapScheme;
+	snapScheme.setName("snap");
+	snapScheme.addParameter("S");
+	snapScheme.addParameter("N");
+	snapScheme.addParameter("A");
+	snapScheme.addParameter("P");
 	
-	program.addScheme(s1);
+	program.addScheme(snapScheme);
 	
 	// ...
 	
