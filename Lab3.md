@@ -14,7 +14,7 @@
 
 2. Make 3 files: Tuple.h, Relation.h, and Header.h
 
-3. Lets start with Header. A header is a list of values. Each value defines a column in the table.
+3. Lets start with Header. A header is a list of values. Each value represents a column in the table.
 ~~~c++
 
 class Header {
@@ -25,20 +25,6 @@ private:
 public:
   Header() { }
   Header(vector<string> attributes) : attributes(attributes) { }
-
-  unsigned size() {
-    return attributes.size();
-  }
-
-  string at(int index) {
-    return attributes.at(index);
-  }
-
-  void push_back(string attribute) {
-  	attributes.push_back(attribute);
-  }
-
-  // TODO: write a toString() method for testing
 
 };
 ~~~
@@ -55,19 +41,6 @@ public:
   Tuple() { }
   Tuple(vector<string> values) : values(values) { }
 
-  unsigned size() const {
-    return values.size();
-  }
-
-  string at(int index) const {
-    return values.at(index);
-  }
-
-	
-  void push_back(string attribute) {
-  	attributes.push_back(attribute);
-  }
-  
   //You must define this to allow tuples to be put into a set
   bool operator<(const Tuple t) const {
     return values < t.values;
@@ -78,7 +51,14 @@ public:
 };
 ~~~
 
-5. Write a toString() method for tuples `Tuple::toString()`
+5. Write a toString() method for tuples `Tuple::toString()`, for this to work you must define the following functions in both `Header` and `Tuple`. 
+~~~c++
+unsigned int size();
+ 
+string at(unsigned int index);
+~~~
+
+
 ~~~c++
   string toString(Header header) {
     stringstream out;
