@@ -70,7 +70,7 @@ body: {apple(e, f, g), orange(A, B, C, f)}
 ```
 
 
-`TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes must include an empty constructor, setter, getter, adder, and toString() methods. Take a screenshot of each class (s1, s2, s3)`
+`TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes must include an empty constructor, setter, getter, adder, and toString() methods. Take a screenshot of each class (s1, s2, s3). Parameter will not have an adder`
 
 ##### Hint: Use your IDE to generate the setters, getters, and constructor
 
@@ -138,6 +138,7 @@ Queries(1):
 Domain(1):
   '12 Apple'
 ```
+
 You will need to "hard-code" values for the test case.
 
 To get you started here is the beginning of `main.cpp`
