@@ -1,3 +1,4 @@
+
 # Lab2b
 ---
 ### Part 0: Recap
@@ -174,7 +175,7 @@ int main() {
 ---
 ### Part 2: Modify the Parser
 
-1. Add helper functions into your Lexer, you may consider writing your own custom error messages.
+1. Add helper functions into your `Parser`, you may consider writing your own custom error messages.
 
 ~~~c++
 string getPrevTokenContents() {
