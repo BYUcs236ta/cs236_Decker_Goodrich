@@ -108,13 +108,6 @@ public:
 		parameters.push_back(parameter);
 	}
 	
-	// helper string adder
-	void addParameter(string paramValue) {
-		Parameter param;
-		param.setValue(paramValue);
-		addParameter(param);
-	}
-	
 	// toString
 	string toString() {
 		string sep = "";
