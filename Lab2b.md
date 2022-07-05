@@ -1,9 +1,9 @@
 # Lab2b
 ---
 ### Part 0: Recap
-1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the code is valid.
+1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the Datalog file is valid Datalog syntax.
 2. This is an important step in a programming languages evaluation. Labs 1, 2a, 2b focus of defining a syntax for our programming language. 
-3. Here we will use create an internal representation of the program. This will be done using a "DatalogProgram" class.
+3. Here we will create an internal representation of the program (to be used in the later Projects). This will be done using a `DatalogProgram` class.
 4. The output for the project will either be `Success! [the toString() of your datalogProgram object]` or `Failure! [token we failed on]`
 5. This lab will walk through the needed data-structures and have you create them.
 6. You can do this!
@@ -18,48 +18,51 @@
 	4. Queries
 	5. Domain
 
-We will represent them using the following 4 classes
-
-DatalogProgram, Rule, Predicate, Parameter
+We will represent them using the following 4 classes: `DatalogProgram`, `Rule`, `Predicate`, `Parameter`
 
 Here is how those map onto each other:
 
-A schemes, facts, and queries are Predicates
+Schemes, facts, and queries are `Predicates`
 
-A rules are represented by our Rule class
+Rules are represented by our `Rule` class
 
-```
-A Datalog Program has:
-	vector<Predicate> schemes
-	vector<Predicate> facts
-	vector<Rule> rules
-	vector<Predicate> queries
-	set<string> domain
+A Datalog Program has member variables:
+```c++
+vector<Predicate> schemes;
+vector<Predicate> facts;
+vector<Rule> rules;
+vector<Predicate> queries;
+set<string> domain;
 ```
 	
+A Predicate has member variables:
+```c++
+vector<Parameter> Parameters;
+string name;
 ```
-A Predicate has:
-	vector<Parameter> Parameters
-	string name
 	
 Example:
+```
 snap(A, B, C)
 ->
 name: snap
 Parameters: {A, B, C}
 ```
 
-```
 A Parameter has:
-	string value
+```c++
+string value;
 ```
 
-```
+
 A Rule has:
-	Predicate head
-	vector<Predicate> body
+```
+Predicate head;
+vector<Predicate> body;
+```
 	
-Example
+Example:
+```
 snap(A, B, C) :- apple(e, f, g), orange(A, B, C, f)
 ->
 head: snap(A, B, C)
@@ -75,7 +78,7 @@ body: {apple(e, f, g), orange(A, B, C, f)}
 
 ##### [For details on how to use sets please refrence c++.com] (https://www.cplusplus.com/reference/set/set/)
 
-To get you started here is Predicate
+To get you started here is `Predicate`
 
 ```c++
 class Predicate {
@@ -127,7 +130,7 @@ public:
 };
 ```
 
-2. Write a test case in main that when you call toString() on the DatalogProgram you get the following:
+2. Write a test case in `main` that when you call `toString()` on a `DatalogProgram` object you get the following (you need to create the `DatalogProgram` object and call its member functions to store the required information):
 
 ```
 Schemes(2):
@@ -144,9 +147,9 @@ Domain(1):
 ```
 You will need to "hard-code" values for the test case.
 
-To get you started here is the beginning of main.cpp
+To get you started here is the beginning of `main.cpp`
 
-```
+```c++
 int main() {
 	DatalogProgram program;
 	
@@ -159,7 +162,7 @@ int main() {
 	
 	program.addScheme(s1);
 	
-	...
+	// ...
 	
 	cout << program.toString();
 	return 0;
@@ -300,7 +303,7 @@ void scheme() {
 }
 ~~~
 
-6. Think about how you would extract the data from the idList() function. Do you need to save it in a member variable of class? Should you change the idList() function to return something? If so what would you change it too?
+6. Think about how you would extract the data from the `idList()` function. Do you need to save it in a member variable of the class? Should you change the `idList()` function to return something? If so what would you change it too?
 
 ---
 ### Conclusion
