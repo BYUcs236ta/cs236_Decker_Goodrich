@@ -106,7 +106,7 @@ public:
 	}
 	
 	// helper string adder
-	void addParameter(String paramValue) {
+	void addParameter(string paramValue) {
 		Parameter param;
 		param.setValue(paramValue);
 		addParameter(param);
