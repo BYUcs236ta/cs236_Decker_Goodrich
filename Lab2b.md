@@ -293,13 +293,15 @@ void scheme() {
 	match(ID); // in our example this would be "s"
 	
 	Parameter firstParameter;
-	firstParameter.setValue(getPrevTokenContents())
-	newScheme.addParameter(firstParameter);
+	firstParameter.setValue(getPrevTokenContents()) // make a new parameter
+	
+	newScheme.addParameter(firstParameter); // add our new parameter into our scheme
 	
 	idList(); // in our example this would be the list ["N", "a", "P"]
+	
 	match(RIGHT_PAREN);
 	
-	program.addScheme(newScheme);
+	program.addScheme(newScheme); // add scheme to our program
 	
 }
 ~~~
