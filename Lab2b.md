@@ -38,7 +38,7 @@ set<string> domain;
 	
 A Predicate has member variables:
 ```c++
-vector<Parameter> Parameters;
+vector<Parameter> parameters;
 string name;
 ```
 	
