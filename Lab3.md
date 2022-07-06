@@ -154,18 +154,6 @@ public:
 	void addRelation(Relation r) {
 		database.insert({r.getName(), r});
 	}
-
-	Relation getRelationCopy(string relationName) {
-		return database.at(relationName);
-	}
-	
-	unsigned int numTuples() {
-		unsigned int count = 0;
-		for (auto currRelationNamePair : database) {
-			count += currRelationNamePair.second.size();
-		}
-		return count;
-	}
 	
 	string toString() {
 		// TODO: Write a toString method for your database class.

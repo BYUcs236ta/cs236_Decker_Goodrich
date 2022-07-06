@@ -110,7 +110,7 @@ public:
 	}
 
 	//helper function
-	string addParameter(string parameterValue) {
+	void addParameter(string parameterValue) {
 		Parameter parameter;
 		parameter.setValue(parameterValue);
 		parameters.push_back(parameter);
