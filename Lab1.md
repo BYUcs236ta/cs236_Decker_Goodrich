@@ -13,7 +13,8 @@ Make sure to read the Project 1 Guide (found in Learning Suite) &mdash; and the 
 8. Write a toString for every class (Except maybe the automaton classes). This will be helpful during testing and debugging.
 ---
 ### Part 1: Tokens
-1. Make a `TokenType` enum (`Token.h`). You will need to add more to this list later but 
+1. Make a `TokenType` enum (`Token.h`). You will need to add more to this list later.
+
 ```c++
 #include <string>
 #include <sstream>
@@ -24,6 +25,7 @@ enum TokenType {
 ```
 
 2. Make a `Token` class (`Token.h`). A token is comprised of 3 things (Type, Contents, LineNum)
+
 ```c++
 
 class Token {
@@ -42,6 +44,7 @@ class Token {
 Feel free to use your IDE to generate it. Your constructor should initialize the "type", "contents", and "line" variables using its arguments.
 
 4. Write "toString" function for the "Token" class. *Make sure it is in public*
+
 ~~~c++
   string toString() const {
     stringstream out;
@@ -60,10 +63,10 @@ Feel free to use your IDE to generate it. Your constructor should initialize the
 
 `TODO: Take a screenshot of the code you wrote to test this and the resulted print (name your file "s2" for screenshot 2 so it is easier for the TAs to grade)
 
-6. Notice how the output has a number in place of the COMMA enum-type. We need to fix this. Add the following function to Token.h. You will need to call this function in `Token::toString()` 
+6. Notice how the output has a number in place of the COMMA enum-type. We need to fix this. Add the following function to Token.h (above the class, but below the TokenType enum). You will need to call this function in `Token::toString()` 
 
 ```c++
-string typeName(TokenType type) const {
+string tokenTypeToString(TokenType type)  {
   switch (type) {
   case COMMA:
     return "COMMA";
@@ -154,7 +157,9 @@ public:
 
 ---
 ### Part 3: Lexer
+
 1. Create a Lexer.h file.
+
 ```c++
 #include <vector>
 #include "Token.h"
@@ -167,12 +172,14 @@ class Lexer {
 ```
 
 2. Add 2 private members
+
 ```c++
 vector<Automaton*> automata;
 vector<Token> tokens;
 ```
 
 3. You will need to following methods:
+
 ```c++
 void initializeAutomata() { // this should be private
 	// Here you will create and add each automaton to your automata vector
@@ -207,6 +214,7 @@ ID Example:
 So if your input string is "::-onePerson"
 
 By those rules it should become the following tokens:
+
 ```c++
 (COLON, ":", 1),
 (COLON_DASH, ":-", 1),
@@ -214,19 +222,32 @@ By those rules it should become the following tokens:
 ```
 
 Parallel and Max Algorithm (this goes in the run method of Lexer.h):
-1) Initialize Max Variables
+
+1. Initialize Max Variables
+
 ```c++
 Automaton* maxAutomaton = automata.at(0);
 unsigned int maxRead = 0;
 ```
-2) Handle whitespace and count newlines (not required for the lab, but will be required for the project leave a TODO comment in your code for you to come back to so you know where to put this logic)
-3) Iterate through each automaton
+
+2. Handle whitespace and count newlines (not required for the lab, but will be required for the project leave a TODO comment in your code for you to come back to so you know where to put this logic)
+
+3. Iterate through each automaton
+
 ```c++
 for (unsigned int i = 0; i < automata.size(); i++) {
 	Automaton* currentAutomaton = automata.at(i);
 }
 ```
-4) In step 3's loop call `currentAutomaton`'s run method. If the result of that call is larger than `maxRead` update `maxRead` and `maxAutomaton` to be the new values of those variables. This is the "Max" part of the algorithm because we find the maximum value of that variable. 
+
+4. In step 3's loop call `currentAutomaton`'s run method. Save that result in an `unsigned int` named `numRead`
+
+5. If `numRead` is larger than `maxRead` update `maxRead` and `maxAutomaton` to be the new values of those variables. This is the "Max" part of the algorithm because we find the maximum value of that variable. 
+
+6. It may be worth including the following line of code as a helpful debug statement
+```c++
+cout << tokenTypeToString(currAutomaton->getType()) << ": read " << numRead << " characters" << endl;
+```
 
 `TODO: Write the code described in this step and take a screenshot (name your file "s4" for screenshot 4 so it is easier for the TAs to grade, we will note this as just "(s4)" in future).`
 
@@ -249,12 +270,14 @@ tokens.push_back(currToken);
 
 ---
 ### Part 5: Create Automata
-1) Colon Automaton
+1. Colon Automaton
 
 As a reminder it looks like the following:
+
 ![](/assets/images/colon_fsa.png)
 
 Here is how that turns into code:
+
 Create ColonAutomaton.h
 ```c++
 #include "Automaton.h"
@@ -276,12 +299,16 @@ private:
 };
 ```
 
-2) Colon_Dash Automaton
+2. Colon_Dash Automaton
+
 As a reminder it looks like the following:
+
 ![](/assets/images/colondash_fsa.png)
 
 and the code:
+
 Create ColonDashAutomaton.h
+
 ```c++
 #include "Automaton.h"
 class ColonDashAutomaton : public Automaton {
@@ -315,9 +342,12 @@ private:
 
 every state has a function, and each transition is a case on the if/else chain (remember that every diagram implicitly has a fail transition if none of the others pass)
 
-3) Undefined Character Automaton
+3. Undefined Character Automaton
+
 ![](/assets/images/undefined_fsa.png)
+
 Create the UndefinedCharAutomaton.h
+
 ```c++
 #include "Automaton.h"
 class UndefinedCharAutomaton : public Automaton {
@@ -333,9 +363,12 @@ private:
 };
 ```
 
-4) Identifier Automaton
+4. Identifier Automaton
+
 Code:
+
 Create IDAutomaton.h
+
 ```c++
 #include "Automaton.h"
 // need these for isalnum and isalpha
