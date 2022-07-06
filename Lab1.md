@@ -84,9 +84,6 @@ string typeName(TokenType type) const {
 
 class Automaton {
 protected:
-    // This tracks where in the input we are
-    unsigned int currCharIndex = 0;
-	
     // This tracks the number of newLines ('\n') we have read
     unsigned int newLinesRead = 0;
 
@@ -105,7 +102,6 @@ protected:
             newLinesRead++;
 	}
         numCharRead++;
-        currCharIndex++;
     }
 
     char curr() {
