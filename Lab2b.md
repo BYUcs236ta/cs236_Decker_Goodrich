@@ -180,12 +180,12 @@ int main() {
 ~~~c++
 string getPrevTokenContents() {
   if (currTokenIndex < 0) throw "CUSTOM ERROR MESSAGE HERE";
-  return tokens.at(currTokenIndex - 1).toString();
+  return tokens.at(currTokenIndex - 1).getContents();
 }
 
 string getCurrTokenContents() {
   if (currTokenIndex >= tokens.size()) throw "CUSTOM ERROR MESSAGE HERE";
-  return tokens.at(currTokenIndex);
+  return tokens.at(currTokenIndex).getContents();
 }
 ~~~
 
