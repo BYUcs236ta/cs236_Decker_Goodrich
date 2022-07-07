@@ -6,6 +6,7 @@ Slack is one of the main ways we'll be communicating this semester. Slack is ava
 2.  When you have familiarized yourself with the slack, send a direct message to a TA on slack to get full credit for the assignment. The message must contain the following text
 
 ```
+I understand the following to be true:
 1. The only accepted formats for HW and Exam submission are .pdf and .png any other format may not be accepted. 
 2. Any HW's submitted must be oriented correctly 
 ```
