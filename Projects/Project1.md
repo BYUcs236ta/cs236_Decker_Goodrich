@@ -3,6 +3,9 @@
 UNDER CONSTRUCTION Currently hosted on learning suite
 
 ---
+### Table of Contents
+[Examples] (#Example Input 1)
+---
 ### General Project Requirements
 
 1.  Projects are to be completed by each student individually (not by groups of students)
@@ -72,7 +75,7 @@ Total Tokens = 26
 ```
 
 ---
-##### Example Input 1
+##### Example Input 2
 ```
 ,
 'a string'
@@ -83,7 +86,7 @@ FactsRules
 ```
 
 ---
-##### Example Output 1
+##### Example Output 2
 ```
 (COMMA,",",1)
 (STRING,"'a string'",2)
