@@ -93,11 +93,11 @@ Rules:
 
 ##### Post-Order
 
->0, 1, 2
+>\[0, 1, 2\]
 
 ##### Reverse Post-Order
 
->2, 1, 0
+>\[2, 1, 0\]
 
 ##### SCC's
 
@@ -105,8 +105,9 @@ SCC(1) = {2}
 SCC(2) = {1}
 SCC(3) = {0}
 
+
 ---
-##### Example 2:
+### Example 2:
 ```datalog
 Rules:
 
@@ -147,11 +148,11 @@ Rules:
 
 ##### Post-Order
 
->1, 0, 3, 2, 4
+>\[1, 0, 3, 2, 4\]
 
 ##### Reverse Post-Order
 
->4, 2, 3, 0, 1
+>\[4, 2, 3, 0, 1\]
 
 ##### SCC's
 
