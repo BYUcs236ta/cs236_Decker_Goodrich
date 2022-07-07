@@ -4,7 +4,7 @@
 - [Part 0 - Recap](#Part-0---Recap)
 - [Part 1 - What is a datalog program](#Part-1---What-is-a-datalog-program)
 - [Part 2 - Modify the Parser](#Part-2---Modify-the-Parser)
-- [Part 3 - Update scheme()](#Part-3---Update-scheme())
+- [Part 3 - Update scheme](#Part-3---Update-scheme)
 - [Conclusion](#Conclusion)
 - [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
 
@@ -245,7 +245,7 @@ DatalogProgram run() {
 ~~~
 
 ---
-### Part 3 - Update scheme()
+### Part 3 - Update scheme
 1. Your scheme function should look like the following:
 ~~~c++
 void scheme() {
