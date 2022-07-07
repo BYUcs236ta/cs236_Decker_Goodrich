@@ -4,7 +4,7 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 
 ---
 ## Table of Contents
-[General-Project-Requirements](###General-Project-Requirements)
+[General-Project-Requirements](#General-Project-Requirements)
 
 ---
 ### General Project Requirements
