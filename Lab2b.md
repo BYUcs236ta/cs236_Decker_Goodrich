@@ -2,7 +2,7 @@
 ---
 # Table of Contents
 - [Part 0 - Recap](#Part-0---Recap)
-- [Part 1 - What is a datalog program?](#Part-1---What-is-a-datalog-program?)
+- [Part 1 - What is a datalog program](#Part-1---What-is-a-datalog-program)
 - [Part 2 - Modify the Parser](#Part-2---Modify-the-Parser)
 - [Part 3 - Update scheme()](#Part-3---Update-scheme())
 - [Conclusion](#Conclusion)
@@ -19,7 +19,7 @@
 6. You can do this!
 
 ---
-### Part 1 - What is a datalog program?
+### Part 1 - What is a datalog program
 
 1. A Datalog Program is composed of 5 parts. 
 	1. Schemes
