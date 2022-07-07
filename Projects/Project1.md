@@ -29,7 +29,6 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 		- [Undefined Strings](#Undefined-Strings)
 		- [Undefined Comments](#Undefined-Comments)
 
-
 ---
 ## General Project Requirements
 
