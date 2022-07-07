@@ -204,6 +204,13 @@ An identifier is a letter followed by zero or more letters or digits, and is not
 
 Note that for the input "1stPerson" the scanner would find two tokens: an 'undefined' token made from the character "1" and an 'identifier' token made from the characters "stPerson".
 
+Examples:
+| Valid       | Invalid   |
+| ----------- | --------- |
+| Identifier1 | 1stPerson |
+| Person      | Schemes          |
+
+
 ---
 ##### Strings
 
@@ -212,6 +219,14 @@ TokenType: STRING
 A string is a sequence of characters enclosed in single quotes. White space (space, tab, etc.) is not skipped when inside a string. Two adjacent single quotes within a string denote an apostrophe. The line number for a string token is the line where the string begins. If a string is not terminated (end of file is encountered before the end of the string), the token becomes an undefined token.  
   
 The 'value' of a token printed to the output is the sequence of input characters that form the token. For a string token this means that two adjacent single quotes in the input are printed as two adjacent single quotes in the output. (In other words, don't convert two adjacent single quotes in a string to just one apostrophe in the output.)
+
+~~~
+'This is a string'  
+  
+'' -- (The empty string)  
+  
+'This isn''t two strings'
+~~~
 
 ---
 ##### Comments
@@ -224,10 +239,22 @@ There are 2 varieties, you may consider handling each case as its own automaton
 ###### Single Line
 A line comment starts with a hash character (#) and ends at the end of the line or end of the file. (You may consider handling single-line and block comments as separate automata). A single line comment does NOT start with the characters "#|".
 
+```
+# This is a comment
+# This is a comment that ends in eof
+```
 
 ###### Block Comments
 A block comment starts with #| and ends with |#. Block comments may cover multiple lines. Block comments can be empty and multiple comments can appear on the same line. The line number for a comment token is the line where the comment begins. If a block comment is not terminated (end of file is encountered before the end of the comment), then this is an undefined token that includes all of the text starting at the "#|" all the way to the end of file.
 
+Examples:
+
+~~~
+#||#  
+  
+#| This is a  
+multiline comment |#
+~~~
 
 ---
 ##### Undefined Tokens
@@ -265,4 +292,7 @@ Examples:
 #| a comment that does not end
 
 #|||||||||
+
+#| This is an illegal block comment  
+because it ends with end of file
 ~~~
