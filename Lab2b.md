@@ -1,15 +1,15 @@
 # Lab2b
 ---
 # Table of Contents
-- [Part 0: Recap](#Part-0:-Recap)
-- [Part 1: What is a datalog program?](#Part-1:-What-is-a-datalog-program?)
+- [Part 0 - Recap](#Part-0---Recap)
+- [Part 1 What is a datalog program?](#Part-1-What-is-a-datalog-program?)
 - [Part 2: Modify the Parser](#Part-2:-Modify-the-Parser)
-- [Part 3: Update scheme()](#Part-3:-Update-scheme())
+- [Part 3 Update scheme()](#Part-3-Update-scheme())
 - [Conclusion](#Conclusion)
 - [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
 
 ---
-### Part 0: Recap
+### Part 0 - Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the Datalog file is valid Datalog syntax.
 2. This is an important step in a programming languages evaluation. Labs 1, 2a, 2b focus of defining a syntax for our programming language. 
 3. Here we will create an internal representation of the program (to be used in the later Projects). This will be done using a `DatalogProgram` class.
@@ -18,7 +18,7 @@
 6. You can do this!
 
 ---
-### Part 1: What is a datalog program?
+### Part 1 What is a datalog program?
 
 1. A Datalog Program is composed of 5 parts. 
 	1. Schemes
@@ -245,7 +245,7 @@ DatalogProgram run() {
 ~~~
 
 ---
-### Part 3: Update scheme()
+### Part 3 Update scheme()
 1. Your scheme function should look like the following:
 ~~~c++
 void scheme() {
