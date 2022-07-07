@@ -1,4 +1,3 @@
-
 # Lab2b
 ---
 ### Part 0: Recap

@@ -1,6 +1,6 @@
 # Lab1
 ---
-Make sure to read the Project 1 Guide (found in Learning Suite) and the specs so that you have the big picture for the entire Lexer.
+Make sure to read the Project 1 Guide (found in Learning Suite) and the specs ; so that you have the big picture for the entire Lexer.
 
 ### Part 0: Walter's Best Practice
 1. This is advice, please take it as such

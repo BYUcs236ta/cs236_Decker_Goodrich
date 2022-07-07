@@ -1,6 +1,6 @@
 # Lab2a
 ---
-Make sure to read the Project 1 Guide (found in Learning Suite) — and the specs — so that you have the big picture for the entire Parser.
+Make sure to read the Project 2 Guide (found in Learning Suite) — and the specs — so that you have the big picture for the entire Parser.
 
 ### Part 0: Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens"
