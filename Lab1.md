@@ -1,17 +1,20 @@
 # Lab1
 ---
 # Table of Contents
-- [Part 0: Walter's Best Practice](#Part 0: Walter's Best Practice)
-- [Part 1: Tokens](#Part 1: Tokens)
-- [Part 2: Automaton Base Class](#Part 2: Automaton Base Class)
-- [Part 3: Lexer](#Part 3: Lexer)
-- [Part 4: Parallel and Max](#Part 4: Parallel and Max)
-- [Part 5: Create Automata](#Part 5: Create Automata)
-- [Part 6: Add Automata to Lexer](#Part 6: Add Automata to Lexer)
-- [Part 7: Test](#Part 7: Test)
+- [Part 0 - Walter's Best Practice](#Part-0---Walter's-Best-Practice)
+- [Part 1 - Tokens](#Part-1---Tokens)
+- [Part 2 - Automaton Base Class](#Part-2---Automaton-Base-Class)
+- [Part 3 - Lexer](#Part-3---Lexer)
+- [Part 4 - Parallel and Max](#Part-4---Parallel-and-Max)
+- [Part 5 - Create Automata](#Part-5---Create-Automata)
+		- [Colon Automaton](#Colon-Automaton)
+		- [Colon Dash Automaton](#Colon-Dash-Automaton)
+		- [Undefined Character Automaton](#Undefined-Character-Automaton)
+		- [Identifier Automaton](#Identifier-Automaton)
+- [Part 6 - Add Automata to Lexer](#Part-6---Add-Automata-to-Lexer)
+- [Part 7 - Test](#Part-7---Test)
 - [Conclusion](#Conclusion)
-- [TODO for the project](#TODO for the project)
-		- [(NOT REQUIRED FOR THE LAB)](#(NOT REQUIRED FOR THE LAB))
+- [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
 
 ---
 Make sure to read the Project 1 Guide (found in Learning Suite) and the specs ; so that you have the big picture for the entire Lexer.

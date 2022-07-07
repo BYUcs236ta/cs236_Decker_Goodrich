@@ -5,9 +5,7 @@
 - [Part 1 - Parser class and helper functions](#Part-1---Parser-class-and-helper-functions)
 - [Part 2 - Parsing](#Part-2---Parsing)
 - [Conclusion](#Conclusion)
-- [TODO for the project](#TODO-for-the-project)
-		- [(NOT REQUIRED FOR THE LAB)](#(NOT-REQUIRED-FOR-THE-LAB))
-
+- [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
 
 ---
 

@@ -1,22 +1,22 @@
 # Lab3
 ---
 # Table of Contents
-- [Part 0: Recap](#Part 0: Recap)
-- [Part 1: What is a relation](#Part 1: What is a relation)
-- [Part 2: Relation Class](#Part 2: Relation Class)
-- [Part 3: Database](#Part 3: Database)
-- [Part 4: Relational Operations](#Part 4: Relational Operations)
+- [Part 0 - Recap](#Part-0---Recap)
+- [Part 1 - What is a relation](#Part-1---What-is-a-relation)
+- [Part 2 - Relation Class](#Part-2---Relation-Class)
+- [Part 3 - Database](#Part-3---Database)
+- [Part 4 - Relational Operations](#Part-4---Relational-Operations)
 - [Conclusion](#Conclusion)
-- [TODO for the project](#TODO for the project)
-		- [(NOT REQUIRED FOR THE LAB)](#(NOT REQUIRED FOR THE LAB))
+- [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
+
 
 ---
-### Part 0: Recap
+### Part 0 - Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the code is valid. We then used those tokens to create a DatalogProgram object.
 2. This is a really cool project. After you finish with project 3 you will have a complete programming language (We will add more functionality in projects 4 and 5). A programming language needs 2 things Syntax and Meaning. Projects 1, 2a, 2b defined the syntax and Projects 3, 4, and 5 will define the meaning
 
 ---
-### Part 1: What is a relation
+### Part 1 - What is a relation
 
 1. A relation is comprised of 3 parts.
 	1. Name
@@ -107,7 +107,7 @@ if (size() != header.size())
 	throw "<CUSTOM ERROR MESSAGE HERE>";
 ~~~
 
-### Part 2: Relation Class
+### Part 2 - Relation Class
 
 1. Lets make a class that can contain those 3 parts we talked about.
 
@@ -173,7 +173,7 @@ Name: Snap
  `TODO take a screenshot of your test case in main and the output. (s1)`
 
 ---
-### Part 3: Database
+### Part 3 - Database
 
 1. Create `Database.h` 
 
@@ -238,7 +238,7 @@ int main() {
 `TODO: take a screenshot of the output of the above code (s2)`
 
 ---
-### Part 4: Relational Operations
+### Part 4 - Relational Operations
 
 I am providing some test code for the following functions and the types. You must implement each of the functions and take a screenshot. These methods will go in the relation class. They will also return a relation. 
 
@@ -441,8 +441,7 @@ colC="1",colB="1"
 2. Leave any feedback in the feedback section of the lab
 
 ---
-### TODO for the project 
-##### (NOT REQUIRED FOR THE LAB)
+### TODO for the project **(NOT REQUIRED FOR THE LAB)**
 1.  Import your code from project 2b
 2. Create Interpreter class
 3. Add in evalSchemes, evalFacts, evalQueries methods

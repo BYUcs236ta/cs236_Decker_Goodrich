@@ -1,30 +1,30 @@
 # Lab5
 ---
 # Table of Contents
-- [Part 0: Recap](#Part 0: Recap)
-- [Datalog Code](#Datalog Code)
-- [Part 1: Dependency Graph](#Part 1: Dependency Graph)
-- [Part 2: Reverse Dependency Graph](#Part 2: Reverse Dependency Graph)
-- [Part 3: Reverse Post Order](#Part 3: Reverse Post Order)
-- [Part 4: Strongly Connected Components](#Part 4: Strongly Connected Components)
-- [Example 1:](#Example 1:)
-		- [Forward](#Forward)
-		- [Reverse](#Reverse)
-		- [Post-Order](#Post-Order)
-		- [Reverse Post-Order](#Reverse Post-Order)
-		- [SCC's](#SCC's)
-- [Example 2:](#Example 2:)
-		- [Forward](#Forward)
-		- [Reverse](#Reverse)
-		- [Post-Order](#Post-Order)
-		- [Reverse Post-Order](#Reverse Post-Order)
-		- [SCC's](#SCC's)
+- [Part 0 - Recap](#Part-0---Recap)
+- [Datalog Code](#Datalog-Code)
+- [Part 1 - Dependency Graph](#Part-1---Dependency-Graph)
+- [Part 2 - Reverse Dependency Graph](#Part-2---Reverse-Dependency-Graph)
+- [Part 3 - Reverse Post Order](#Part-3---Reverse-Post-Order)
+- [Part 4 - Strongly Connected Components](#Part-4---Strongly-Connected-Components)
+- [Example 1](#Example-1)
+	- [Forward](#Forward)
+	- [Reverse](#Reverse)
+	- [Post-Order](#Post-Order)
+	- [Reverse Post-Order](#Reverse-Post-Order)
+	- [SCC's](#SCC's)
+- [Example 2:](#Example-2:)
+	- [Forward](#Forward)
+	- [Reverse](#Reverse)
+	- [Post-Order](#Post-Order)
+	- [Reverse Post-Order](#Reverse-Post-Order)
+	- [SCC's](#SCC's)
 - [Conclusion](#Conclusion)
-- [TODO for the project](#TODO for the project)
-		- [(NOT REQUIRED FOR THE LAB)](#(NOT REQUIRED FOR THE LAB))
+- [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
+
 
 ---
-### Part 0: Recap
+### Part 0 - Recap
 1. We have created a programming language from the ground up. In Projects 1, 2a, 2b we defined the syntax, and converted the raw input text to tokens, then into a data structure that represents the program.
 2. For Projects 3 and 4 we took that program and interpreted it. We gave that syntax its meaning.
 3. For this final project we are going to increase the efficiency of the `Rule Evaluation` it using some graph theory.
@@ -64,27 +64,27 @@ Queries:
 ```
 
 ---
-### Part 1: Dependency Graph
+## Part 1 - Dependency Graph
 
 Draw the dependency graph and give the adjacency list for the rules of the above input. 
 
 ---
-### Part 2: Reverse Dependency Graph
+## Part 2 - Reverse Dependency Graph
 
 Give the reverse dependency graph and its adjacency list
 
 ---
-### Part 3: Reverse Post Order
+## Part 3 - Reverse Post Order
 
 Give the Post Order after performing a `Depth First Search Forest` on the Reverse Graph. Wherever a choice is to be made choose the node that is at a lower index.
 
 ---
-### Part 4: Strongly Connected Components
+## Part 4 - Strongly Connected Components
 
 Give the Strongly connected components after performing a `Depth First Search Forest` on the Forward Graph. Use the Reverse of your Post Order from part 3 as the priority list.
 
 ---
-### Example 1:
+### Example 1
 ```datalog
 Rules:
 
@@ -95,7 +95,7 @@ Rules:
 #|2|# Ancestor(x,y) :- Parent(x,y).
 ```
 
-##### Forward
+#### Forward
 
 ![](/assets/images/Lab5_Forward_SimpleExample.png)
 
@@ -105,7 +105,7 @@ Rules:
 | 1    | 1, 2 |
 | 2    |      |
 
-##### Reverse
+#### Reverse
 
 ![](/assets/images/Lab5_ReverseGraph_SimpleExample.png)
 
@@ -115,15 +115,15 @@ Rules:
 | 1    | 1   |
 | 2    | 1    |
 
-##### Post-Order
+#### Post-Order
 
 >\[0, 1, 2\]
 
-##### Reverse Post-Order
+#### Reverse Post-Order
 
 >\[2, 1, 0\]
 
-##### SCC's
+#### SCC's
 
 1. SCC{2}
 2. SCC{1}
@@ -146,7 +146,7 @@ Rules:
 #|4|# Delta(x, y, z) :- Echo(y, z, x).
 ```
 
-##### Forward
+#### Forward
 
 ![](/assets/images/Lab5_Forward_ComplicatedExample.png)
 
@@ -158,7 +158,7 @@ Rules:
 | 3    | 2    |
 | 4    |      |
 
-##### Reverse
+#### Reverse
 
 ![](/assets/images/Lab5_RevereGraph_ComplexExample.png)
 
@@ -170,15 +170,15 @@ Rules:
 | 3    | 2       |
 | 4    | 2       |
 
-##### Post-Order
+#### Post-Order
 
 >\[1, 0, 3, 2, 4\]
 
-##### Reverse Post-Order
+#### Reverse Post-Order
 
 >\[4, 2, 3, 0, 1\]
 
-##### SCC's
+#### SCC's
 
 1. SCC{4}
 2. SCC{2, 3}
@@ -186,12 +186,11 @@ Rules:
 
 
 ---
-### Conclusion
+## Conclusion
 1. Submit a .png or .pdf of your work to learning suite
 2. Leave any feedback in the feedback section of the lab
 
 ---
-### TODO for the project 
-##### (NOT REQUIRED FOR THE LAB)
+## TODO for the project **(NOT REQUIRED FOR THE LAB)**
 1.  Write code to perform the above steps
 2. Refactor Project 4 code to use this new Algorithm for rule evaluation

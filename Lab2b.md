@@ -8,7 +8,6 @@
 - [Conclusion](#Conclusion)
 - [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
 
-
 ---
 ### Part 0 - Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the Datalog file is valid Datalog syntax.
