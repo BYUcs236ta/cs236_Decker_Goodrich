@@ -2,11 +2,11 @@
 ---
 ### Part 0: Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the code is valid. We then used those tokens to create a DatalogProgram object.
-2. This is a really cool project. After you finish with project 3 you will have a complete programming language (We will add more functionality in projects 4 and 5). A programming language needs 2 things projects 1, 2a, 2b defined the syntax and projects 3, 4, and 5 will define the meaning
-3. You are amazing!
+2. This is a really cool project. After you finish with project 3 you will have a complete programming language (We will add more functionality in projects 4 and 5). A programming language needs 2 things Syntax and Meaning. Projects 1, 2a, 2b defined the syntax and Projects 3, 4, and 5 will define the meaning
 
 ---
 ### Part 1: What is a relation
+
 1. A relation is comprised of 3 parts.
 	1. Name
 	2. Header
@@ -15,6 +15,7 @@
 2. Make 3 files: Tuple.h, Relation.h, and Header.h
 
 3. Lets start with Header. A header is a list of values. Each value represents a column in the table.
+
 ~~~c++
 
 class Header {
@@ -30,6 +31,7 @@ public:
 ~~~
 
 4. Here is Tuple. A tuple represents a single row in a table.
+
 ~~~c++
 class Tuple {
 
@@ -54,19 +56,23 @@ public:
 5. Write a toString() method for tuples `Tuple::toString()`, for this to work you must define the following functions in both `Header` and `Tuple`. 
 
 ~~~c++
-// define these:
+// you need to define both the Tuple and Header classes:
 unsigned int size();
  
 string at(unsigned int index);
 
 void push_back(string value);
 
-// These function names should be familar to you, they should operate the same way that a vector operates
-// at returns the string at the given index
-// push_back adds the given value to the back of values or attribute vector
-// size returns the size of the vector
-~~~
+// These function names should be familar to you, they should operate the same way that they operate in a vector
 
+// at returns the string at the given index
+
+// push_back adds the given value to the back of values or attribute vector
+
+// size returns the size of the vector
+
+// Each should only be a single line of code
+~~~
 
 ~~~c++
   // This goes in your tuple class
@@ -84,13 +90,16 @@ void push_back(string value);
 ~~~
 
 6. Add error checking to tuple toString() method. Write your own error message. Add this code snippet to the start of Tuple::toString(). 
+
 ~~~c++
 if (size() != header.size())
 	throw "<CUSTOM ERROR MESSAGE HERE>";
 ~~~
 
 ### Part 2: Relation Class
-1) Lets make a class that can contain those 3 parts we talked about.
+
+1. Lets make a class that can contain those 3 parts we talked about.
+
 ```c++
 #include "Header"
 #include <set>
@@ -103,14 +112,13 @@ private:
 public:
 	Relation() { }
 
-	unsigned int size() {
-		return tuples.size();
-	}
-
 }
 ```
-2) Write a getter and setter for name and header.
-3) Put the following addTuple method into your relation class.
+
+2. Write a getter and setter for name and header.
+
+3. Put the following addTuple method into your relation class.
+
 ```c++
 bool addTuple(Tuple t) {
 	// this method adds the tuple into the set 
@@ -119,7 +127,9 @@ bool addTuple(Tuple t) {
 	return tuples.insert(t).second;
 }
 ```
-4) Add the following toString method to the Relation class `Relation::toString()`
+
+4. Add the following toString method to the Relation class `Relation::toString()`
+
 ```c++
 string toString() {
 	stringstream out;
@@ -130,19 +140,32 @@ string toString() {
 	return out.str();
 }
 ```
-6) Write a test case in main that reproduces the following Relation. Call toString() on the relation 
+
+5. Add the size() method to your relation class
+
+```c++
+unsigned int size() {
+	return tuples.size();
+}
+```
+
+6. Write a test case in main that reproduces the following Relation. Call toString() on the relation 
 
 Name: Snap
+
 | S       | N         | A              | P          |
 | ------- | --------- | -------------- | ---------- |
 | '12345' | 'Charlie' | '12 Apple St.' | '555-1234' |
 | '67890' | 'Lucy'    | '34 Pear Ave.' | '555-5678' |
 | '33333' | 'Snoopy'  | '12 Apple St.' | '555-1234' |
+
  `TODO take a screenshot of your test case in main and the output. (s1)`
 
 ---
 ### Part 3: Database
-1) Create `Database.h` 
+
+1. Create `Database.h` 
+
 ```c++
 #include "Relation.h"
 #include <map>
@@ -156,13 +179,16 @@ public:
 	}
 	
 	string toString() {
+		stringstream out;
 		// TODO: Write a toString method for your database class.
 		// Use this for testing
+		return out.str();
 	}
 }
 ```
 
-2) Run the following code in main:
+2. Run the following code in main:
+
 ```c++
 #include "Database.h"
 int main() {
@@ -202,15 +228,15 @@ int main() {
 
 ---
 ### Part 4: Relational Operations
+
 I am providing some test code for the following functions and the types. You must implement each of the functions and take a screenshot. These methods will go in the relation class. They will also return a relation. 
 
 1) Select
+
 You will need 2 select methods. I provide the definition of one of them. 
+
 ```c++
 Relation select(unsigned int col, string value) {
-	if (col >= header.size()) // check to see if the col in value
-		throw "column index is out of range " + col + " >= " + header.size();
-	
 	Relation output; // make a new empty relation
 	output.setName(this.name); // copy over name
 	output.setHeader(this.header); // copy over header
@@ -229,10 +255,13 @@ Relation select(unsigned int col1, unsigned int col2) {
 	// write your code here
 }
 ```
+
 `TODO: take a screenshot of your select method (s3)`
 
 The following case is given for you to try on your own to verify your method is working, feel free to add more to it!
+
 Test case:
+
 ```c++
 int main() {
 	Tuple t1;
@@ -256,12 +285,13 @@ int main() {
 	r1.addTuple(t1);
 	r1.addTuple(t2);
 
-	cout << r1.select(r1.select(0, "A")) << endl;
-	cout << r1.select(r1.select(0, 2));
+	cout << r1.select(r1.select(0, "A")).toString() << endl;
+	cout << r1.select(r1.select(0, 2)).toString() << endl;
 }
 ```
 
 Output:
+
 ```c++
 col0="A",col1="B",col2="C"
 
@@ -270,7 +300,8 @@ col0="1",col1="2",col2="1"
 
 
 
-2) Rename
+2. Rename
+
 ```c++
 Relation rename(vector<string> newAttributes) {
 	// Make a new empty relation
@@ -280,11 +311,13 @@ Relation rename(vector<string> newAttributes) {
 	
 }
 ```
+
 `TODO: take a screenshot of your rename method (s4)`
 
 The following case is given for you to try on your own to verify your method is working, feel free to add more to it!
 
 Test case:
+
 ```c++
 int main() {
 	Tuple t1;
@@ -319,12 +352,14 @@ int main() {
 ```
 
 Output:
+
 ```c++
 colA="A",colB="B",colC="C"
 colA="1",colB="2",colC="1"
 ```
 
-3) Project 
+3. Project 
+
 ```c++
 Relation project(vector<unsigned int> indiciesToKeep) {
 	// Make a new empty relation
@@ -339,6 +374,7 @@ Relation project(vector<unsigned int> indiciesToKeep) {
 	
 }
 ```
+
 Hint: instead of copying the header and they re-organizing it start with an empty tuple/header and add elements one at a time.
 
 `TODO: take a screenshot of your project method (s5)`
@@ -346,6 +382,7 @@ Hint: instead of copying the header and they re-organizing it start with an empt
 The following case is given for you to try on your own to verify your method is working, feel free to add more to it!
 
 Test case:
+
 ```c++
 int main() {
 	Tuple t1;
@@ -381,11 +418,11 @@ int main() {
 ```
 
 Output:
+
 ```c++
 colC="C",colB="A"
 colC="1",colB="1"
 ```
-
 
 ---
 ### Conclusion
@@ -396,7 +433,9 @@ colC="1",colB="1"
 ### TODO for the project 
 ##### (NOT REQUIRED FOR THE LAB)
 1.  Import your code from project 2b
-3. Good Luck!
+2. Create 
+3. Add in evalSchemes, evalFacts, evalQueries methods
+4. Good Luck!
 
 
 
