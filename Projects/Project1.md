@@ -29,7 +29,6 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 	- [Undefined Strings](#Undefined-Strings)
 	- [Undefined Comments](#Undefined-Comments)
 
-
 ---
 ### General Project Requirements
 
@@ -60,7 +59,7 @@ Write a `Lexer` that reads a sequence of characters from a text file, identifies
 ---
 ## Example Input Output
 ---
-### Example Input 1
+#### Example Input 1
 ```
 Queries:
    marriedTo ('Bea' , 'Zed')?
@@ -70,7 +69,7 @@ Rules:
 ```
 
 ---
-### Example Output 1
+#### Example Output 1
 ```
 (QUERIES,"Queries",2)
 (COLON,":",2)
@@ -102,7 +101,7 @@ Total Tokens = 26
 ```
 
 ---
-### Example Input 2
+#### Example Input 2
 ```
 ,
 'a string'
@@ -113,7 +112,7 @@ FactsRules
 ```
 
 ---
-### Example Output 2
+#### Example Output 2
 ```
 (COMMA,",",1)
 (STRING,"'a string'",2)
@@ -202,7 +201,7 @@ Total Tokens = 6
 ---
 ## Token Types
 
-### Table
+#### Table
 
 The following table describes the types of tokens your lexer must recognize.
 
@@ -228,7 +227,7 @@ The following table describes the types of tokens your lexer must recognize.
 | EOF         | The end of the input file. |          |
 
 ---
-### Identifiers
+#### Identifiers
 
 TokenType: ID
 
@@ -244,7 +243,7 @@ Examples:
 
 
 ---
-### Strings
+#### Strings
 
 TokenType: STRING
 
@@ -261,14 +260,14 @@ The 'value' of a token printed to the output is the sequence of input characters
 ~~~
 
 ---
-### Comments
+#### Comments
 
 TokenType: COMMENT
 
 There are 2 varieties, you may consider handling each case as its own automaton
 
 
-#### Single Line
+###### Single Line
 A line comment starts with a hash character (#) and ends at the end of the line or end of the file. (You may consider handling single-line and block comments as separate automata). A single line comment does NOT start with the characters "#|".
 
 ```
@@ -276,7 +275,7 @@ A line comment starts with a hash character (#) and ends at the end of the line 
 # This is a comment that ends in eof
 ```
 
-#### Block Comments
+###### Block Comments
 A block comment starts with #| and ends with |#. Block comments may cover multiple lines. Block comments can be empty and multiple comments can appear on the same line. The line number for a comment token is the line where the comment begins. If a block comment is not terminated (end of file is encountered before the end of the comment), then this is an undefined token that includes all of the text starting at the "#|" all the way to the end of file.
 
 Examples:
@@ -289,13 +288,13 @@ multiline comment |#
 ~~~
 
 ---
-### Undefined Tokens
+#### Undefined Tokens
 
 TokenType: UNDEFINED
 
 There are 3 varieties, you may consider handling each case as its own automaton.
 
-#### Undefined Characters
+###### Undefined Characters
 Any character not tokenized as a string, keyword, identifier, symbol, or white space is undefined.
 
 Examples:
@@ -304,7 +303,7 @@ Examples:
 $&^ (Three undefined tokens)
 ~~~
 
-#### Undefined Strings
+###### Undefined Strings
 Any non-terminating string is undefined. If you reach EOF before finding the end of the string the opening of the string to the EOF is considered a single UNDEFINED Token.
 
 Examples:
