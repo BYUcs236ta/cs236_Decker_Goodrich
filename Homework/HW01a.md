@@ -24,6 +24,7 @@ A useful site for drawing them digitally: [https://www.madebyevan.com/fsm/](http
 Give a regular expression for the FSA described in Question 1. 
 
 Here are the symbols we would like you to use:
+
 >() - parenthesis 
 >
 >\* - Kleene Star 
