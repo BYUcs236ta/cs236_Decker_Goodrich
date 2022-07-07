@@ -2,10 +2,9 @@
 
 UNDER CONSTRUCTION Currently hosted on learning suite
 
-[[__TOC__]]
-[[_TOC_]]
-{{toc}}
-[/toc/]
+---
+## Table of Contents
+[General-Project-Requirements](###General-Project-Requirements)
 
 ---
 ### General Project Requirements
