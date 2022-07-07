@@ -1,10 +1,11 @@
 # Lab2b
 ---
 # Table of Contents
+
 - [Part 0 - Recap](#Part-0---Recap)
 - [Part 1 What is a datalog program?](#Part-1-What-is-a-datalog-program?)
-- [Part 2: Modify the Parser](#Part-2:-Modify-the-Parser)
-- [Part 3 Update scheme()](#Part-3-Update-scheme())
+- [Part 2 - Modify the Parser](#Part-2---Modify-the-Parser)
+- [Part 3 - Update scheme()](#Part-3---Update-scheme())
 - [Conclusion](#Conclusion)
 - [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
 
@@ -187,7 +188,7 @@ int main() {
 `TODO: Take a screenshot of main (s4)`
 
 ---
-### Part 2: Modify the Parser
+### Part 2 - Modify the Parser
 
 1. Add helper functions into your `Parser`, you may consider writing your own custom error messages.
 
@@ -245,7 +246,7 @@ DatalogProgram run() {
 ~~~
 
 ---
-### Part 3 Update scheme()
+### Part 3 - Update scheme()
 1. Your scheme function should look like the following:
 ~~~c++
 void scheme() {

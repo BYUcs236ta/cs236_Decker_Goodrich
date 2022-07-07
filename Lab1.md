@@ -16,7 +16,7 @@
 ---
 Make sure to read the Project 1 Guide (found in Learning Suite) and the specs ; so that you have the big picture for the entire Lexer.
 
-### Part 0: Walter's Best Practice
+### Part 0 - Walter's Best Practice
 1. This is advice, please take it as such
 2. Stay organized
 3. Keep consistent style as there are no style requirements in this course it is up to you to enforce that for yourself
@@ -26,7 +26,7 @@ Make sure to read the Project 1 Guide (found in Learning Suite) and the specs ; 
 7. Please only use unsigned ints or size_t in this course. None of the labs require negative numbers and this will improve consistency.
 8. Write a toString for every class (Except maybe the automaton classes). This will be helpful during testing and debugging.
 ---
-### Part 1: Tokens
+### Part 1 - Tokens
 1. Make a `TokenType` enum (`Token.h`). You will need to add more to this list later.
 
 ```c++
@@ -92,7 +92,7 @@ string tokenTypeToString(TokenType type)  {
 `TODO: Add cases for COLON, UNDEFINED, ID and COLON_DASH types, take a screenshot (name your file "s3" for screenshot 3 so it is easier for the TAs to grade)`
 
 ---
-### Part 2: Automaton Base Class
+### Part 2 - Automaton Base Class
 1. Here we will create an Automaton.h file. This will be the base class for all of our Automata. Later we will show you how to use this.
 
 ```c++
@@ -170,7 +170,7 @@ public:
 ```
 
 ---
-### Part 3: Lexer
+### Part 3 - Lexer
 
 1. Create a Lexer.h file.
 
@@ -207,7 +207,7 @@ vector<Token> run(string input) { // this should be in public
 ```
 
 ---
-### Part 4: Parallel and Max
+### Part 4 - Parallel and Max
 The next big step here now that we have the architecture created is to implement our algorithm. I want to take a moment to justify that algorithm.
 
 We are trying to define the syntax for a programming language. We have a list of desired patterns. Here is a partial list of them:
@@ -283,7 +283,8 @@ tokens.push_back(currToken);
  7) After the while loop, return tokens to close off the function.
 
 ---
-### Part 5: Create Automata
+### Part 5 - Create Automata
+##### Colon Automaton
 1. Colon Automaton
 
 As a reminder it looks like the following:
@@ -313,6 +314,7 @@ private:
 };
 ```
 
+##### Colon Dash Automaton
 2. Colon_Dash Automaton
 
 As a reminder it looks like the following:
@@ -356,6 +358,7 @@ private:
 
 every state has a function, and each transition is a case on the if/else chain (remember that every diagram implicitly has a fail transition if none of the others pass)
 
+##### Undefined Character Automaton
 3. Undefined Character Automaton
 
 ![](/assets/images/undefined_fsa.png)
@@ -377,9 +380,8 @@ private:
 };
 ```
 
+##### Identifier Automaton
 4. Identifier Automaton
-
-Code:
 
 Create IDAutomaton.h
 
@@ -425,7 +427,7 @@ Hint 2: It may be helpful to include sError in your diagram but you are not requ
 
 Hint 3: The following site may be helpful: [Finite State Machine Designer](https://www.madebyevan.com/fsm/)
 
-### Part 6: Add Automata to Lexer
+### Part 6 - Add Automata to Lexer
 1) add the following includes to `Lexer.h`
 ```c++
 #include "IDAutomaton.h"
@@ -446,7 +448,7 @@ void initializeAutomata() {
 The order you choose to write these matters. This is your tie breaker. If an Automaton is earlier in the list it will have higher precedence when both return the same value.
 
 ---
-### Part 7: Test
+### Part 7 - Test
 Run the following code in main:
 ```c++
 #include "Lexer.h"
@@ -470,8 +472,7 @@ It should produce the following as output:
 2. Leave any feedback in notes of your lab submission.
 
 ---
-### TODO for the project 
-##### (NOT REQUIRED FOR THE LAB)
+### TODO for the project **(NOT REQUIRED FOR THE LAB)**
 1. Write and test all of the Automata on the lab specs
 	1. Start with the easy ones
 	2. Test as you go

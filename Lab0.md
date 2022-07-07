@@ -1,24 +1,22 @@
 # Lab0
 ---
 # Table of Contents
-
-- [Table of Contents](#Table of Contents)
-- [Part 0: TA Recommendations](#Part 0: TA Recommendations)
-- [Part 1: Installing Clion](#Part 1: Installing Clion)
-		- [Part 1a: License Creation](#Part 1a: License Creation)
-		- [Part 1b: Download](#Part 1b: Download)
-- [Part 2: Setting up clion project](#Part 2: Setting up clion project)
-- [Part 3: Hello World Program](#Part 3: Hello World Program)
+- [Part 0 - TA Recommendations](#Part-0---TA-Recommendations)
+- [Part 1 - Installing Clion](#Part-1---Installing-Clion)
+		- [Part 1a - License Creation](#Part-1a---License-Creation)
+		- [Part 1b - Download](#Part-1b---Download)
+- [Part 2 - Setting up clion project](#Part-2---Setting-up-clion-project)
+- [Part 3 - Hello World Program](#Part-3---Hello-World-Program)
 - [Conclusion](#Conclusion)
 
 ---
-### Part 0: TA Recommendations
+### Part 0 - TA Recommendations
 We advise students to use CLion. The reason for this is that is has good debugging tools and the TAs are familiar with it. You may choose to use a different IDE if you wish but be warned that the TAs won't be able to help with IDE specific issues as effectively. If you are making this choice submit a screenshot of the hello-world program (the one you should be familiar with, shown in Part 3) running in your IDE/programming environment and you will receive full credit for this lab!
 
 ---
-### Part 1: Installing Clion
+### Part 1 - Installing Clion
 ---
-##### Part 1a: License Creation
+##### Part 1a - License Creation
 If you already own clion you may skip this step. If not you may get a free educational license by following the steps below:
 1) Go to the following link [https://www.jetbrains.com/community/education/#students](https://www.jetbrains.com/community/education/#students)
 2) Click apply now
@@ -27,11 +25,11 @@ If you already own clion you may skip this step. If not you may get a free educa
 5) Click the activation email then from there it will ask you to login/create a jet-brains account
 6)  Download clion from this page
 ---
-##### Part 1b: Download
+##### Part 1b - Download
 1) Download clion from the following link if not already installed: [https://www.jetbrains.com/clion/download/](https://www.jetbrains.com/clion/download/)
 
 ---
-### Part 2: Setting up clion project
+### Part 2 - Setting up clion project
 Before completing these instructions on how to connect CLion to the CS lab machines, make sure that you have a CS account set up and that you remember your password. If you do not, follow the appropriate instructions [here](https://docs.cs.byu.edu/doku.php?id=setting-up-your-account-with-the-cs-authentication-system).
 
 It is best to have a simple main.cpp file open in CLion before you begin these steps.
@@ -132,7 +130,7 @@ You might need to click "reload changes" before you'll see the green arrow next 
 Grading note: We advise students to use CLion. The reason for this is that is has good debugging tools and the TAs are familiar with it. You may choose to use a different IDE if you wish but be warned that the TAs won't be able to help with IDE specific issues as effectively. If you are making this choice submit a screenshot of the hello-world program running in your IDE/programming environment and you will receive full credit for this lab!
 
 ---
-### Part 3: Hello World Program
+### Part 3 - Hello World Program
 ```c++
 #include <iostream>  
   

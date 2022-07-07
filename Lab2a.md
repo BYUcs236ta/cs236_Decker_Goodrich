@@ -1,18 +1,19 @@
 # Lab2a
 ---
 # Table of Contents
-- [Part 0: Recap](#Part 0: Recap)
-- [Part 1: Parser class and helper functions](#Part 1: Parser class and helper functions)
-- [Part 2: Parsing](#Part 2: Parsing)
+- [Part 0 - Recap](#Part-0---Recap)
+- [Part 1 - Parser class and helper functions](#Part-1---Parser-class-and-helper-functions)
+- [Part 2 - Parsing](#Part-2---Parsing)
 - [Conclusion](#Conclusion)
-- [TODO for the project](#TODO for the project)
-		- [(NOT REQUIRED FOR THE LAB)](#(NOT REQUIRED FOR THE LAB))
+- [TODO for the project](#TODO-for-the-project)
+		- [(NOT REQUIRED FOR THE LAB)](#(NOT-REQUIRED-FOR-THE-LAB))
+
 
 ---
 
 Make sure to read the Project 2 Guide (found in Learning Suite) — and the specs — so that you have the big picture for the entire Parser.
 
-### Part 0: Recap
+### Part 0 - Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens"
 2. This is an important step in a programming languages evaluation. Labs 1, 2a, 2b focus of defining a syntax for our programming language. 
 3. Here we will use a grammar to verify if the Tokens created represent a valid Datalog program. 
@@ -21,7 +22,7 @@ Make sure to read the Project 2 Guide (found in Learning Suite) — and the spec
 6. Keep up the good work!
 
 ---
-### Part 1: Parser class and helper functions
+### Part 1 - Parser class and helper functions
 
 1. Make a `Parser` class (Parser.h)  
 The `Parser` is given a `vector` of `Tokens` that are typically provided by the `Lexer`.  (Don't forget to `#include <vector>`) (Don't forget to `#include "Token.h"`)
@@ -122,7 +123,7 @@ int main() {
 `TODO: Take a screenshot of this output (s2)`
 
 ---
-### Part 2: Parsing
+### Part 2 - Parsing
 
 1. Here is the grammar rule for 'idList' from the Project 2a description. Write a parsing function for 'idList' in the `Parser` class (Parser.h)
 
@@ -219,8 +220,7 @@ int main() {
 2. Leave any feedback in notes of your lab submission
 
 ---
-### TODO for the project 
-##### (NOT REQUIRED FOR THE LAB)
+### TODO for the project **(NOT REQUIRED FOR THE LAB)**
 1.  Write and test parsing functions for the remaining grammar rules
 (Hint: this lab only covered terminals. For non-terminals in the grammar call the function associated with the production)
 2. Write a `run` function for the parser
