@@ -2,8 +2,30 @@
 
 UNDER CONSTRUCTION Currently hosted on learning suite
 
-```toc
-```
+- [[#General Project Requirements|General Project Requirements]]
+- [[#Special Requirements|Special Requirements]]
+- [[#Recourses|Recourses]]
+- [[#Example I/O|Example I/O]]
+		- [[#Example Input 1|Example Input 1]]
+		- [[#Example Output 1|Example Output 1]]
+		- [[#Example Input 2|Example Input 2]]
+		- [[#Example Output 2|Example Output 2]]
+- [[#Example I/O#Testing|Testing]]
+- [[#Example I/O#Design|Design]]
+- [[#Example I/O#White Space|White Space]]
+- [[#Example I/O#Output Format|Output Format]]
+- [[#Example I/O#Input Errors|Input Errors]]
+- [[#Example I/O#Token Types|Token Types]]
+	- [[#Token Types#Table|Table]]
+	- [[#Token Types#Identifiers|Identifiers]]
+	- [[#Token Types#Strings|Strings]]
+	- [[#Token Types#Comments|Comments]]
+		- [[#Comments#Single Line|Single Line]]
+		- [[#Comments#Block Comments|Block Comments]]
+	- [[#Token Types#Undefined Tokens|Undefined Tokens]]
+		- [[#Undefined Tokens#Undefined Characters|Undefined Characters]]
+		- [[#Undefined Tokens#Undefined Strings|Undefined Strings]]
+		- [[#Undefined Tokens#Undefined Comments|Undefined Comments]]
 
 ---
 ### General Project Requirements
