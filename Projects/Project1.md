@@ -25,7 +25,7 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 	- [[#Token Types#Undefined Tokens|Undefined Tokens]]
 		- [[#Undefined Tokens#Undefined Characters|Undefined Characters]]
 		- [[#Undefined Tokens#Undefined Strings|Undefined Strings]]
-		- [[#Undefined Tokens#Undefined Comments|Undefined Comments]]
+		- [#Undefined Tokens#Undefined Comments|Undefined Comments]
 
 ---
 ### General Project Requirements
