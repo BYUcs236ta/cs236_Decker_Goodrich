@@ -475,7 +475,9 @@ It should produce the following as output:
 2. Leave any feedback in notes of your lab submission.
 
 ---
-### TODO for the project **(NOT REQUIRED FOR THE LAB)**
+### TODO for the project 
+
+**(NOT REQUIRED FOR THE LAB)**
 1. Write and test all of the Automata on the lab specs
 	1. Start with the easy ones
 	2. Test as you go

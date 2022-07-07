@@ -328,7 +328,9 @@ void scheme() {
 2. Leave any feedback in the feedback section of the lab quiz
 
 ---
-### TODO for the project **NOT REQUIRED FOR THE LAB**
+### TODO for the project 
+
+**NOT REQUIRED FOR THE LAB**
 1. Add code to produce the datalog program into your parser. This will necessitate changing your existing functions for the various productions.
 	1. For this step start with schemes, test, the go onto facts, test, then queries, test, then finally rules. 
 	2. For things like idList think about what type that function will have, figure out how to pass the value of this thing from this function to where it needs to be stored

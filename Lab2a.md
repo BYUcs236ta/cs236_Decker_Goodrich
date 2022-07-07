@@ -5,7 +5,7 @@
 - [Part 1 - Parser class and helper functions](#Part-1---Parser-class-and-helper-functions)
 - [Part 2 - Parsing](#Part-2---Parsing)
 - [Conclusion](#Conclusion)
-- [TODO for the project **NOT REQUIRED FOR THE LAB**](#TODO-for-the-project-**NOT-REQUIRED-FOR-THE-LAB**)
+- [TODO for the project](#TODO-for-the-project)
 
 
 ---
@@ -219,8 +219,10 @@ int main() {
 2. Leave any feedback in notes of your lab submission
 
 ---
-### TODO for the project **NOT REQUIRED FOR THE LAB**
-1.  Write and test parsing functions for the remaining grammar rules
+### TODO for the project
+
+ **Not Required for the lab**
+1. Write and test parsing functions for the remaining grammar rules
 (Hint: this lab only covered terminals. For non-terminals in the grammar call the function associated with the production)
 2. Write a `run` function for the parser
 	1. This `run` function will call your `Parser::datalogProgram()` function

@@ -7,4 +7,4 @@
 
 ---
 ### TODO for the project 
-##### (NOT REQUIRED FOR THE LAB)
+**(NOT REQUIRED FOR THE LAB)**

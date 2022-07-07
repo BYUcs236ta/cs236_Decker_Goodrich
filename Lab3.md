@@ -441,7 +441,9 @@ colC="1",colB="1"
 2. Leave any feedback in the feedback section of the lab
 
 ---
-### TODO for the project **(NOT REQUIRED FOR THE LAB)**
+### TODO for the project 
+
+**(NOT REQUIRED FOR THE LAB)**
 1.  Import your code from project 2b
 2. Create Interpreter class
 3. Add in evalSchemes, evalFacts, evalQueries methods
