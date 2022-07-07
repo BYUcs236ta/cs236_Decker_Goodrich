@@ -1,5 +1,16 @@
 # Lab3
 ---
+# Table of Contents
+- [Part 0: Recap](#Part 0: Recap)
+- [Part 1: What is a relation](#Part 1: What is a relation)
+- [Part 2: Relation Class](#Part 2: Relation Class)
+- [Part 3: Database](#Part 3: Database)
+- [Part 4: Relational Operations](#Part 4: Relational Operations)
+- [Conclusion](#Conclusion)
+- [TODO for the project](#TODO for the project)
+		- [(NOT REQUIRED FOR THE LAB)](#(NOT REQUIRED FOR THE LAB))
+
+---
 ### Part 0: Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the code is valid. We then used those tokens to create a DatalogProgram object.
 2. This is a really cool project. After you finish with project 3 you will have a complete programming language (We will add more functionality in projects 4 and 5). A programming language needs 2 things Syntax and Meaning. Projects 1, 2a, 2b defined the syntax and Projects 3, 4, and 5 will define the meaning

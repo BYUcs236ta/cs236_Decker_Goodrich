@@ -1,5 +1,15 @@
 # Lab2a
 ---
+# Table of Contents
+- [Part 0: Recap](#Part 0: Recap)
+- [Part 1: Parser class and helper functions](#Part 1: Parser class and helper functions)
+- [Part 2: Parsing](#Part 2: Parsing)
+- [Conclusion](#Conclusion)
+- [TODO for the project](#TODO for the project)
+		- [(NOT REQUIRED FOR THE LAB)](#(NOT REQUIRED FOR THE LAB))
+
+---
+
 Make sure to read the Project 2 Guide (found in Learning Suite) — and the specs — so that you have the big picture for the entire Parser.
 
 ### Part 0: Recap

@@ -1,5 +1,18 @@
 # Lab2b
 ---
+# Table of Contents
+- [Part 0: Recap](#Part 0: Recap)
+- [Part 1: What is a datalog program?](#Part 1: What is a datalog program?)
+		- [Hint: Use your IDE to generate the setters, getters, and constructor](#Hint: Use your IDE to generate the setters, getters, and constructor)
+		- [Hint: DatalogProgram should have addFact, addScheme, addRule, addQuery, addDomainItem methods.](#Hint: DatalogProgram should have addFact, addScheme, addRule, addQuery, addDomainItem methods.)
+		- [[For details on how to use sets please reference c++.com] (https://www.cplusplus.com/reference/set/set/)](#[For details on how to use sets please reference c++.com] (https://www.cplusplus.com/reference/set/set/))
+- [Part 2: Modify the Parser](#Part 2: Modify the Parser)
+- [Part 3: Update scheme()](#Part 3: Update scheme())
+- [Conclusion](#Conclusion)
+- [TODO for the project](#TODO for the project)
+		- [(NOT REQUIRED FOR THE LAB)](#(NOT REQUIRED FOR THE LAB))
+
+---
 ### Part 0: Recap
 1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the Datalog file is valid Datalog syntax.
 2. This is an important step in a programming languages evaluation. Labs 1, 2a, 2b focus of defining a syntax for our programming language. 

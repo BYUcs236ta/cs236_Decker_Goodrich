@@ -1,5 +1,29 @@
 # Lab5
 ---
+# Table of Contents
+- [Part 0: Recap](#Part 0: Recap)
+- [Datalog Code](#Datalog Code)
+- [Part 1: Dependency Graph](#Part 1: Dependency Graph)
+- [Part 2: Reverse Dependency Graph](#Part 2: Reverse Dependency Graph)
+- [Part 3: Reverse Post Order](#Part 3: Reverse Post Order)
+- [Part 4: Strongly Connected Components](#Part 4: Strongly Connected Components)
+- [Example 1:](#Example 1:)
+		- [Forward](#Forward)
+		- [Reverse](#Reverse)
+		- [Post-Order](#Post-Order)
+		- [Reverse Post-Order](#Reverse Post-Order)
+		- [SCC's](#SCC's)
+- [Example 2:](#Example 2:)
+		- [Forward](#Forward)
+		- [Reverse](#Reverse)
+		- [Post-Order](#Post-Order)
+		- [Reverse Post-Order](#Reverse Post-Order)
+		- [SCC's](#SCC's)
+- [Conclusion](#Conclusion)
+- [TODO for the project](#TODO for the project)
+		- [(NOT REQUIRED FOR THE LAB)](#(NOT REQUIRED FOR THE LAB))
+
+---
 ### Part 0: Recap
 1. We have created a programming language from the ground up. In Projects 1, 2a, 2b we defined the syntax, and converted the raw input text to tokens, then into a data structure that represents the program.
 2. For Projects 3 and 4 we took that program and interpreted it. We gave that syntax its meaning.
