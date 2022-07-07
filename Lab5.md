@@ -159,3 +159,15 @@ Rules:
 SCC(1) = {4}
 SCC(2) = {2, 3}
 SCC(3) = {0, 1}
+
+
+---
+### Conclusion
+1. Submit a .png or .pdf of your work to learning suite
+2. Leave any feedback in the feedback section of the lab
+
+---
+### TODO for the project 
+##### (NOT REQUIRED FOR THE LAB)
+1.  Write code to perform the above steps
+2. Refactor Project 4 code to use this new Algorithm for rule evaluation

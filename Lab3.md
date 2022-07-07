@@ -390,7 +390,7 @@ colC="1",colB="1"
 ---
 ### Conclusion
 1. Submit your screenshots in a .zip folder on learning suite
-2. Leave any feedback in the feedback section of the lab quiz
+2. Leave any feedback in the feedback section of the lab
 
 ---
 ### TODO for the project 
