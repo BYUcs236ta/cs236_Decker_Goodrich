@@ -11,7 +11,7 @@ c. f(x) = sin(x) when domain space is the Natural numbers ($\mathbb{N}$, the pos
 
 d. f(x) = $x^{½}$ when both domain and range space are R. (Recall that the square root of a positive number n is n.) 
 
-e. f(x, y) = max(x, y) for domain space $\mathbb{R}, \mathbb{R}$ and range space Real numbers ($\mathbb{R}$). 
+e. f(x, y) = max(x, y) for domain space $\mathbb{R}, \mathbb{R}$ and range space Real numbers ($\mathbb{R}$). (The `max()` function returns the item with the highest value)
 
 f. f = {((1, 1), a), ((2, 1), b), ((1, 2), b)} for domain space {1, 2}, {1, 2} and range space {a, b}. 
 
@@ -35,4 +35,5 @@ e. f(x) = cos(x) when both domain and range space are $\mathbb{R}$.
 f. f(x) = 3x+2 when both domain and range space are $\mathbb{R}$. 
 
 g. f(x) = x2+1 when both domain and range space are positive reals $(\mathbb{R}^{+})$.
+
 
