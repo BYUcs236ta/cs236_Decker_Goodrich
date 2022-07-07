@@ -433,9 +433,11 @@ colC="1",colB="1"
 ### TODO for the project 
 ##### (NOT REQUIRED FOR THE LAB)
 1.  Import your code from project 2b
-2. Create 
+2. Create Interpreter class
 3. Add in evalSchemes, evalFacts, evalQueries methods
-4. Good Luck!
+4. In interpreter::run() call each of those methods
+5. Try to keep code as modular as possible
+6. Good Luck!
 
 
 

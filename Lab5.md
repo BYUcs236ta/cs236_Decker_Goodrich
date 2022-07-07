@@ -73,7 +73,7 @@ Rules:
 
 ##### Forward
 
-![](Lab5_Forward_SimpleExample.png)
+![](/assets/images/Lab5_Forward_SimpleExample.png)
 
 | From | To   |
 | ---- | ---- |
@@ -83,7 +83,7 @@ Rules:
 
 ##### Reverse
 
-![[Pasted image 20220706191121.png]]
+![](/assets/images/Lab5_ReverseGraph_SimpleExample.png)
 
 | From | To  |
 | ---- | --- |
@@ -124,7 +124,7 @@ Rules:
 
 ##### Forward
 
-![](Lab5_Forward_ComplicatedExample.png)
+![](/assets/images/Lab5_Forward_ComplicatedExample.png)
 
 | From | To   |
 | ---- | ---- |
@@ -136,7 +136,7 @@ Rules:
 
 ##### Reverse
 
-![[Pasted image 20220706191548.png]]
+![](/assets/images/Lab5_RevereGraph_ComplexExample.png)
 
 | From | To      |
 | ---- | ------- |
