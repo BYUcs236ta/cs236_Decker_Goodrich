@@ -4,30 +4,33 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 
 ---
 # Table of Contents
+
 - [General Project Requirements](#General-Project-Requirements)
 - [Special Requirements](#Special-Requirements)
 - [Recourses](#Recourses)
 - [Example Input Output](#Example-Input-Output)
-		- [Example Input 1](#Example-Input-1)
-		- [Example Output 1](#Example-Output-1)
-		- [Example Input 2](#Example-Input-2)
-		- [Example Output 2](#Example-Output-2)
+- [Example Input 1](#Example-Input-1)
+- [Example Output 1](#Example-Output-1)
+- [Example Input 2](#Example-Input-2)
+- [Example Output 2](#Example-Output-2)
 - [Testing](#Testing)
 - [Design](#Design)
 - [White Space](#White-Space)
 - [Output Format](#Output-Format)
 - [Input Errors](#Input-Errors)
 - [Token Types](#Token-Types)
-	- [Table](#Table)
-	- [Identifiers](#Identifiers)
-	- [Strings](#Strings)
-	- [Comments](#Comments)
-		- [Single Line](#Single-Line)
-		- [Block Comments](#Block-Comments)
-	- [Undefined Tokens](#Undefined-Tokens)
-		- [Undefined Characters](#Undefined-Characters)
-		- [Undefined Strings](#Undefined-Strings)
-		- [Undefined Comments](#Undefined-Comments)
+- [Table](#Table)
+- [Identifiers](#Identifiers)
+- [Strings](#Strings)
+- [Comments](#Comments)
+	- [Single Line](#Single-Line)
+	- [Block Comments](#Block-Comments)
+- [Undefined Tokens](#Undefined-Tokens)
+	- [Undefined Characters](#Undefined-Characters)
+	- [Undefined Strings](#Undefined-Strings)
+	- [Undefined Comments](#Undefined-Comments)
+
+
 ---
 ### General Project Requirements
 
