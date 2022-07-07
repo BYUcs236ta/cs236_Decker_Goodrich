@@ -12,7 +12,7 @@ It also should reject times like:
 
 Note that there are no leading zeros. Also, am and pm are lowercase and have no periods. A terminal error state is not necessary. 
 
-To make the task easier, you can make up any grouping you want. For example, you may wish to let 
+To make the task easier, you can make up any grouping you want. For example, you may wish to let:
 
 \<digit\> represent any digit
 
