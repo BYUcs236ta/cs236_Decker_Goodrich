@@ -12,7 +12,15 @@ It also should reject times like:
 
 Note that there are no leading zeros. Also, am and pm are lowercase and have no periods. A terminal error state is not necessary. 
 
-To make the task easier, you can make up any grouping you want. For example, you may wish to let \<digit\> represent any digit, let <1> represent the digit 1, let <012> represent any digit 0 through 2, and let represent a space. 
+To make the task easier, you can make up any grouping you want. For example, you may wish to let 
+
+\<digit\> represent any digit
+
+\<1\> represent the digit 1
+
+\<0-2\> represent any digit 0 through 2
+
+\<space\> represent a space.
 
 Time statements are formatted in many ways, but we want your FSA to only accept the above time format and not military time or any other time format.
 
