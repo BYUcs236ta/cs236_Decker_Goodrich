@@ -4,7 +4,6 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 
 ---
 # Table of Contents
-
 - [General Project Requirements](#General-Project-Requirements)
 - [Special Requirements](#Special-Requirements)
 - [Recourses](#Recourses)
@@ -58,6 +57,7 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 
 Write a `Lexer` that reads a sequence of characters from a text file, identifies the `datalog language` tokens found in the file, and outputs each token.
 
+---
 ## Example Input Output
 ---
 ### Example Input 1
