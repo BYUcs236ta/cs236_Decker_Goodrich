@@ -22,12 +22,12 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 	- [Identifiers](#Identifiers)
 	- [Strings](#Strings)
 	- [Comments](#Comments)
-			- [Single Line](#Single-Line)
-			- [Block Comments](#Block-Comments)
+		- [Single Line](#Single-Line)
+		- [Block Comments](#Block-Comments)
 	- [Undefined Tokens](#Undefined-Tokens)
-			- [Undefined Characters](#Undefined-Characters)
-			- [Undefined Strings](#Undefined-Strings)
-			- [Undefined Comments](#Undefined-Comments)
+		- [Undefined Characters](#Undefined-Characters)
+		- [Undefined Strings](#Undefined-Strings)
+		- [Undefined Comments](#Undefined-Comments)
 
 
 ---
