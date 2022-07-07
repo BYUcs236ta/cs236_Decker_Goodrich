@@ -18,16 +18,17 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 - [Output Format](#Output-Format)
 - [Input Errors](#Input-Errors)
 - [Token Types](#Token-Types)
-- [Table](#Table)
-- [Identifiers](#Identifiers)
-- [Strings](#Strings)
-- [Comments](#Comments)
-	- [Single Line](#Single-Line)
-	- [Block Comments](#Block-Comments)
-- [Undefined Tokens](#Undefined-Tokens)
-	- [Undefined Characters](#Undefined-Characters)
-	- [Undefined Strings](#Undefined-Strings)
-	- [Undefined Comments](#Undefined-Comments)
+	- [Table](#Table)
+	- [Identifiers](#Identifiers)
+	- [Strings](#Strings)
+	- [Comments](#Comments)
+			- [Single Line](#Single-Line)
+			- [Block Comments](#Block-Comments)
+	- [Undefined Tokens](#Undefined-Tokens)
+			- [Undefined Characters](#Undefined-Characters)
+			- [Undefined Strings](#Undefined-Strings)
+			- [Undefined Comments](#Undefined-Comments)
+
 
 ---
 ### General Project Requirements
@@ -314,7 +315,7 @@ Examples:
 ' '' '' a another string that does not end
 ~~~
 
-#### Undefined Comments
+###### Undefined Comments
 Any non-terminating Block-Comment is undefined. If you reach EOF before finding the end of the Block-Comment the opening of the Block-Comment to the EOF is considered a single UNDEFINED Token.
 
 Examples:
