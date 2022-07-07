@@ -1,16 +1,12 @@
 # Lab2b
 ---
 # Table of Contents
-- [Part 0: Recap](#Part 0: Recap)
-- [Part 1: What is a datalog program?](#Part 1: What is a datalog program?)
-		- [Hint: Use your IDE to generate the setters, getters, and constructor](#Hint: Use your IDE to generate the setters, getters, and constructor)
-		- [Hint: DatalogProgram should have addFact, addScheme, addRule, addQuery, addDomainItem methods.](#Hint: DatalogProgram should have addFact, addScheme, addRule, addQuery, addDomainItem methods.)
-		- [[For details on how to use sets please reference c++.com] (https://www.cplusplus.com/reference/set/set/)](#[For details on how to use sets please reference c++.com] (https://www.cplusplus.com/reference/set/set/))
-- [Part 2: Modify the Parser](#Part 2: Modify the Parser)
-- [Part 3: Update scheme()](#Part 3: Update scheme())
+- [Part 0: Recap](#Part-0:-Recap)
+- [Part 1: What is a datalog program?](#Part-1:-What-is-a-datalog-program?)
+- [Part 2: Modify the Parser](#Part-2:-Modify-the-Parser)
+- [Part 3: Update scheme()](#Part-3:-Update-scheme())
 - [Conclusion](#Conclusion)
-- [TODO for the project](#TODO for the project)
-		- [(NOT REQUIRED FOR THE LAB)](#(NOT REQUIRED FOR THE LAB))
+- [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
 
 ---
 ### Part 0: Recap
@@ -40,6 +36,7 @@ Schemes, facts, and queries are `Predicates`
 Rules are represented by our `Rule` class
 
 A Datalog Program has member variables:
+
 ```c++
 vector<Predicate> schemes;
 vector<Predicate> facts;
@@ -49,12 +46,14 @@ set<string> domain;
 ```
 	
 A Predicate has member variables:
+
 ```c++
 vector<Parameter> parameters;
 string name;
 ```
-	
+
 Example:
+
 ```
 snap(A, B, C)
 ->
@@ -63,18 +62,21 @@ Parameters: {A, B, C}
 ```
 
 A Parameter has:
+
 ```c++
 string value;
 ```
 
 
 A Rule has:
+
 ```
 Predicate head;
 vector<Predicate> body;
 ```
 	
 Example:
+
 ```
 snap(A, B, C) :- apple(e, f, g), orange(A, B, C, f)
 ->
@@ -85,11 +87,11 @@ body: {apple(e, f, g), orange(A, B, C, f)}
 
 `TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes must include an empty constructor, setter, getter, adder, and toString() methods. Take a screenshot of each class (s1, s2, s3). Parameter will not have an adder`
 
-##### Hint: Use your IDE to generate the setters, getters, and constructor
+**Hint: Use your IDE to generate the setters, getters, and constructor**
 
-##### Hint: DatalogProgram should have addFact, addScheme, addRule, addQuery, addDomainItem methods.
+**Hint: DatalogProgram should have addFact, addScheme, addRule, addQuery, addDomainItem methods.**
 
-##### [For details on how to use sets please reference c++.com] (https://www.cplusplus.com/reference/set/set/)
+**[For details on how to use sets please reference c++.com] (https://www.cplusplus.com/reference/set/set/)**
 
 To get you started here is `Predicate`
 
@@ -326,8 +328,7 @@ void scheme() {
 2. Leave any feedback in the feedback section of the lab quiz
 
 ---
-### TODO for the project 
-##### (NOT REQUIRED FOR THE LAB)
+### TODO for the project **(NOT REQUIRED FOR THE LAB)**
 1. Add code to produce the datalog program into your parser. This will necessitate changing your existing functions for the various productions.
 	1. For this step start with schemes, test, the go onto facts, test, then queries, test, then finally rules. 
 	2. For things like idList think about what type that function will have, figure out how to pass the value of this thing from this function to where it needs to be stored
