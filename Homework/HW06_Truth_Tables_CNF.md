@@ -1,4 +1,4 @@
-# HW06
+# HW06_Truth_Tables_CNF
 ---
 ### Symbol Reference
 - $\lnot$ logical not (sometimes written as !)

@@ -1,4 +1,4 @@
-# HW01b
+# HW01b_Project_1_FSA_Diagrams
 
 ## Draw the following Finite State Automata (FSA) needed for project 1:
 

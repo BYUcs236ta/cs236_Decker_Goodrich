@@ -1,4 +1,4 @@
-# HW10
+# HW10_Resolution
 ---
 ### Question 1
 Use resolution to prove:

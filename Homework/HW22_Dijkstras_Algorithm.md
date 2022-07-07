@@ -1,4 +1,4 @@
-# HW22
+# HW22_Dijkstras_Algorithm
 ---
 ### Question 1
 

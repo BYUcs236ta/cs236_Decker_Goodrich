@@ -1,4 +1,4 @@
-# HW09
+# HW09_Predicate_Logic
 ---
 ### Question 1
 

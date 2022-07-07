@@ -1,4 +1,4 @@
-# HW07
+# HW07_Logic_Deduction
 ---
 ### Question 1
 

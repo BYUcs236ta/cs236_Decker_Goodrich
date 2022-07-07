@@ -1,4 +1,4 @@
-# HW23
+# HW23_Kruskals_Algorithm
 ---
 ### Graph G
 

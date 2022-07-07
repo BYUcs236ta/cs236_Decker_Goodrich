@@ -1,4 +1,4 @@
-# HW16
+# HW16_Properties_of_Relations
 ---
 ### Question 1
 Consider the following relations that are all relations on A (i.e. $A \leftrightarrow A$) where A = {a, b, c, d}. 

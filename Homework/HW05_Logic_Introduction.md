@@ -1,4 +1,4 @@
-# HW05
+# HW05_Logic_Introduction
 ---
 ### Symbol Reference
 - $\lnot$ logical not (sometimes written as !)

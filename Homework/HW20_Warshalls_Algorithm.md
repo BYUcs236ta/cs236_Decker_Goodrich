@@ -1,4 +1,4 @@
-# HW20
+# HW20_Warshalls_Algorithm
 ---
 ### Question 1
 

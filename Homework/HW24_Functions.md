@@ -1,4 +1,4 @@
-# HW24
+# HW24_Functions
 ---
 ### Question 1
 Classify each of the following as a total function, a partial function, or not a function. 

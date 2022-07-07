@@ -1,4 +1,4 @@
-# HW11
+# HW11_Predicate_Logic_and_Resolution
 ---
 ### Question 1
 
