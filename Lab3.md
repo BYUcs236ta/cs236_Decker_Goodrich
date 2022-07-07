@@ -7,8 +7,7 @@
 - [Part 3 - Database](#Part-3---Database)
 - [Part 4 - Relational Operations](#Part-4---Relational-Operations)
 - [Conclusion](#Conclusion)
-- [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
-
+- [TODO for the project](#TODO-for-the-project)
 
 ---
 ### Part 0 - Recap

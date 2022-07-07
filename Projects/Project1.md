@@ -7,7 +7,7 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 - [General Project Requirements](#General Project Requirements)
 - [Special Requirements](#Special Requirements)
 - [Recourses](#Recourses)
-- [Example I/O](#Example I/O)
+- [Example Input Output](#Example Input Output)
 		- [Example Input 1](#Example Input 1)
 		- [Example Output 1](#Example Output 1)
 		- [Example Input 2](#Example Input 2)
@@ -55,7 +55,7 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 
 Write a `Lexer` that reads a sequence of characters from a text file, identifies the `datalog language` tokens found in the file, and outputs each token.
 
-## Example I/O
+## Example Input Output
 ---
 ##### Example Input 1
 ```

@@ -14,7 +14,7 @@
 - [Part 6 - Add Automata to Lexer](#Part-6---Add-Automata-to-Lexer)
 - [Part 7 - Test](#Part-7---Test)
 - [Conclusion](#Conclusion)
-- [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
+- [TODO for the project](#TODO-for-the-project)
 
 ---
 Make sure to read the Project 1 Guide (found in Learning Suite) and the specs ; so that you have the big picture for the entire Lexer.

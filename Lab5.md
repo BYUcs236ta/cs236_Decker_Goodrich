@@ -20,7 +20,7 @@
 	- [Reverse Post-Order](#Reverse-Post-Order)
 	- [SCC's](#SCC's)
 - [Conclusion](#Conclusion)
-- [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
+- [TODO for the project](#TODO-for-the-project)
 
 
 ---

@@ -6,7 +6,7 @@
 - [Part 2 - Modify the Parser](#Part-2---Modify-the-Parser)
 - [Part 3 - Update scheme](#Part-3---Update-scheme)
 - [Conclusion](#Conclusion)
-- [TODO for the project **(NOT REQUIRED FOR THE LAB)**](#TODO-for-the-project-**(NOT-REQUIRED-FOR-THE-LAB)**)
+- [TODO for the project](#TODO-for-the-project)
 
 ---
 ### Part 0 - Recap

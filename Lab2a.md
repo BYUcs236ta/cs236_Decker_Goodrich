@@ -7,7 +7,6 @@
 - [Conclusion](#Conclusion)
 - [TODO for the project](#TODO-for-the-project)
 
-
 ---
 
 Make sure to read the Project 2 Guide (found in Learning Suite) — and the specs — so that you have the big picture for the entire Parser.
