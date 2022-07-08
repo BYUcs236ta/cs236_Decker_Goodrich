@@ -147,15 +147,12 @@ public:
 3. Put the following addTuple method into your relation class.
 
 ```c++
-bool addTuple(Tuple t) {
-	// this method adds the tuple into the set 
-	// returns true if the tuple was unique. 
-	// returns false if the tuple was already in the set it 
-	return tuples.insert(t).second;
+void addTuple(Tuple t) {
+	tuples.insert(t);
 }
 ```
 
-4. Add the following toString method to the Relation class `Relation::toString()`
+4. Add the following toString method to the Relation class `Relation::toString()` 
 
 ```c++
 string toString() {
@@ -254,7 +251,7 @@ int main() {
 `TODO: take a screenshot of the output of the above code (s2)`
 
 ---
-### Part 4 - Relational Operations
+### Part 3 - Relational Operations
 
 I am providing some test code for the following functions and the types. You must implement each of the functions and take a screenshot. These methods will go in the relation class. They will also return a relation. 
 
