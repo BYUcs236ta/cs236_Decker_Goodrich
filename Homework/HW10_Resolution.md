@@ -14,10 +14,6 @@ Prove by contradiction using resolution. Justify each step. Table below is given
 | 1    | $(\lnot P \lor R)$       | Premise       |
 | 2    | $(Q \lor R)$             | Premise       |
 | 3    | $(\lnot P \lor \lnot Q)$ | Premise       |
-|      |                          |               |
-|      |                          |               |
-|      |                          |               |
-|      |                          |               |
 
 
 ---
@@ -31,7 +27,7 @@ then $\lnot P$
 
 Construct your proof as follows:
 
-a. convert the premises to conjunctive normal form
+a. Convert the premises to conjunctive normal form
 
 b. Using the re-written premises, prove by contradiction, using resolution
 
