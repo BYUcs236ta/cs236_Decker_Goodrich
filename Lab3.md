@@ -154,11 +154,7 @@ void addTuple(Tuple t) {
 }
 ```
 
-<<<<<<< HEAD
-4. Add the following toString method to the Relation class `Relation::toString()` 
-=======
 4. Add the following `toString` method to the `Relation` class
->>>>>>> c524660acd4f07b0faf00d8076c476e98babee93
 
 ```c++
 string toString() {
@@ -193,76 +189,11 @@ Name: Snap
  `TODO take a screenshot of your test case in main and the output. (s1)`
 
 ---
-### Part 3 - Database
-
-1. Create `Database.h` 
-
-```c++
-#include "Relation.h"
-#include <map>
-class Database {
-private:
-	map<string, Relation> database;
-
-public:
-	void addRelation(Relation r) {
-		database.insert({r.getName(), r});
-	}
-	
-	string toString() {
-		stringstream out;
-		// TODO: Write a toString method for your database class.
-		// Use this for testing
-		return out.str();
-	}
-}
-```
-
-2. Run the following code in main:
-
-```c++
-#include "Database.h"
-int main() {
-	Tuple t1;
-	t1.push_back("A");
-	t1.push_back("B");
-	t1.push_back("C");
-	
-	Tuple t2;
-	t1.push_back("1");
-	t1.push_back("2");
-	t1.push_back("3");
-
-	Header h1;
-	h1.push_back("col0");
-	h1.push_back("col1");
-	h1.push_back("col2");
-
-	Relation r1;
-	r1.setName("first");
-	r1.setHeader(h1);
-	r1.addTuple(t1);
-	
-	Relation r2;
-	r2.setName("second");
-	r2.setHeader(h1);
-	r2.addTuple(t2);
-
-	Database database;
-	database.addRelation(r1);
-
-	cout << database.toString();
-}
-```
-
-`TODO: take a screenshot of the output of the above code (s2)`
-
----
 ### Part 3 - Relational Operations
 
 I am providing some test code for the following functions and the types. You must implement each of the functions and take a screenshot. These methods will go in the relation class. They will also return a relation. 
 
-1) Select
+#### 1 - Select
 
 You will need 2 select methods. I provide the definition of one of them. 
 
@@ -287,7 +218,7 @@ Relation select(unsigned int col1, unsigned int col2) {
 }
 ```
 
-`TODO: take a screenshot of your select method (s3)`
+`TODO: take a screenshot of your select method (s2)`
 
 The following case is given for you to try on your own to verify your method is working, feel free to add more to it!
 
@@ -329,9 +260,7 @@ col0="A",col1="B",col2="C"
 col0="1",col1="2",col2="1"
 ```
 
-
-
-2. Rename
+#### 2 - Rename
 
 ```c++
 Relation rename(vector<string> newAttributes) {
@@ -343,7 +272,7 @@ Relation rename(vector<string> newAttributes) {
 }
 ```
 
-`TODO: take a screenshot of your rename method (s4)`
+`TODO: take a screenshot of your rename method (s3)`
 
 The following case is given for you to try on your own to verify your method is working, feel free to add more to it!
 
@@ -389,7 +318,7 @@ colA="A",colB="B",colC="C"
 colA="1",colB="2",colC="1"
 ```
 
-3. Project 
+#### 3 - Project 
 
 ```c++
 Relation project(vector<unsigned int> indiciesToKeep) {
@@ -406,9 +335,9 @@ Relation project(vector<unsigned int> indiciesToKeep) {
 }
 ```
 
-Hint: instead of copying the header and they re-organizing it start with an empty tuple/header and add elements one at a time.
+Hint: instead of copying the header and then re-organizing it start with an empty tuple/header and add elements one at a time.
 
-`TODO: take a screenshot of your project method (s5)`
+`TODO: take a screenshot of your project method (s4)`
 
 The following case is given for you to try on your own to verify your method is working, feel free to add more to it!
 
@@ -465,11 +394,16 @@ colC="1",colB="1"
 
 **(NOT REQUIRED FOR THE LAB)**
 1.  Import your code from project 2b
-2. Create Interpreter class
-3. Add in evalSchemes, evalFacts, evalQueries methods
-4. In interpreter::run() call each of those methods
-5. Try to keep code as modular as possible
-6. Good Luck!
+2. Create database class
+	1. A database should have a map\<string,Relation*\> in it to store the relation
+	2. Questions:
+		1. Why is that it's type?
+		2. Why are we using pointers here?
+3. Create Interpreter class
+4. Add in evalSchemes, evalFacts, evalQueries methods
+5. In interpreter::run() call each of those methods
+6. Try to keep code as modular as possible
+7. Good Luck!
 
 
 
