@@ -199,23 +199,25 @@ I am providing some test code for the following functions and the types. You mus
 You will need 2 select methods. I provide the definition of one of them. 
 
 ```c++
-Relation select(unsigned int col, string value) {
-	Relation output; // make a new empty relation
-	output.setName(this.name); // copy over name
-	output.setHeader(this.header); // copy over header
+Relation* select(unsigned int col, string value) {
+	Relation* output = new Relation(); // make a new empty relation
+	output->setName(this.name); // copy over name
+	output->setHeader(this.header); // copy over header
 
 	for (Tuple currTuple : this.tuples) { // loop through each tuple
 		if (currTuple.at(col) == value) {
-			output.addTuple(currTuple);
+			output->addTuple(currTuple);
 		}
 	}
 
 	return output;
 }
 
-Relation select(unsigned int col1, unsigned int col2) {
+Relation* select(unsigned int col1, unsigned int col2) {
+	Relation* output = new Relation();
 	// check to make sure both columns are in bounds
 	// write your code here
+	return output;
 }
 ```
 
@@ -248,8 +250,8 @@ int main() {
 	r1.addTuple(t1);
 	r1.addTuple(t2);
 
-	cout << r1.select(r1.select(0, "A")).toString() << endl;
-	cout << r1.select(r1.select(0, 2)).toString() << endl;
+	cout << r1.select(r1.select(0, "A"))->toString() << endl;
+	cout << r1.select(r1.select(0, 2))->toString() << endl;
 }
 ```
 
@@ -264,12 +266,13 @@ col0="1",col1="2",col2="1"
 #### 2 - Rename
 
 ```c++
-Relation rename(vector<string> newAttributes) {
+Relation* rename(vector<string> newAttributes) {
 	// Make a new empty relation
+	Relation* output = new Relation();
 	// Make a new Header with newAttributes as its contents
 	// copy over the old name
 	// copy over all of the existing tuples
-	
+	return output;
 }
 ```
 
@@ -322,8 +325,9 @@ colA="1",colB="2",colC="1"
 #### 3 - Project 
 
 ```c++
-Relation project(vector<unsigned int> indiciesToKeep) {
+Relation* project(vector<unsigned int> indiciesToKeep) {
 	// Make a new empty relation
+	Relation* output = new Relation();
 	// copy over the old name
 	
 	// generate the new header
@@ -332,7 +336,8 @@ Relation project(vector<unsigned int> indiciesToKeep) {
 	
 	// loop through all the tuples
 		// for each tuple "re-order" it
-	
+
+	return output;
 }
 ```
 
