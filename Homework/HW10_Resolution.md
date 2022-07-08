@@ -3,13 +3,22 @@
 ### Question 1
 Use resolution to prove:
 
-if $(\lnot P \lor R) \land (Q \lor R) \land (P \lor Q)$
+if $(\lnot P \lor R) \land (Q \lor R) \land (P \lor \lnot Q)$
 
 then R
 
 Prove by contradiction using resolution. Justify each step. Table below is given to get you started
 
-![](/assets/images/HW10_Q1.png)
+| Line | Statement                | Justification |
+| ---- | ------------------------ | ------------- |
+| 1    | $(\lnot P \lor R)$       | Premise       |
+| 2    | $(Q \lor R)$             | Premise       |
+| 3    | $(\lnot P \lor \lnot Q)$ | Premise       |
+|      |                          |               |
+|      |                          |               |
+|      |                          |               |
+|      |                          |               |
+
 
 ---
 ### Question 2
