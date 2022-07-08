@@ -403,7 +403,7 @@ colC="1",colB="1"
 2. Create database class
 	1. A database should have a map\<string,Relation*\> in it to store the relation
 	2. Questions:
-		1. Why is that it's type?
+		1. Why is that its type?
 		2. Why are we using pointers here?
 3. Create Interpreter class
 4. Add in evalSchemes, evalFacts, evalQueries methods
