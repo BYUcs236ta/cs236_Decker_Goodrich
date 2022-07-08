@@ -11,13 +11,13 @@
 
 ---
 ### Part 0 - Recap
-1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the code is valid. We then used those tokens to create a DatalogProgram object.
-2. This is a really cool project. After you finish with project 3 you will have a complete programming language (We will add more functionality in projects 4 and 5). A programming language needs 2 things Syntax and Meaning. Projects 1, 2a, 2b defined the syntax and Projects 3, 4, and 5 will define the meaning
+1. Thus far we have taken a .txt file and turned it into a vector of "Tokens". We then took that vector and verified that the code is valid. We then used those tokens to create a `DatalogProgram` object.
+2. This is a really cool project. After you finish with project 3 you will have a complete programming language (We will add more functionality in projects 4 and 5). A programming language needs 2 things Syntax and Meaning. Projects 1, 2a, 2b defined the syntax and Projects 3, 4, and 5 will define the meaning.
 
 ---
 ### Part 1 - What is a relation
 
-1. A relation is comprised of 3 parts.
+1. A relation is comprised of 3 parts:
 	1. Name
 	2. Header
 	3. Set\<Tuple\>
@@ -63,34 +63,34 @@ public:
 };
 ~~~
 
-5. Write a toString() method for tuples `Tuple::toString()`, for this to work you must define the following functions in both `Header` and `Tuple`. 
+5. Write a toString() method for tuples `Tuple::toString()`. For this to work you must define the following functions in both `Header` and `Tuple`. 
 
 Add helper methods:
 ~~~c++
 // Tuple :
 unsigned int size() {
-	return values.size();
+    return values.size();
 }
  
 string at(unsigned int index) {
-	return values.at(index);
+    return values.at(index);
 }
 
 void push_back(string value) {
-	values.push_back(value);
+    values.push_back(value);
 }
 
 // Header :
 unsigned int size() {
-	return attributes.size();
+    return attributes.size();
 }
  
 string at(unsigned int index) {
-	return attributes.at(index);
+    return attributes.at(index);
 }
 
 void push_back(string value) {
-	attributes.push_back(value);
+    attributes.push_back(value);
 }
 
 
@@ -100,7 +100,7 @@ void push_back(string value) {
   // This goes in your tuple class, note that tuple must include Header.h
   string toString(Header header) {
     stringstream out;
-	string sep = "";
+    string sep = "";
     for (unsigned i = 0; i < size(); i++) {
       string name = header.at(i);
       string value = at(i);
@@ -115,12 +115,14 @@ void push_back(string value) {
 
 ~~~c++
 // for the toString
-if (size() != header.size())
-	throw "CUSTOM ERROR MESSAGE HERE";
+if (size() != header.size()) {
+    throw "CUSTOM ERROR MESSAGE HERE";
+}
 
 // for at methods
-if (index >= size())
-	throw "CUSTOM ERROR MESSAGE HERE";
+if (index >= size()) {
+    throw "CUSTOM ERROR MESSAGE HERE";
+}
 ~~~
 
 ### Part 2 - Relation Class
@@ -152,28 +154,33 @@ void addTuple(Tuple t) {
 }
 ```
 
+<<<<<<< HEAD
 4. Add the following toString method to the Relation class `Relation::toString()` 
+=======
+4. Add the following `toString` method to the `Relation` class
+>>>>>>> c524660acd4f07b0faf00d8076c476e98babee93
 
 ```c++
 string toString() {
-	stringstream out;
-	for (Tuple t : tuples) {
-		if (t.size() > 0)
-			out << t.toString() << endl;
-	}
-	return out.str();
+    stringstream out;
+    for (Tuple t : tuples) {
+        if (t.size() > 0) {
+	    out << t.toString() << endl;
+        }
+    }
+    return out.str();
 }
 ```
 
-5. Add the size() method to your relation class
+5. Add the `size()` method to your `Relation` class
 
 ```c++
 unsigned int size() {
-	return tuples.size();
+    return tuples.size();
 }
 ```
 
-6. Write a test case in main that reproduces the following Relation. Call toString() on the relation 
+6. Write a test case in main that reproduces the following Relation. Call `toString()` on the relation 
 
 Name: Snap
 
