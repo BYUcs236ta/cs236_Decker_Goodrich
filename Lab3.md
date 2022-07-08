@@ -65,27 +65,39 @@ public:
 
 5. Write a toString() method for tuples `Tuple::toString()`, for this to work you must define the following functions in both `Header` and `Tuple`. 
 
+Add helper methods:
 ~~~c++
-// you need to define both the Tuple and Header classes:
-unsigned int size();
+// Tuple :
+unsigned int size() {
+	return values.size();
+}
  
-string at(unsigned int index);
+string at(unsigned int index) {
+	return values.at(index);
+}
 
-void push_back(string value);
+void push_back(string value) {
+	values.push_back(value);
+}
 
-// These function names should be familar to you, they should operate the same way that they operate in a vector
+// Header :
+unsigned int size() {
+	return attributes.size();
+}
+ 
+string at(unsigned int index) {
+	return attributes.at(index);
+}
 
-// at returns the string at the given index
+void push_back(string value) {
+	attributes.push_back(value);
+}
 
-// push_back adds the given value to the back of values or attribute vector
 
-// size returns the size of the vector
-
-// Each should only be a single line of code
 ~~~
 
 ~~~c++
-  // This goes in your tuple class
+  // This goes in your tuple class, note that tuple must include Header.h
   string toString(Header header) {
     stringstream out;
 	string sep = "";
@@ -99,11 +111,16 @@ void push_back(string value);
   }
 ~~~
 
-6. Add error checking to tuple toString() method. Write your own error message. Add this code snippet to the start of Tuple::toString(). 
+6. Optional: Add error checking to `Tuple::toString()`, `Header::at()`, `Tuple::at()`. Write your own error message.
 
 ~~~c++
+// for the toString
 if (size() != header.size())
-	throw "<CUSTOM ERROR MESSAGE HERE>";
+	throw "CUSTOM ERROR MESSAGE HERE";
+
+// for at methods
+if (index >= size())
+	throw "CUSTOM ERROR MESSAGE HERE";
 ~~~
 
 ### Part 2 - Relation Class
