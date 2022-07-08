@@ -4,8 +4,10 @@
 - [Part 0 - Recap](#Part-0---Recap)
 - [Part 1 - What is a relation](#Part-1---What-is-a-relation)
 - [Part 2 - Relation Class](#Part-2---Relation-Class)
-- [Part 3 - Database](#Part-3---Database)
-- [Part 4 - Relational Operations](#Part-4---Relational-Operations)
+- [Part 3 - Relational Operations](#Part-3---Relational-Operations)
+	- [1 - Select](#1---Select)
+	- [2 - Rename](#2---Rename)
+	- [3 - Project](#3---Project)
 - [Conclusion](#Conclusion)
 - [TODO for the project](#TODO-for-the-project)
 
@@ -92,7 +94,6 @@ string at(unsigned int index) {
 void push_back(string value) {
     attributes.push_back(value);
 }
-
 
 ~~~
 
