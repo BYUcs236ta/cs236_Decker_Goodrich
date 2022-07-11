@@ -55,7 +55,7 @@ for each tuple t1 from snap:
 ```
 
 ```
-t1 = ('12345', 'C. Brown', '12    Apple St.', '555-1234') 
+t1 = ('12345', 'C. Brown', '12 Apple St.', '555-1234') 
 
 can join with
 
@@ -66,7 +66,7 @@ because t1.at(0) == t2.at(1);
 
 
 ```
-t1 = ('12345', 'C. Brown', '12    Apple St.', '555-1234') 
+t1 = ('12345', 'C. Brown', '12 Apple St.', '555-1234') 
 
 cannot join with
 
