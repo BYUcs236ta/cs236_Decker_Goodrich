@@ -319,8 +319,8 @@ int main() {
 Output:
 
 ```c++
-colA="A",colB="B",colC="C"
 colA="1",colB="2",colC="1"
+colA="A",colB="B",colC="C"
 ```
 
 #### 3 - Project 
@@ -387,8 +387,8 @@ int main() {
 Output:
 
 ```c++
-colC="C",colB="A"
 colC="1",colB="1"
+colC="C",colB="A"
 ```
 
 ---
