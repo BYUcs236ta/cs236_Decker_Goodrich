@@ -236,9 +236,9 @@ int main() {
 	t1.push_back("C");
 	
 	Tuple t2;
-	t1.push_back("1");
-	t1.push_back("2");
-	t1.push_back("1");
+	t2.push_back("1");
+	t2.push_back("2");
+	t2.push_back("1");
 
 	Header h1;
 	h1.push_back("col0");
@@ -291,9 +291,9 @@ int main() {
 	t1.push_back("C");
 	
 	Tuple t2;
-	t1.push_back("1");
-	t1.push_back("2");
-	t1.push_back("1");
+	t2.push_back("1");
+	t2.push_back("2");
+	t2.push_back("1");
 
 	Header h1;
 	h1.push_back("col0");
@@ -312,7 +312,7 @@ int main() {
 	r1.addTuple(t1);
 	r1.addTuple(t2);
 
-	cout << r1.rename(h2) << endl;
+	cout << r1.rename(h2)->toString() << endl;
 }
 ```
 
@@ -358,9 +358,9 @@ int main() {
 	t1.push_back("C");
 	
 	Tuple t2;
-	t1.push_back("1");
-	t1.push_back("2");
-	t1.push_back("1");
+	t2.push_back("1");
+	t2.push_back("2");
+	t2.push_back("1");
 
 	Header h1;
 	h1.push_back("col0");
