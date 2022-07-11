@@ -379,7 +379,7 @@ int main() {
 	r1.addTuple(t1);
 	r1.addTuple(t2);
 
-	cout << r1.project(colsToKeep) << endl;
+	cout << r1.project(colsToKeep)->toString() << endl;
 	
 }
 ```
