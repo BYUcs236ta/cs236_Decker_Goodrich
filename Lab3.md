@@ -162,7 +162,7 @@ string toString() {
     stringstream out;
     for (Tuple t : tuples) {
         if (t.size() > 0) {
-	    out << t.toString() << endl;
+	    out << t.toString(header) << endl;
         }
     }
     return out.str();
@@ -201,6 +201,7 @@ You will need 2 select methods. I provide the definition of one of them.
 ```c++
 Relation* select(unsigned int col, string value) {
 	Relation* output = new Relation(); // make a new empty relation
+	
 	output->setName(this.name); // copy over name
 	output->setHeader(this.header); // copy over header
 
