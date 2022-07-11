@@ -251,8 +251,8 @@ int main() {
 	r1.addTuple(t1);
 	r1.addTuple(t2);
 
-	cout << r1.select(r1.select(0, "A"))->toString() << endl;
-	cout << r1.select(r1.select(0, 2))->toString() << endl;
+	cout << r1.select(0, "A")->toString() << endl;
+	cout << r1.select(0, 2)->toString() << endl;
 }
 ```
 
