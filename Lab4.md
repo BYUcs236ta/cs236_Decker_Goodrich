@@ -12,6 +12,70 @@
 ---
 ### Part 1 - Natural Join Algorithm
 
+#### Example
+
+snap
+| StudentID (0)   | Name (1)            | Address (2)              | PhoneNumber (3)      |
+| ------- | ---------------- | ------------------ | ---------- |
+| '12345' | 'C.      Brown'  | '12    Apple St.'  | '555-1234' |
+| '22222' | 'P.       Patty' | '56    Grape Blvd' | '555-9999' |
+| '33333' | 'Snoopy'         | '12    Apple  St.' | '555-1234' |
+
+csg
+| Course (0)  | StudentName (1)  | Grade (2) |
+| ------- | -------- | ------- |
+| 'CS101' | '12345' | 'A'     |
+| 'CS101' | '22222'  | 'B'     |
+| 'CS101' | '33333'  | 'C'     |
+| 'EE200' | '12345'  | 'B+'    |
+| 'EE200' | '22222'  | 'B'     |
+
+We will calculate snap |x| csg
+
+#### Step 1 - Calculate header overlap
+
+snap and csg overlap on index (0, 1)
+
+
+#### Step 2 - Calculate unique indexes
+
+in csg indices \[0, 1\] are unique
+
+#### Step 3 - Create new Header
+newHeader = \[StudentID, Name, Address, PhoneNumber, Course, Grade\]
+
+#### Step 4 - Find Tuples
+
+```
+for each tuple t1 from snap:
+	for each tuple t2 from csg:
+		if t1 and t2 are the same at all locations in our overlap:
+			Create a new tuple
+			add the tuple into the output relation
+```
+
+```
+t1 = ('12345', 'C.      Brown', '12    Apple St.', '555-1234') 
+
+can join with
+
+t2 = ('CS101', '12345', 'A')
+
+because t1.at(0) == t2.at(1);
+```
+
+
+```
+t1 = ('12345', 'C.      Brown', '12    Apple St.', '555-1234') 
+
+cannot join with
+
+t2 = ('CS101', '22222', 'B')
+
+because t1.at(0) != t2.at(1)
+```
+
+
 ```c++
 int main() {  
     Tuple snap_t1;  
