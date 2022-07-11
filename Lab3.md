@@ -369,8 +369,8 @@ int main() {
 
 
 	vector<unsigned int> colsToKeep;
-	h2.push_back(2);
-	h2.push_back(0);
+	colsToKeep.push_back(2);
+	colsToKeep.push_back(0);
 
 
 	Relation r1;
