@@ -36,24 +36,22 @@ We will calculate snap |x| csg
 
 #### Step 1 - Calculate header overlap
 
-snap and csg overlap on index (0, 1)
+snap and csg overlap on index `(0, 1)`
 
 
-#### Step 2 - Calculate unique indices
-
-in csg indices \[0, 1\] are unique
-
-#### Step 3 - Create new Header
+#### Step 2 - Create new Header
 newHeader = \[StudentID, Name, Address, PhoneNumber, Course, Grade\]
 
-#### Step 4 - Find Tuples
+#### Step 3 - Find Tuples
 
 ```
 for each tuple t1 from snap:
 	for each tuple t2 from csg:
 		if t1 and t2 are the same at all locations in our overlap:
-			Create a new tuple
-			add the tuple into the output relation
+			Create a new tuple*
+			add the tuple into the output relation*
+
+* consider making seperate functions for both of these operations
 ```
 
 ```
