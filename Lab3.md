@@ -387,8 +387,8 @@ int main() {
 Output:
 
 ```c++
-colC="1",colB="1"
-colC="C",colB="A"
+col2="1",col0="1"
+col2="C",col0="A"
 ```
 
 ---
