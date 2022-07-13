@@ -142,7 +142,7 @@ private:
 public:
 	Relation() { }
 
-}
+};
 ```
 
 2. Write a getter and setter for name and header.
