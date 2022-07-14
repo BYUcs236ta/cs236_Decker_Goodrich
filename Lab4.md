@@ -8,14 +8,15 @@
 	- [Natural Join Signature](#Natural-Join-Signature)
 	- [Example Tables](#Example-Tables)
 	- [Step 1 - Calculate header overlap](#Step-1---Calculate-header-overlap)
-		- [Pseudocode](#Pseudocode)
+		- [Overlap Pseudocode](#Overlap-Pseudocode)
 	- [Step 2 - Create new Header](#Step-2---Create-new-Header)
-		- [Pseudocode](#Pseudocode)
+		- [Combine Header Pseudocode](#Combine-Header-Pseudocode)
 	- [Step 3 - Find Tuples](#Step-3---Find-Tuples)
 		- [Pseudocode](#Pseudocode)
 - [Test Case](#Test-Case)
 - [Conclusion](#Conclusion)
 - [TODO for the project](#TODO-for-the-project)
+
 
 
 ---
@@ -83,7 +84,7 @@ snap and csg overlap on index pair `(0, 1)`
 
 csg has unique attribute names at columns `[0, 2]`
 
-##### Pseudocode
+##### Overlap Pseudocode
 What data structures should be used for the overlap and uniqueCols
 
 ~~~
@@ -112,7 +113,7 @@ end index2 for loop
 #### Step 2 - Create new Header
 newHeader = \[StudentID, Name, Address, PhoneNumber, Course, Grade\]
 
-##### Pseudocode
+##### Combine Header Pseudocode
 Should this be a separate function?
 
 ~~~
@@ -140,7 +141,10 @@ cannot join with
 
 t2 = ('CS101', '22222', 'B')
 
-because t1.at(0) != t2.at(1)
+because:
+t1.at(0) == t2.at(1)
+'12345' == '22222'
+FALSE
 ```
 
 ```
@@ -150,10 +154,15 @@ can join with
 
 t2 = ('CS101', '12345', 'A')
 
-because t1.at(0) == t2.at(1)
+because:
+t1.at(0) == t2.at(1)
+'12345' == '12345'
+TRUE
 ```
 
-##### Pseudocode
+##### Tuple Section Pseudocode
+
+In `NatJoin()`
 ```
 for each tuple t1 from r1:
 	for each tuple t2 from r2:
@@ -164,6 +173,7 @@ for each tuple t1 from r1:
 * consider making seperate functions for ifJoinable(t1, t2, overlapData) and combineTuples(t1, t2, uniqueCols)
 ```
 
+Helper functions:
 ~~~
 function canJoin (Tuple t1, Tuple t2, overlap):
 
@@ -273,6 +283,7 @@ StudentID=12345, Name=C. Brown, Address=12 Apple St., Phone=555-1234, Course=cs1
 StudentID=22222, Name=P. Patty, Address=56 Grape Blvd, Phone=555-9999, Course=EE200, Grade=B
 StudentID=22222, Name=P. Patty, Address=56 Grape Blvd, Phone=555-9999, Course=cs101, Grade=B
 StudentID=33333, Name=Snoopy, Address=12 Apple St., Phone=555-1234, Course=cs101, Grade=C
+// Note: the order of your tuples and columns may be different!
 ```
 
 ---
