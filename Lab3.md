@@ -205,7 +205,7 @@ Relation* select(unsigned int col, string expectedVal) {
 	output->setName(this->name); // copy over name
 	output->setHeader(this->header); // copy over header
 
-	for (Tuple currTuple : this.tuples) { // loop through each tuple
+	for (Tuple currTuple : this->tuples) { // loop through each tuple
 		if (currTuple.at(col) == expectedVal) {
 			output->addTuple(currTuple);
 		}
@@ -331,12 +331,18 @@ Relation* project(vector<unsigned int> indiciesToKeep) {
 	Relation* output = new Relation();
 	// copy over the old name
 	
-	// generate the new header
-	// keep only the columns in the 
-	// vector in the order they are given
-	
-	// loop through all the tuples
-		// for each tuple "re-order" it
+	// set header  
+	// make a new empty header  
+	// for each int i in colsToKeep  
+	    // add this->header.at(i) to new header
+	// add new header to output relation*  
+	  
+	// set tuples  
+	// for each tuple t  
+	    // make a new empty tuple   
+		     // for each int i in colsToKeep        
+			     // add t.at(i) into the new empty tuple    
+		     // add newTuple into output relation*
 
 	return output;
 }
