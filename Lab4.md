@@ -12,7 +12,7 @@
 	- [Step 2 - Create new Header](#Step-2---Create-new-Header)
 		- [Combine Header Pseudocode](#Combine-Header-Pseudocode)
 	- [Step 3 - Find Tuples](#Step-3---Find-Tuples)
-		- [Pseudocode](#Pseudocode)
+		- [Tuple Section Pseudocode](#Tuple-Section-Pseudocode)
 - [Test Case](#Test-Case)
 - [Conclusion](#Conclusion)
 - [TODO for the project](#TODO-for-the-project)
