@@ -162,7 +162,7 @@ string toString() {
     stringstream out;
     for (Tuple t : tuples) {
         if (t.size() > 0) {
-		    out << t.toString(header) << endl;
+		    out << "  " << t.toString(header) << endl;
         }
     }
     return out.str();
