@@ -3,6 +3,20 @@
 
 ---
 # Table of Contents
+- [Part 0 - Recap](#Part-0---Recap)
+- [Natural Join Algorithm](#Natural-Join-Algorithm)
+	- [Natural Join Signature](#Natural-Join-Signature)
+	- [Example Tables](#Example-Tables)
+	- [Step 1 - Calculate header overlap](#Step-1---Calculate-header-overlap)
+		- [Pseudocode](#Pseudocode)
+	- [Step 2 - Create new Header](#Step-2---Create-new-Header)
+		- [Pseudocode](#Pseudocode)
+	- [Step 3 - Find Tuples](#Step-3---Find-Tuples)
+		- [Pseudocode](#Pseudocode)
+- [Test Case](#Test-Case)
+- [Conclusion](#Conclusion)
+- [TODO for the project](#TODO-for-the-project)
+
 
 ---
 ### Part 0 - Recap
@@ -12,9 +26,38 @@
 
 
 ---
-### Part 1 - Natural Join Algorithm
+### Natural Join Algorithm
 
-#### Example
+For this lab we will implement the natural join algorithm. This will be a member function of `Relation.h`.
+
+#### Natural Join Signature
+~~~c++
+Relation* natJoin(Relation* other) {
+	// give clearer names to the this and other relations
+	Relation* r1 = this; 
+	Relation* r2 = other;
+
+	Relation* output = new Relation();
+
+	// set name
+
+	// calculate header overlap 
+	
+	// combine headers
+	
+	// combine tuples
+	return output;
+}
+~~~
+
+For the name I recommend using something like:
+
+~~~c++
+output->setName(r1->getName() + " |x| " + r2->getName());
+~~~
+
+
+#### Example Tables
 
 snap
 | StudentID (0)   | Name (1)            | Address (2)              | PhoneNumber (3)      |
@@ -37,35 +80,58 @@ We will calculate snap |x| csg
 #### Step 1 - Calculate header overlap
 
 snap and csg overlap on index pair `(0, 1)`
-csg has unique attribute names at indices `[0, 2]`
+csg has unique attribute names at columns `[0, 2]`
 
+##### Pseudocode
+What data structures should be used for the overlap and uniqueCols
+
+~~~
+let Header h1 be r1's header
+let Header h2 be r2's header
+
+initilize overlap (what type should this be? maybe a map or 2 vectors?)
+initilaze uniqueCols (what type should this be? maybe a vector or set)
+
+for index index2 from 0 - h2.size():
+	found = false
+	
+	for index index1 from 0 - h1.size():
+		if (h1[index1] == h2[index2]):
+			found = true
+			add index1, index2 to your overlap structure
+		end if
+	end index1 for loop
+		
+	if (not found):
+		add index2 to uniqueCols
+	end if
+end index2 for loop
+~~~
 
 #### Step 2 - Create new Header
 newHeader = \[StudentID, Name, Address, PhoneNumber, Course, Grade\]
 
+##### Pseudocode
+Should this be a separate function?
+
+~~~
+// don't forget to pass by refrence to avoid making unecessary copies
+function combineHeaders (Header h1, Header h2, uniqueCols):
+	let newHeader be a new empty header
+	
+	copy all values from h1 into newHeader
+	
+	for i in uniqueCols:
+		copy h2[i] into newHeader
+	
+	return newHeader
+~~~
+
 #### Step 3 - Find Tuples
 
-```
-for each tuple t1 from snap:
-	for each tuple t2 from csg:
-		if t1 and t2 are the same at all locations in our overlap:
-			Create a new tuple*
-			add the tuple into the output relation*
+For every possible pair of tuples check if they can be joined
 
-* consider making seperate functions for ifJoinable(t1, t2, overlapData) and combineTuples(t1, t2, uniqueCols)
-```
-
-```
-t1 = ('12345', 'C. Brown', '12 Apple St.', '555-1234') 
-
-can join with
-
-t2 = ('CS101', '12345', 'A')
-
-because t1.at(0) == t2.at(1);
-```
-
-
+Examples:
 ```
 t1 = ('12345', 'C. Brown', '12 Apple St.', '555-1234') 
 
@@ -76,7 +142,53 @@ t2 = ('CS101', '22222', 'B')
 because t1.at(0) != t2.at(1)
 ```
 
+```
+t1 = ('12345', 'C. Brown', '12 Apple St.', '555-1234') 
 
+can join with
+
+t2 = ('CS101', '12345', 'A')
+
+because t1.at(0) == t2.at(1)
+```
+
+##### Pseudocode
+```
+for each tuple t1 from r1:
+	for each tuple t2 from r2:
+		if canJoin(t1, t2, overlap):
+			newTuple = combineTuples(t1, t2, uniqueCols)
+			add new tuple into the output relation*
+
+* consider making seperate functions for ifJoinable(t1, t2, overlapData) and combineTuples(t1, t2, uniqueCols)
+```
+
+~~~
+function canJoin (Tuple t1, Tuple t2, overlap):
+
+	for each pair (index1, index2) from overlap:
+		if (t1[index1] != t2[index2]):
+			return FALSE
+			
+	return TRUE
+~~~
+
+~~~
+function combineTuples (Tuple t1, Tuple t2, uniqueCols):
+	let newTuple be a new empty tuple
+	
+	copy all values from t1 into newTuple
+	
+	for i in uniqueCols:
+		copy t2[i] into newTuple
+	
+	return newTuple
+~~~
+
+`Take a screenshot of your natural join function, if you used helper functions take additional screenshots of each function. These are the only screenshots required for the lab.`
+
+---
+### Test Case
 ```c++
 int main() {  
     Tuple snap_t1;  
