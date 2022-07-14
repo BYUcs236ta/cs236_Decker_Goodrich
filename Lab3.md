@@ -169,10 +169,10 @@ string toString() const {
 }
 ```
 
-5. Add the `size()` method to your `Relation` class
+5. Add the `numTuples()` method to your `Relation` class
 
 ```c++
-unsigned int size() const {
+unsigned int numTuples() const {
     return tuples.size();
 }
 ```
