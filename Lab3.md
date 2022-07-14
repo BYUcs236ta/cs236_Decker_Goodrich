@@ -270,8 +270,8 @@ col0="1",col1="2",col2="1"
 Relation* rename(vector<string> newAttributes) {
 	// Make a new empty relation
 	Relation* output = new Relation();
-	// Make a new Header with newAttributes as its contents
 	// copy over the old name
+	// Make a new Header with newAttributes as its contents
 	// copy over all of the existing tuples
 	return output;
 }
