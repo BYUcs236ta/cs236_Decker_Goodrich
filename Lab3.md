@@ -70,11 +70,11 @@ public:
 Add helper methods:
 ~~~c++
 // Tuple :
-unsigned int size() {
+unsigned int size() const {
     return values.size();
 }
  
-string at(unsigned int index) {
+string at(unsigned int index) const {
     return values.at(index);
 }
 
@@ -83,11 +83,11 @@ void push_back(string value) {
 }
 
 // Header :
-unsigned int size() {
+unsigned int size() const {
     return attributes.size();
 }
  
-string at(unsigned int index) {
+string at(unsigned int index) const {
     return attributes.at(index);
 }
 
@@ -99,7 +99,7 @@ void push_back(string value) {
 
 ~~~c++
   // This goes in your tuple class, note that tuple must include Header.h
-  string toString(Header header) {
+  string toString(Header header) const {
     stringstream out;
     string sep = "";
     for (unsigned i = 0; i < size(); i++) {
@@ -158,7 +158,7 @@ void addTuple(Tuple t) {
 4. Add the following `toString` method to the `Relation` class
 
 ```c++
-string toString() {
+string toString() const {
     stringstream out;
     for (Tuple t : tuples) {
         if (t.size() > 0) {
@@ -172,7 +172,7 @@ string toString() {
 5. Add the `size()` method to your `Relation` class
 
 ```c++
-unsigned int size() {
+unsigned int size() const {
     return tuples.size();
 }
 ```
