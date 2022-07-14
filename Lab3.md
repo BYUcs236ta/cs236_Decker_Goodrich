@@ -199,14 +199,14 @@ I am providing some test code for the following functions and the types. You mus
 You will need 2 select methods. I provide the definition of one of them. 
 
 ```c++
-Relation* select(unsigned int col, string value) {
+Relation* select(unsigned int col, string expectedVal) {
 	Relation* output = new Relation(); // make a new empty relation
 	
 	output->setName(this->name); // copy over name
 	output->setHeader(this->header); // copy over header
 
 	for (Tuple currTuple : this.tuples) { // loop through each tuple
-		if (currTuple.at(col) == value) {
+		if (currTuple.at(col) == expectedVal) {
 			output->addTuple(currTuple);
 		}
 	}
