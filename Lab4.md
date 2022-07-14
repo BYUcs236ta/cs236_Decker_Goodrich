@@ -80,6 +80,7 @@ We will calculate snap |x| csg
 #### Step 1 - Calculate header overlap
 
 snap and csg overlap on index pair `(0, 1)`
+
 csg has unique attribute names at columns `[0, 2]`
 
 ##### Pseudocode
