@@ -111,7 +111,7 @@ end index2 for loop
 ~~~
 
 #### Step 2 - Create new Header
-newHeader = \[StudentID, Name, Address, PhoneNumber, Course, Grade\]
+newHeader = \{StudentID, Name, Address, PhoneNumber, Course, Grade\}
 
 ##### Combine Header Pseudocode
 Should this be a separate function?
