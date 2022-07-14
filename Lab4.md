@@ -68,7 +68,7 @@ snap
 | '33333' | 'Snoopy'         | '12    Apple  St.' | '555-1234' |
 
 csg
-| Course (0)  | StudentName (1)  | Grade (2) |
+| Course (0)  | StudentID (1)  | Grade (2) |
 | ------- | -------- | ------- |
 | 'CS101' | '12345' | 'A'     |
 | 'CS101' | '22222'  | 'B'     |
