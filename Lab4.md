@@ -36,7 +36,8 @@ We will calculate snap |x| csg
 
 #### Step 1 - Calculate header overlap
 
-snap and csg overlap on index `(0, 1)`
+snap and csg overlap on index pair `(0, 1)`
+csg has unique attribute names at indices `[0, 2]`
 
 
 #### Step 2 - Create new Header
@@ -51,7 +52,7 @@ for each tuple t1 from snap:
 			Create a new tuple*
 			add the tuple into the output relation*
 
-* consider making seperate functions for both of these operations
+* consider making seperate functions for ifJoinable(t1, t2, overlapData) and combineTuples(t1, t2, uniqueCols)
 ```
 
 ```

@@ -202,8 +202,8 @@ You will need 2 select methods. I provide the definition of one of them.
 Relation* select(unsigned int col, string value) {
 	Relation* output = new Relation(); // make a new empty relation
 	
-	output->setName(this.name); // copy over name
-	output->setHeader(this.header); // copy over header
+	output->setName(this->name); // copy over name
+	output->setHeader(this->header); // copy over header
 
 	for (Tuple currTuple : this.tuples) { // loop through each tuple
 		if (currTuple.at(col) == value) {
