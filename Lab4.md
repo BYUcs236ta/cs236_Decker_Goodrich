@@ -16,6 +16,8 @@
 - [Test Case](#Test-Case)
 - [Conclusion](#Conclusion)
 - [TODO for the project](#TODO-for-the-project)
+- [Alternate Nat Join Pseudocode](#Alternate-Nat-Join-Pseudocode)
+	- [Example:](#Example:)
 
 
 
@@ -292,3 +294,109 @@ StudentID=33333, Name=Snoopy, Address=12 Apple St., Phone=555-1234, Course=cs101
 ---
 ### TODO for the project 
 **(NOT REQUIRED FOR THE LAB)**
+
+
+---
+### Alternate Nat Join Pseudocode 
+
+This uses cross-product, select and project operations
+
+Cross-Product:
+~~~
+function crossProduct (Relation r1, Relation r2):
+	Relation* output
+	// set outputs name
+	Header newHeader = r1.header.copy()
+	for each attribute a from r2.header:
+		add a into newHeader
+	add newHeader to output
+
+	for each Tuple t1 from r1:
+		for each Tuple t2 from r2:
+			Tuple newTuple = t1.copy()
+			for each value v from t2
+				add v into newTuple
+			add newTuple to output
+	return output
+~~~
+
+Nat-Join:
+~~~
+function natJoin (Relation* r1, Relation* r2):
+	Relation* output = crossProduct(r1, r2)
+
+	map<string, int> seenBefore
+	vector<int> colsToKeep
+	for i = 0 to output.header.size():
+		string iVal = output.header[i]
+		if seenBefore.contains(iVal): 
+			output = output.select(i, seenBefore[])
+		else:
+			seenBefore[iVal] = i
+			add i to colsToKeep
+
+	output = output.project(colsToKeep)
+		
+~~~
+
+#### Example:
+Given tables:
+
+| StudentID (0)   | Name (1)            | Address (2)              | PhoneNumber (3)      |
+| ------- | ---------------- | ------------------ | ---------- |
+| '12345' | 'C.      Brown'  | '12    Apple St.'  | '555-1234' |
+| '22222' | 'P.       Patty' | '56    Grape Blvd' | '555-9999' |
+| '33333' | 'Snoopy'         | '12    Apple  St.' | '555-1234' |
+
+csg
+| Course (0)  | StudentID (1)  | Grade (2) |
+| ------- | -------- | ------- |
+| 'CS101' | '12345' | 'A'     |
+| 'CS101' | '22222'  | 'B'     |
+| 'CS101' | '33333'  | 'C'     |
+| 'EE200' | '12345'  | 'B+'    |
+| 'EE200' | '22222'  | 'B'     |
+
+
+After performing cross product on snap and csg
+
+| StudentID (0) | Name (1)   | Address (2)     | PhoneNumber (3) | Course (4) | StudentID (5) | Grade (6) |
+| ------------- | ---------- | --------------- | --------------- | ---------- | ------------- | --------- |
+| '12345'       | 'C. Brown' | '12 Apple St.'  | '555-1234'      | 'CS101'    | '12345'       | 'A'       |
+| '12345'       | 'C. Brown' | '12 Apple St.'  | '555-1234'      | 'CS101'    | '22222'       | 'B'       |
+| '12345'       | 'C. Brown' | '12 Apple St.'  | '555-1234'      | 'CS101'    | '33333'       | 'C'       |
+| '12345'       | 'C. Brown' | '12 Apple St.'  | '555-1234'      | 'EE200'    | '12345'       | 'B+'      |
+| '12345'       | 'C. Brown' | '12 Apple St.'  | '555-1234'      | 'EE200'    | '22222'       | 'B'       |
+| '22222'       | 'P. Patty' | '56 Grape Blvd' | '555-9999'      | 'CS101'    | '12345'       | 'A'       |
+| '22222'       | 'P. Patty' | '56 Grape Blvd' | '555-9999'      | 'CS101'    | '22222'       | 'B'       |
+| '22222'       | 'P. Patty' | '56 Grape Blvd' | '555-9999'      | 'CS101'    | '33333'       | 'C'       |
+| '22222'       | 'P. Patty' | '56 Grape Blvd' | '555-9999'      | 'EE200'    | '12345'       | 'B+'      |
+| '22222'       | 'P. Patty' | '56 Grape Blvd' | '555-9999'      | 'EE200'    | '22222'       | 'B'       |
+| '33333'       | 'Snoopy'   | '12 Apple St.'  | '555-1234'      | 'CS101'    | '12345'       | 'A'       |
+| '33333'       | 'Snoopy'   | '12 Apple St.'  | '555-1234'      | 'CS101'    | '22222'       | 'B'       |
+| '33333'       | 'Snoopy'   | '12 Apple St.'  | '555-1234'      | 'CS101'    | '33333'       | 'C'       |
+| '33333'       | 'Snoopy'   | '12 Apple St.'  | '555-1234'      | 'EE200'    | '12345'       | 'B+'      |
+| '33333'       | 'Snoopy'   | '12 Apple St.'  | '555-1234'      | 'EE200'    | '22222'       | 'B'       |
+
+After SELECT(0, 5):
+
+| StudentID (0) | Name (1)   | Address (2)     | PhoneNumber (3) | Course (4) | StudentID (5) | Grade (6) |
+| ------------- | ---------- | --------------- | --------------- | ---------- | ------------- | --------- |
+| '12345'       | 'C. Brown' | '12 Apple St.'  | '555-1234'      | 'CS101'    | '12345'       | 'A'       |
+| '12345'       | 'C. Brown' | '12 Apple St.'  | '555-1234'      | 'EE200'    | '12345'       | 'B+'      |
+| '22222'       | 'P. Patty' | '56 Grape Blvd' | '555-9999'      | 'CS101'    | '22222'       | 'B'       |
+| '22222'       | 'P. Patty' | '56 Grape Blvd' | '555-9999'      | 'EE200'    | '22222'       | 'B'       |
+| '33333'       | 'Snoopy'   | '12 Apple St.'  | '555-1234'      | 'CS101'    | '33333'       | 'C'       |
+
+
+After PROJECT `{0, 1, 2, 3, 4, 6}`
+| StudentID (0) | Name (1)   | Address (2)     | PhoneNumber (3) | Course (4) | Grade (5) |
+| ------------- | ---------- | --------------- | --------------- | ---------- | --------- |
+| '12345'       | 'C. Brown' | '12 Apple St.'  | '555-1234'      | 'CS101'    | 'A'       |
+| '12345'       | 'C. Brown' | '12 Apple St.'  | '555-1234'      | 'EE200'    | 'B+'      |
+| '22222'       | 'P. Patty' | '56 Grape Blvd' | '555-9999'      | 'CS101'    | 'B'       |
+| '22222'       | 'P. Patty' | '56 Grape Blvd' | '555-9999'      | 'EE200'    | 'B'       |
+| '33333'       | 'Snoopy'   | '12 Apple St.'  | '555-1234'      | 'CS101'    | 'C'       |
+
+
+
