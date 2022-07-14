@@ -94,10 +94,10 @@ let Header h2 be r2's header
 initilize overlap (what type should this be? maybe a map or 2 vectors?)
 initilaze uniqueCols (what type should this be? maybe a vector or set)
 
-for index index2 from 0 - h2.size():
+for index2 = 0 to h2.size():
 	found = false
 	
-	for index index1 from 0 - h1.size():
+	for index1 = 0 to h1.size():
 		if (h1[index1] == h2[index2]):
 			found = true
 			add index1, index2 to your overlap structure
@@ -166,7 +166,7 @@ In `NatJoin()`
 ```
 for each tuple t1 from r1:
 	for each tuple t2 from r2:
-		if canJoin(t1, t2, overlap):
+		if isJoinable(t1, t2, overlap):
 			newTuple = combineTuples(t1, t2, uniqueCols)
 			add new tuple into the output relation*
 
@@ -175,7 +175,7 @@ for each tuple t1 from r1:
 
 Helper functions:
 ~~~
-function canJoin (Tuple t1, Tuple t2, overlap):
+function isJoinable (Tuple t1, Tuple t2, overlap):
 
 	for each pair (index1, index2) from overlap:
 		if (t1[index1] != t2[index2]):
