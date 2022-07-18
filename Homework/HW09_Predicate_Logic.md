@@ -31,11 +31,11 @@ A universe contains the three individuals a, b, and c. For these individuals, a 
 
 Write each of the following expressions without quantifiers (i.e. convert them to expressions with ANDs and ORs or both) and then evaluate the expression.
 
-a. $\forall x \exists y Q(x, y)$
+a. $\forall w Q(w, b)$
 
-b. $\forall y Q(y, b)$
+b. $\forall r Q(r, r)$
 
-c. $\forall y Q(y, y)$
+c. $\forall w \exists r Q(w, r)$
 
 ---
 ### Question 3
