@@ -5,6 +5,22 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 ---
 # Table of Contents
 
+- [General Project Requirements](#General-Project-Requirements)
+- [Resources](#Resources)
+- [Example Input and Output](#Example-Input-and-Output)
+	- [Example Input](#Example-Input)
+	- [Example Output](#Example-Output)
+- [The Database Classes](#The-Database-Classes)
+- [Datalog Program Evaluation](#Datalog-Program-Evaluation)
+	- [Evaluating Schemes](#Evaluating-Schemes)
+	- [Evaluating Facts](#Evaluating-Facts)
+	- [Evaluating Rules](#Evaluating-Rules)
+	- [Evaluating Queries](#Evaluating-Queries)
+	- [Query Evaluation Output](#Query-Evaluation-Output)
+	- [Assumptions](#Assumptions)
+	- [Implementation Requirements](#Implementation-Requirements)
+	- [Implementation Suggestions](#Implementation-Suggestions)
+
 ---
 ## General Project Requirements
 
@@ -163,7 +179,6 @@ You may assume the following about the Datalog program:
         
         This select function could take two parameters that are both positions. The two given positions in a tuple would need to have equal values for that tuple to be included in the result.
         
-    
     The select operation does not change the header of the relation. The header of the relation resulting from the select is the same as the header of the original relation.
     
 2.  **How does the project operation work?**
@@ -194,8 +209,9 @@ You may assume the following about the Datalog program:
     
     Consider the query from the example Datalog program:
     
-    SK(X,Y)?
+    `SK(X,Y)?`
     
     One of the answers for this query is:
     
-    X='b', Y='b'
+    `X='b', Y='b'`
+    
