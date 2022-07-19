@@ -335,3 +335,5 @@ void scheme() {
 	1. For this step start with schemes, test, the go onto facts, test, then queries, test, then finally rules. 
 	2. For things like idList think about what type that function will have, figure out how to pass the value of this thing from this function to where it needs to be stored
 2. Good Luck!
+
+[Top](#Lab2b)

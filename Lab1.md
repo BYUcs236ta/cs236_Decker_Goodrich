@@ -487,3 +487,5 @@ It should produce the following as output:
 3. Add newline tracking
 4. Read in input from a file whose name is passed in from a command line argument and print output to the standard output (cout)
 5. Good Luck!
+
+[Top](#Lab1)

@@ -196,3 +196,5 @@ Rules:
 **(NOT REQUIRED FOR THE LAB)**
 1.  Write code to perform the above steps
 2. Refactor Project 4 code to use this new Algorithm for rule evaluation
+
+[Top](#Lab5)
