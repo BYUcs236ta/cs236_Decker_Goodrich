@@ -214,4 +214,5 @@ You may assume the following about the Datalog program:
     One of the answers for this query is:
     
     `X='b', Y='b'`
-    
+
+[Top](#Project3)
