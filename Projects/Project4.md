@@ -5,6 +5,25 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 ---
 # Table of Contents
 
+- [General Project Requirements](#General-Project-Requirements)
+- [Specific Project Requirement](#Specific-Project-Requirement)
+- [Resources](#Resources)
+- [Example Input and Output](#Example-Input-and-Output)
+	- [Example Input](#Example-Input)
+	- [Example Output](#Example-Output)
+- [New Database Operations](#New-Database-Operations)
+	- [Join](#Join)
+	- [Union](#Union)
+	- [Project operation](#Project-operation)
+- [Evaluating Rules](#Evaluating-Rules)
+- [The Fixed-Point Algorithm](#The-Fixed-Point-Algorithm)
+- [Output Format](#Output-Format)
+- [Rule Evaluation Output](#Rule-Evaluation-Output)
+- [Query Evaluation Output](#Query-Evaluation-Output)
+- [Implementation Requirements](#Implementation-Requirements)
+- [Assumptions](#Assumptions)
+- [FAQ](#FAQ)
+
 ---
 ## General Project Requirements
 
