@@ -16,8 +16,6 @@
 - [Test Case](#Test-Case)
 - [Conclusion](#Conclusion)
 - [TODO for the project](#TODO-for-the-project)
-- [Alternate Nat Join Pseudocode](#Alternate-Nat-Join-Pseudocode)
-	- [Example:](#Example:)
 
 ---
 ### Part 0 - Recap
@@ -211,7 +209,7 @@ function combineTuples (Tuple t1, Tuple t2, uniqueCols):
 	return newTuple
 ~~~
 
-`Take a screenshot of your natural join function, if you used helper functions take additional screenshots of each function. These are the only screenshots required for the lab` (make sure to also include your Big-O analysis).
+`Take a screenshot of your natural join function, if you used helper functions take additional screenshots of each function. These are the only screenshots required for the lab (make sure to also include your Big-O analysis).`
 
 ---
 ### Test Case
