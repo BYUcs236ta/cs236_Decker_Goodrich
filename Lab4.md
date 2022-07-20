@@ -21,10 +21,10 @@
 
 ---
 ### Part 0 - Recap
-- In projects 1-3 we have converted a text file -> vector\<Token\> -> DatalogProgram -> Database
-- In the previous lab we evaluated the schemes, facts, and Queries. 
+- In projects 1-3 we have converted a text file to a `vector<Token>` then parsed it to check syntax and build the representation (`DatalogProgram`), and finally converted that representation into a Database and started executing the program
+- In the previous lab we evaluated the Schemes, Facts, and Queries 
 - Next step is to add the `Rule` evaluation to the `Interpreter`
-- Rule evaluation will use Natural Join as one of it's major steps.
+- Rule evaluation will use Natural Join as one of it's major steps
 - Keep up the good work!
 
 ---
@@ -34,20 +34,20 @@ For this lab we will implement the natural join algorithm. This will be a member
 
 #### Natural Join Signature
 ~~~c++
-Relation* natJoin(Relation* other) {
+Relation* naturalJoin(Relation* other) {
 	// give clearer names to the this and other relations
 	Relation* r1 = this; 
 	Relation* r2 = other;
 
 	Relation* output = new Relation();
 
-	// set name
+	// set name of output relation
 
-	// calculate header overlap 
+	// calculate header overlap of 'this' and 'other' relations
 	
-	// combine headers
+	// combine headers -- will be the header for 'output'
 	
-	// combine tuples
+	// combine tuples -- will be the tuples for 'output'
 	return output;
 }
 ~~~
