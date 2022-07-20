@@ -5,8 +5,26 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 ---
 # Table of Contents
 
+- [General Project Requirements](#General-Project-Requirements)
+- [Resources](#Resources)
+- [Example Input and Output](#Example-Input-and-Output)
+	- [Example Input Successful](#Example-Input-Successful)
+	- [Example Output Successful](#Example-Output-Successful)
+	- [Example Input Failure](#Example-Input-Failure)
+	- [Example Output Failure](#Example-Output-Failure)
+- [Testing](#Testing)
+- [Design](#Design)
+- [The Datalog Grammar](#The-Datalog-Grammar)
+- [Datalog Program Data Structures](#Datalog-Program-Data-Structures)
+- [Output Format](#Output-Format)
+- [Syntax Errors](#Syntax-Errors)
+- [Implementation Requirements](#Implementation-Requirements)
+- [Implementation Suggestions](#Implementation-Suggestions)
+
+
+
 ---
-### General Project Requirements
+## General Project Requirements
 
 1.  Projects are to be completed by each student individually (not by groups of students)
 2.  Projects must be passed-off (over Zoom or Gather) with a TA or by the pass-off server to be given credit
@@ -168,12 +186,12 @@ Also output the set of the domain values that appear in the datalog program. The
 All output should be sent to standard output, not a file.
 
 ---
-### Syntax Errors
+## Syntax Errors
 
 If the parse is unsuccessful, output 'Failure!' followed by the offending token. Output the type, value, and line number of the token surrounded by parentheses and indented by 2 spaces on a new line of output. Note that the parser stops after encountering the first offending token.
 
 ---
-### Implementation Requirements
+## Implementation Requirements
 
 1.  You must implement a deterministic top-down parser that chooses the rule to expand based on the current token.
 2.  You must implement the parser using the recursive-descent approach.
@@ -182,7 +200,7 @@ If the parse is unsuccessful, output 'Failure!' followed by the offending token.
 5.  The parser must run to completion with a normal exit status for any input. Do not terminate with a non-zero exit status for any input, including inputs that have errors.
 6.  What strings are included in the domain? The domain consists of all strings found in the **facts**. It does not include strings found only in the rules or queries.
 
-### Implementation Suggestions
+## Implementation Suggestions
 
 1.  **What's a good way to organize your work on this project?**
     

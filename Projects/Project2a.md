@@ -4,6 +4,18 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 
 ---
 # Table of Contents
+- [General Project Requirements](#General-Project-Requirements)
+- [Example Input and Output](#Example-Input-and-Output)
+	- [Example Input Successful](#Example-Input-Successful)
+	- [Example Output Successful](#Example-Output-Successful)
+	- [Example Input Failure](#Example-Input-Failure)
+	- [Example Output Failure](#Example-Output-Failure)
+- [Testing](#Testing)
+- [Design](#Design)
+- [The Datalog Grammar](#The-Datalog-Grammar)
+- [Output Format](#Output-Format)
+- [Implementation Requirements](#Implementation-Requirements)
+- [Implementation Suggestions](#Implementation-Suggestions)
 
 ---
 ## General Project Requirements
