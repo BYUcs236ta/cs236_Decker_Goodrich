@@ -46,6 +46,7 @@ Schemes:
 Facts:
   dog('a','b','c','d','e').
   fish('f','g','h','i','j').
+  
 Rules:
   #|R0|# cat(a,b,c,d,e) :- dog(a,b,c,d,e). 
   #|R1|# cat(a,b,c,d,e) :- fish(b,c,d,e,a). 

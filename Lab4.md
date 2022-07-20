@@ -1,5 +1,4 @@
 # Lab4
-# UNDER CONSTRUCTION
 
 ---
 # Table of Contents
@@ -52,7 +51,7 @@ Relation* natJoin(Relation* other) {
 }
 ~~~
 
-For the name I recommend using something like:
+For the setting the name I recommend using something like:
 
 ~~~c++
 output->setName(r1->getName() + " |x| " + r2->getName());
@@ -114,6 +113,8 @@ end index2 for loop
 #### Step 2 - Create new Header
 newHeader = \{StudentID, Name, Address, PhoneNumber, Course, Grade\}
 
+This header is formed from taking all the elements of the first header, and only the unique elements from the second header. 
+
 ##### Combine Header Pseudocode
 Should this be a separate function?
 
@@ -161,6 +162,9 @@ t1.at(0) == t2.at(1)
 TRUE
 ```
 
+
+You need to use the overlap object you created to calculate this.
+
 ##### Tuple Section Pseudocode
 
 In `NatJoin()`
@@ -197,7 +201,7 @@ function combineTuples (Tuple t1, Tuple t2, uniqueCols):
 	return newTuple
 ~~~
 
-`Take a screenshot of your natural join function, if you used helper functions take additional screenshots of each function. These are the only screenshots required for the lab.`
+`Take a screenshot of your completed natural join function, if you used helper functions take additional screenshots of each function. These are the only screenshots required for the lab.`
 
 ---
 ### Test Case
