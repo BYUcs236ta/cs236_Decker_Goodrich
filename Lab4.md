@@ -19,19 +19,18 @@
 - [Alternate Nat Join Pseudocode](#Alternate-Nat-Join-Pseudocode)
 	- [Example:](#Example:)
 
-
-
 ---
 ### Part 0 - Recap
 - In projects 1-3 we have converted a text file -> vector\<Token\> -> DatalogProgram -> Database
+- In the previous lab we evaluated the schemes, facts, and Queries. 
 - Next step is to add the `Rule` evaluation to the `Interpreter`
+- Rule evaluation will use Natural Join as one of it's major steps.
 - Keep up the good work!
-
 
 ---
 ### Natural Join Algorithm
 
-For this lab we will implement the natural join algorithm. This will be a member function of `Relation.h`.
+For this lab we will implement the natural join algorithm. This will be a member function of `Relation.h`. We will use this method to join together the body predicates of each rule.
 
 #### Natural Join Signature
 ~~~c++

@@ -1,9 +1,25 @@
-# Project2b
+# Project2
 
 UNDER CONSTRUCTION Currently hosted on learning suite
 
 ---
 # Table of Contents
+- [General Project Requirements](#General-Project-Requirements)
+- [Resources](#Resources)
+- [Example Input and Output](#Example-Input-and-Output)
+- [Example Input Successful](#Example-Input-Successful)
+- [Example Output Successful](#Example-Output-Successful)
+- [Example Input Failure](#Example-Input-Failure)
+- [Example Output Failure](#Example-Output-Failure)
+- [Testing](#Testing)
+- [Design](#Design)
+- [The Datalog Grammar](#The-Datalog-Grammar)
+- [Datalog Program Data Structures](#Datalog-Program-Data-Structures)
+- [Output Format](#Output-Format)
+- [Syntax Errors](#Syntax-Errors)
+- [Implementation Requirements](#Implementation-Requirements)
+- [Implementation Suggestions](#Implementation-Suggestions)
+
 
 ---
 ### General Project Requirements
@@ -14,12 +30,13 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 4.  Even though we provide the test cases, the definition of your project working is that it passes all tests on the _pass-off machine_
     -   If the test cases pass on your machine but not on the pass-off machine you should start by doing the following:
         -   Test your code and the official test cases on a Linux machine, where you should be able to replicate the error
-        -   Look at how you initialize object. IDEs perform default initialization, but building from commandline with g++ on Linux does not
+        -   Look at how you initialize object. IDEs perform default initialization, but building from command-line with g++ on Linux does not
 
 ---
 ## Resources
 
-1.  READ THE FOLLOWING: [Project 2 Guide](http://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=8c190154-JQVT-3lJ5-Zbnf-cw16d26d065d), [TA Help Slides](https://docs.google.com/presentation/d/12UhIebOcmX2tFdk_o9-3eMf50fR8xxrw/edit?usp=sharing&ouid=103259846004644167870&rtpof=true&sd=true)
+1.  READ THE FOLLOWING: [Project 2 Guide](http://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=8c190154-JQVT-3lJ5-Zbnf-cw16d26d065d)
+2. [TA Help Slides](https://docs.google.com/presentation/d/12UhIebOcmX2tFdk_o9-3eMf50fR8xxrw/edit?usp=sharing&ouid=103259846004644167870&rtpof=true&sd=true)
 
 Write a parser that reads a datalog program from a text file, builds a data structure that represents the datalog program, and outputs the contents of the datalog program data structure. You will modify your Recursive Decent Parser from Project 2A.
 
@@ -116,7 +133,7 @@ You will build a datalog interpreter in later projects. The datalog interpreter 
 
 The Datalog Grammar defines valid datalog programs. Use the grammar to write a recursive-descent parser for datalog programs. Use the scanner from the previous project to provide input tokens for the parser.
 
-The nonterminals in the grammar begin with a lower-case letter. Terminal symbols in the grammar are written in all upper-case letters. The word 'lambda' in the grammar represents the empty string.
+The non-terminals in the grammar begin with a lower-case letter. Terminal symbols in the grammar are written in all upper-case letters. The word 'lambda' in the grammar represents the empty string.
 
 Note that comments do not appear in the grammar because comments should be ignored. An easy way to ignore comments is to modify the `lexer/scanner/tokenizer` to stop outputting comments.
 
@@ -157,6 +174,83 @@ You are required to have the following classes: DatalogProgram, Rule, Predicate,
 Write a `toString` method for each of these classes so that you can easily print them out. Return a DatalogProgram object from the parser and then traverse this structure and use `toString` as needed to print the required output.
 
 To integrate this project with later projects, be sure to have a way to get the lists of schemes, facts, rules and queries out of the DatalogProgram.
+
+---
+### Datalog Program Class
+
+1. A Datalog Program is composed of 5 parts. 
+	1. Schemes
+	2. Facts
+	3. Rules
+	4. Queries
+	5. Domain
+
+We will represent them using the following 4 classes: `DatalogProgram`, `Rule`, `Predicate`, `Parameter`
+
+Here is how those map onto each other:
+
+Schemes, Facts, and Queries are `Predicate` objects
+
+Rules are  `Rule` objects
+
+A Datalog Program has member variables:
+
+```c++
+vector<Predicate*> schemes;
+vector<Predicate*> facts;
+vector<Rule*> rules;
+vector<Predicate*> queries;
+set<string> domain;
+```
+
+---
+### Predicate Class
+
+A Predicate has member variables:
+
+```c++
+vector<Parameter*> parameters;
+string name;
+```
+
+Example:
+
+```
+snap(A, B, C)
+->
+name: snap
+Parameters: {A, B, C}
+```
+
+
+---
+### Parameter Class
+
+A Parameter has:
+
+```c++
+string value;
+```
+
+
+---
+### Rule Class
+
+A Rule has:
+
+```
+Predicate head;
+vector<Predicate> body;
+```
+	
+Example:
+
+```
+snap(A, B, C) :- apple(e, f, g), orange(A, B, C, f)
+->
+head: snap(A, B, C)
+body: {apple(e, f, g), orange(A, B, C, f)}
+```
 
 ---
 ## Output Format
@@ -208,5 +302,4 @@ If the parse is unsuccessful, output 'Failure!' followed by the offending token.
     
     **No**, don't store tokens or token types in the data structures created by the parser. The data structures created by the parser should be decoupled from both the scanner and the parser.
 
-
-[Top](#Project2b)
+[Top](#Project2)
