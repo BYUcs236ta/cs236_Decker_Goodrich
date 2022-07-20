@@ -15,15 +15,13 @@
 - [Test Case](#Test-Case)
 - [Conclusion](#Conclusion)
 - [TODO for the project](#TODO-for-the-project)
-- [Alternate Nat Join Pseudocode](#Alternate-Nat-Join-Pseudocode)
-	- [Example:](#Example:)
 
 ---
 ### Part 0 - Recap
-- In projects 1-3 we have converted a text file -> vector\<Token\> -> DatalogProgram -> Database
-- In the previous lab we evaluated the schemes, facts, and Queries. 
+- In projects 1-3 we have converted a text file to a `vector<Token>` then parsed it to check syntax and build the representation (`DatalogProgram`), and finally converted that representation into a Database and started executing the program
+- In the previous lab we evaluated the Schemes, Facts, and Queries 
 - Next step is to add the `Rule` evaluation to the `Interpreter`
-- Rule evaluation will use Natural Join as one of it's major steps.
+- Rule evaluation will use Natural Join as one of it's major steps
 - Keep up the good work!
 
 ---
@@ -33,20 +31,20 @@ For this lab we will implement the natural join algorithm. This will be a member
 
 #### Natural Join Signature
 ~~~c++
-Relation* natJoin(Relation* other) {
+Relation* naturalJoin(Relation* other) {
 	// give clearer names to the this and other relations
 	Relation* r1 = this; 
 	Relation* r2 = other;
 
 	Relation* output = new Relation();
 
-	// set name
+	// set name of output relation
 
-	// calculate header overlap 
+	// calculate header overlap of 'this' and 'other' relations
 	
-	// combine headers
+	// combine headers -- will be the header for 'output'
 	
-	// combine tuples
+	// combine tuples -- will be the tuples for 'output'
 	return output;
 }
 ~~~
@@ -76,23 +74,23 @@ csg
 | 'EE200' | '12345'  | 'B+'    |
 | 'EE200' | '22222'  | 'B'     |
 
-We will calculate snap |x| csg
+We will calculate `snap |x| csg`
 
 #### Step 1 - Calculate header overlap
 
-snap and csg overlap on index pair `(0, 1)`
+`snap` and `csg` overlap on index pair `(0, 1)` -- Hint: you interpret this as index 0 of `snap`'s header is the same as index 1 of `csg`'s header
 
-csg has unique attribute names at columns `[0, 2]`
+`csg` has unique attribute names at columns `[0, 2]` -- Hint: this is a list of indices in `csg's` header that are unique. They need to be included in the `output` relations header.
 
 ##### Overlap Pseudocode
-What data structures should be used for the overlap and uniqueCols
+Note: What data structures should be used for the `overlap` and `uniqueCols` below? There are multiple options that work. You get to choose (see the hints).
 
 ~~~
 let Header h1 be r1's header
 let Header h2 be r2's header
 
-initilize overlap (what type should this be? maybe a map or 2 vectors?)
-initilaze uniqueCols (what type should this be? maybe a vector or set)
+initialize overlap (what type should this be? maybe a map or 2 vectors?)
+initialize uniqueCols (what type should this be? maybe a vector or set)
 
 for index2 = 0 to h2.size():
 	found = false
@@ -111,13 +109,17 @@ end index2 for loop
 ~~~
 
 #### Step 2 - Create new Header
-newHeader = \{StudentID, Name, Address, PhoneNumber, Course, Grade\}
+From the above example, here is the new header:
+```
+newHeader = {StudentID, Name, Address, PhoneNumber, Course, Grade}
+```
+Hint: note that the `newHeader` is the entire header of `snap` and then just the "unique" columns from `csg`. This works every time.
 
 This header is formed from taking all the elements of the first header, and only the unique elements from the second header. 
 
 ##### Combine Header Pseudocode
-Should this be a separate function?
 
+This step is best done as a separate function, which you can then test to make sure it is working.
 ~~~
 // don't forget to pass by refrence to avoid making unecessary copies
 function combineHeaders (Header h1, Header h2, uniqueCols):
@@ -131,9 +133,9 @@ function combineHeaders (Header h1, Header h2, uniqueCols):
 	return newHeader
 ~~~
 
-#### Step 3 - Find Tuples
+#### Step 3 - Find Tuples that can join
 
-For every possible pair of tuples check if they can be joined
+For every possible pair of tuples check if they can be joined (you might consider making this a separate function as well).
 
 Examples:
 ```
@@ -167,16 +169,26 @@ You need to use the overlap object you created to calculate this.
 
 ##### Tuple Section Pseudocode
 
-In `NatJoin()`
+In `naturalJoin()`
 ```
 for each tuple t1 from r1:
 	for each tuple t2 from r2:
+
+// Join tables r1 and r2
+	for every t1 in r1 and t2 in r2
+		// t1 is a tuple from r1
+		// t2 is a tuple from r2
 		if isJoinable(t1, t2, overlap):
 			newTuple = combineTuples(t1, t2, uniqueCols)
 			add new tuple into the output relation*
 
-* consider making seperate functions for ifJoinable(t1, t2, overlapData) and combineTuples(t1, t2, uniqueCols)
+* consider making seperate functions for ifJoinable(t1, t2, overlap) and combineTuples(t1, t2, uniqueCols)
 ```
+
+Let's think about the line: `for every t1 in r1 and t2 in r2`. The "for every" sounds like the "for all" quantifier. We are using the same quantifier for two variables, the "for all." How do we usually represent that in code? Hint: a `for` loop. But we have nested quantifiers. How do we represent that in code? By iterating over every element (t1) in a table (r1) and then for each t1 we need to iterate over every singe element (t2) in the second table (r2).
+
+It may have been a while since you have thought about Big-O notation. This about the nested quantifiers and the code construct needed, a `for` loop. Can you determine what the Big-O runtime of this algorithm should be? Include a text file in your submission with your answer.
+
 
 Helper functions:
 ~~~
@@ -201,7 +213,7 @@ function combineTuples (Tuple t1, Tuple t2, uniqueCols):
 	return newTuple
 ~~~
 
-`Take a screenshot of your completed natural join function, if you used helper functions take additional screenshots of each function. These are the only screenshots required for the lab.`
+`Take a screenshot of your natural join function, if you used helper functions take additional screenshots of each function. These are the only screenshots required for the lab (make sure to also include your Big-O analysis).`
 
 ---
 ### Test Case
@@ -293,6 +305,8 @@ StudentID=33333, Name=Snoopy, Address=12 Apple St., Phone=555-1234, Course=cs101
 
 ---
 ### Conclusion
+
+Once you get the natural join function working it will make the rest of this project much easier. But how do you now whether or not it is working? You should come up with test cases (like the one above) that test out your implementation. Think about how the natural join works. What happens if there are no columns to join? This is a good test case. What happens if all columns join? This is another good test case. We've already provided a test case where one column joins. You should also consider testing where multiple columns join. 
 
 ---
 ### TODO for the project 
