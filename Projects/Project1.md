@@ -220,10 +220,10 @@ The following table describes the types of tokens your lexer must recognize.
 | FACTS       | The string "Facts"         | Facts    |
 | RULES       | The string "Rules"         | Rules    |
 | QUERIES     | The string "Queries"       | Queries  |
-| ID          | See below                  |          |
-| STRING      | See below                  |          |
-| COMMENT     | See below                  |          |
-| UNDEFINED   | See below                  |          |
+| ID          | [See below](#Identifiers)                  |          |
+| STRING      | [See below](#Strings)                  |          |
+| COMMENT     | [See below](#Comments)                  |          |
+| UNDEFINED   | [See below](#Undefined-Tokens)                  |          |
 | EOF         | The end of the input file. |          |
 
 ---

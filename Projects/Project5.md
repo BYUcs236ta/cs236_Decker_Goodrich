@@ -5,6 +5,25 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 ---
 # Table of Contents
 
+- [General Project Requirements](#General-Project-Requirements)
+- [Resources](#Resources)
+- [Example Input and Output](#Example-Input-and-Output)
+	- [Example Input](#Example-Input)
+	- [Example Output](#Example-Output)
+- [Datalog Interpreter](#Datalog-Interpreter)
+- [Evaluating Rules](#Evaluating-Rules)
+	- [Dependency Graph](#Dependency-Graph)
+	- [Reverse Dependency Graph](#Reverse-Dependency-Graph)
+	- [DFS Forest](#DFS-Forest)
+	- [Finding the SCCs](#Finding-the-SCCs)
+- [SCC Evaluation](#SCC-Evaluation)
+- [Output Format](#Output-Format)
+- [Dependency Graph Output](#Dependency-Graph-Output)
+- [Rule Evaluation Output](#Rule-Evaluation-Output)
+- [Implementation Requirements](#Implementation-Requirements)
+- [Implementation Suggestions](#Implementation-Suggestions)
+- [FAQ](#FAQ)
+
 ---
 ## General Project Requirements
 
@@ -106,7 +125,7 @@ The following steps are used to evaluate the rules:
 4.  Evaluate the rules in each component.
 
 ---
-## Dependency Graph
+### Dependency Graph
 
 Build the dependency graph for the rules in the Datalog program.
 
@@ -142,6 +161,7 @@ R3:
 R4: R3 R4
 ~~~
 
+---
 ### Reverse Dependency Graph
 
 Finding the strongly connected components (SCCs) of the dependency graph allows the rules to be grouped and ordered for improved evaluation. An algorithm for computing the SCCs is found in section 3.4.2 of [Algorithms](http://www.cs.berkeley.edu/~vazirani/algorithms/chap3.pdf) by Dasgupta, C. H. Papadimitriou, and U. V. Vazirani.
@@ -159,7 +179,7 @@ R4: R4
 ~~~
 
 ---
-## DFS Forest
+### DFS Forest
 
 The next step of the SCC algorithm is to run DFS-Forest on the reverse dependency graph to obtain post-order numbers.
 
@@ -170,7 +190,7 @@ The post-order for the example from the previous section is:
 `R2, R1, R0, R4, R3`
 
 ---
-## Finding the SCCs
+### Finding the SCCs
 
 The post-order from the DFS-Forest on the reverse graph gives the correct order to use for searching for SCCs in the original dependency graph. The order is used in **reverse order**.
 
