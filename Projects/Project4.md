@@ -33,7 +33,7 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 4.  Even though we provide the test cases, the definition of your project working is that it passes all tests on the `pass-off machine`
     -   If the test cases pass on your machine but not on the pass-off machine you should start by doing the following:
         -   Test your code and the official test cases on a Linux machine, where you should be able to replicate the error
-        -   Look at how you initialize object. IDEs perform default initialization, but building from commandline with g++ on Linux does not
+        -   Look at how you initialize object. IDEs perform default initialization, but building from command-line with g++ on Linux does not
 
 ---
 ## Specific Project Requirement
