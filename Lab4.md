@@ -304,6 +304,6 @@ StudentID=33333, Name=Snoopy, Address=12 Apple St., Phone=555-1234, Course=cs101
 
 Once you get the natural join function working it will make the rest of this project much easier. But how do you know whether or not it is working? You should come up with test cases (like the one above) that test out your implementation. Think about how the natural join works. What happens if there are no columns to join? This is a good test case. What happens if all columns join? This is another good test case. We've already provided a test case where one column joins. You should also consider testing where multiple columns join. 
 
-Submit screenshots of your natural join function, helper functions, and your Big-O analysis on Learning suite to receive credit for lab 4.
+`Submit screenshots of your natural join function, helper functions, and your Big-O analysis on Learning suite to receive credit for lab 4.`
 
 [Top](#Lab4)

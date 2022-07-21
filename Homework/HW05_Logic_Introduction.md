@@ -39,6 +39,13 @@ First assign each clause a propositional symbol then write each of the following
 Then re-write: 
 L $\rightarrow$ Q
 
+
+a. If you do not leave, I will call the police. 
+
+b. I am sad if and only if I am not happy. 
+
+c. It is a nice day if it is sunny and it is not hot.
+
 ---
 ### Question 3
 Given the following:
