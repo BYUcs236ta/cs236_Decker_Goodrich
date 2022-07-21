@@ -209,7 +209,7 @@ function combineTuples (Tuple t1, Tuple t2, uniqueCols):
 	return newTuple
 ~~~
 
-`Take a screenshot of your natural join function, if you used helper functions take additional screenshots of each function. These are the only screenshots required for the lab (make sure to also include your Big-O analysis).`
+`Take a screenshot of your natural join function, if you used helper functions take additional screenshots of each function. Also include your Big-O analysism of the Natual Join Function (leaving a comment above your code will be sufficent for this).`
 
 ---
 ### Test Case
