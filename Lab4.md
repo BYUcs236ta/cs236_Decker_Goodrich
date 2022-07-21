@@ -170,16 +170,13 @@ You need to use the overlap object you created to calculate this.
 
 In `naturalJoin()`
 ```
-for each tuple t1 from r1:
-	for each tuple t2 from r2:
-
 // Join tables r1 and r2
-	for every t1 in r1 and t2 in r2
-		// t1 is a tuple from r1
-		// t2 is a tuple from r2
-		if isJoinable(t1, t2, overlap):
-			newTuple = combineTuples(t1, t2, uniqueCols)
-			add new tuple into the output relation*
+for every t1 in r1 and t2 in r2
+	// t1 is a tuple from r1
+	// t2 is a tuple from r2
+	if isJoinable(t1, t2, overlap):
+		newTuple = combineTuples(t1, t2, uniqueCols)
+		add new tuple into the output relation*
 
 * consider making seperate functions for ifJoinable(t1, t2, overlap) and combineTuples(t1, t2, uniqueCols)
 ```
