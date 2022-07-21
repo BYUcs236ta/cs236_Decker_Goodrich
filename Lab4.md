@@ -183,7 +183,7 @@ for every t1 in r1 and t2 in r2
 
 Let's think about the line: `for every t1 in r1 and t2 in r2`. The "for every" sounds like the "for all" quantifier. We are using the same quantifier for two variables, the "for all." How do we usually represent that in code? Hint: a `for` loop. But we have nested quantifiers. How do we represent that in code? By iterating over every element (t1) in a table (r1) and then for each t1 we need to iterate over every singe element (t2) in the second table (r2).
 
-It may have been a while since you have thought about Big-O notation. This about the nested quantifiers and the code construct needed, a `for` loop. Can you determine what the Big-O runtime of this algorithm should be? Include a text file in your submission with your answer.
+It may have been a while since you have thought about Big-O notation. This about the nested quantifiers and the code construct needed, a `for` loop. Can you determine what the Big-O runtime of this algorithm should be? `Include a text file in your submission with your answer.`
 
 
 Helper functions:
@@ -209,7 +209,7 @@ function combineTuples (Tuple t1, Tuple t2, uniqueCols):
 	return newTuple
 ~~~
 
-`Take a screenshot of your natural join function, if you used helper functions take additional screenshots of each function. Also include your Big-O analysism of the Natual Join Function (leaving a comment above your code will be sufficent for this).`
+`Take a screenshot of your natural join function, if you used helper functions take additional screenshots of each function. Also include your Big-O analysis of the Natural Join Function.`
 
 ---
 ### Test Case
@@ -303,5 +303,7 @@ StudentID=33333, Name=Snoopy, Address=12 Apple St., Phone=555-1234, Course=cs101
 ### Conclusion
 
 Once you get the natural join function working it will make the rest of this project much easier. But how do you know whether or not it is working? You should come up with test cases (like the one above) that test out your implementation. Think about how the natural join works. What happens if there are no columns to join? This is a good test case. What happens if all columns join? This is another good test case. We've already provided a test case where one column joins. You should also consider testing where multiple columns join. 
+
+Submit screenshots of your natural join function, helper functions, and your Big-O analysis on Learning suite to receive credit for lab 4.
 
 [Top](#Lab4)

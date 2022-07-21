@@ -2,7 +2,7 @@
 ---
 ### Graph G
 
-Consider again graph G:
+Consider graph G:
 
 ![](/assets/images/HW22_Graph_G.png)
 
