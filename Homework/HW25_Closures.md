@@ -16,7 +16,7 @@ d. Let R be the relation \{(a, d), (a, b), (c, d), (d, a)\} on \{a, b, c, d, e\}
 ---
 ### Question 2
 
-For each of the following relations
+For each of the following relations:
 
 i. state whether the relation is an equivalence relation and 
 
