@@ -13,7 +13,7 @@
 	- [Post-Order](#Post-Order)
 	- [Reverse Post-Order](#Reverse-Post-Order)
 	- [SCC's](#SCC's)
-- [Example 2:](#Example-2:)
+- [Example 2](#Example-2)
 	- [Forward](#Forward)
 	- [Reverse](#Reverse)
 	- [Post-Order](#Post-Order)
@@ -132,7 +132,7 @@ Rules:
 
 
 ---
-### Example 2:
+### Example 2
 ```datalog
 Rules:
 
