@@ -201,9 +201,19 @@ Total Tokens = 6
 ---
 ## Token Types
 
+### List
+~~~
+	COMMA, PERIOD, Q_MARK, LEFT_PAREN, RIGHT_PAREN,
+	COLON, COLON_DASH,
+	MULTIPLY, ADD,
+	SCHEMES, FACTS, RULES, QUERIES,
+	ID, STRING, COMMENT, UNDEFINED,
+	EOF
+~~~
+
 ### Table
 
-The following table describes the types of tokens your lexer must recognize.
+The following table describes the types of tokens your `Lexer` must recognize.
 
 | Token Type  | Description                | Examples |
 | ----------- | -------------------------- | -------- |

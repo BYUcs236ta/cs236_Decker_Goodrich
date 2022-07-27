@@ -26,8 +26,10 @@ Make sure to read the Project 1 Guide (found in Learning Suite) and the specs so
 4. Make friends and talk to them about the class
 5. Read through and fully understand the provided code. If you have questions please ask a TA!
 6. For smaller files try to keep your code in only the header files (.h) instead of splitting them between a .h and .cpp
-7. Please only use unsigned ints or size_t in this course. None of the labs require negative numbers and this will improve consistency.
+7. Please only use `unsigned int` or `size_t` in this course. None of the labs require negative numbers and this will avoid a common error.
 8. Write a toString for every class (Except maybe the automaton classes). This will be helpful during testing and debugging.
+
+
 ---
 ### Part 1 - Tokens
 1. Make a `TokenType` enum (`Token.h`). You will need to add more to this list later.
@@ -215,11 +217,12 @@ The next big step here now that we have the architecture created is to implement
 
 We are trying to define the syntax for a programming language. We have a list of desired patterns. Here is a partial list of them:
 
-| Type       | Symbol     | Example        | Description                                                                                                                  |
-| ---------- | ---------- | -------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Colon      | COLON      | :              | The character ':'                                                                                                            |
-| Colon dash | COLON_DASH | :-             | The string ":-"                                                                                                              |
-| Identifier | ID         | See table below | An identifier is a letter followed by zero or more letters or digits.| 
+| Type       | Symbol     | Example         | Description                                                           |
+| ---------- | ---------- | --------------- | --------------------------------------------------------------------- |
+| Colon      | COLON      | :               | The character ':'                                                     |
+| Colon dash | COLON_DASH | :-              | The string ":-"                                                       |
+| Identifier | ID         | See table below | An identifier is a letter followed by zero or more letters or digits. |
+| Undefined  | UNDEFINED  | \#\&\%          | Any unrecognized single charcter                                                                      |
 
 ID Example:
 
@@ -228,13 +231,14 @@ ID Example:
 | myID  | 1myId   |
 | onePerson | onePers@n |
 
-So if your input string is "::-onePerson"
+So if your input string is "::-\#onePerson"
 
 By those rules it should become the following tokens:
 
 ```c++
 (COLON, ":", 1),
 (COLON_DASH, ":-", 1),
+(UNDEFINED, "#", 1),
 (ID, "onePerson", 1)
 ```
 
@@ -503,6 +507,7 @@ It should produce the following as output:
 	2. Test as you go
 	3. Draw the automaton before writing code
 	4. When you have problems make sure your drawing matches your code and that your automaton drawing is correct
+	5. You may consider writing a matcher automaton for the simpler token types.
 2. Write separate Automata for SingleLineComment, BlockComment, UndefinedBlockComment, String and UndefinedString tokens.
 3. Add newline tracking
 4. Read in input from a file whose name is passed in from a command line argument and print output to the standard output (cout)
