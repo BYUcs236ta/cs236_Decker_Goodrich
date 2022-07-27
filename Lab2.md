@@ -74,11 +74,11 @@ int main() {
   };
   try {
     Parser p = Parser(tokens);
-    cout << p.currTokenType() << endl;
+    cout << tokenTypeToString(p.currTokenType()) << endl;
     p.advanceToken();
-    cout << p.currTokenType() << endl;
+    cout << tokenTypeToString(p.currTokenType()) << endl;
     p.advanceToken();
-    cout << p.currTokenType() << endl;
+    cout << tokenTypeToString(p.currTokenType()) << endl;
     p.throwError();
   }
   catch(Token errorToken) {
