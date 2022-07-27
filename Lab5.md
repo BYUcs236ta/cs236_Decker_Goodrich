@@ -25,7 +25,7 @@
 
 ---
 ### Part 0 - Recap
-1. We have created a programming language from the ground up. In Projects 1, 2a, 2b we defined the syntax, and converted the raw input text to tokens, then into a data structure that represents the program.
+1. We have created a programming language from the ground up. In Projects 1 and 2 we defined the syntax, and converted the raw input text to tokens, then into a data structure that represents the program.
 2. For Projects 3 and 4 we took that program and interpreted it. We gave that syntax its meaning.
 3. For this final project we are going to increase the efficiency of the `Rule Evaluation` it using some graph theory.
 4. This lab will be written, it will be graded on correctness, you are welcome to come into the TA lab to check over your work and get it graded on the spot.

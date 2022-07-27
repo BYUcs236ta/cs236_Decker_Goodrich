@@ -17,7 +17,7 @@
 
 ---
 ### Part 0 - Recap
-- In projects 1-3 we have converted a text file to a `vector<Token>` then parsed it to check syntax and build the representation (`DatalogProgram`), and finally converted that representation into a Database and started executing the program
+- In projects 1-3 we have converted a text file to a `vector<Token>` then parsed it to check syntax and built the representation (`DatalogProgram`), and finally converted that representation into a Database and started executing the program
 - In the previous lab we evaluated the Schemes, Facts, and Queries 
 - Next step is to add the `Rule` evaluation to the `Interpreter`
 - Rule evaluation will use Natural Join as one of it's major steps
