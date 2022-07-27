@@ -37,19 +37,28 @@ class Parser {
 
 2. Add some support functions to the `Parser` class (Parser.h)  
 
-The support functions will make the parsing routines simpler and easier to write. The `tokenType` function returns the type of the current `Token` being looked at. The `advanceToken()` function moves to the next `Token` in `tokens`. The `throwError()` function is called when the Parser finds an error. You may want to add other support functions in addition to these. Notice how `throwError()` includes the keyword "throw". When this line is reached computation will be halted and your code will return to the nearest "catch block". If no "catch block" is available it will halt and report an error. If you haven't used exceptions in C++, see this tutorial:[https://cplusplus.com/doc/tutorial/exceptions/](https://cplusplus.com/doc/tutorial/exceptions/).
+The support functions will make the parsing routines simpler and easier to write. 
+
+The `currToken()` function should return the current token being looked at. (Hint: Use `currTokenIndex()` to identify which token from the tokens vector to return)
+
+The `currTokenType()` function should returns the type of the current `Token` being looked at. 
+
+The `advanceToken()` function should move to the next `Token` in `tokens`. 
+
+The `throwError()` function is called when the Parser finds an error. You may want to add other support functions in addition to these. Notice how `throwError()` includes the keyword "throw". When this line is reached computation will be halted and your code will return to the nearest "catch block". If no "catch block" is available it will halt and report an error. If you haven't used exceptions before in C++, see this tutorial:[https://cplusplus.com/doc/tutorial/exceptions/](https://cplusplus.com/doc/tutorial/exceptions/).
 
 ```c++
+  Token currToken() const {
+    // TODO: add code for this helper function
+  }
   TokenType currTokenType() const {
-    if (currTokenIndex >= tokens.size()) return UNDEFINED;
-    return tokens.at(currTokenIndex).getType();
+    // TODO: add code for this helper function
   }
   void advanceToken() {
-    ++currTokenIndex;
+    // TODO: add code for this helper function
   }
   void throwError() {
-    if (currTokenIndex >= tokens.size()) throw tokens.at(tokens.size() - 1);
-    throw tokens.at(currTokenIndex);
+    throw currToken();
   }
 ```
 
@@ -84,8 +93,11 @@ int main() {
 
 ~~~c++
   void match(TokenType expectedType) {
-    //the cout should be removed for the final project output
-    cout << "Token at index " << currTokenIndex << " was type: " << currTokenType() << " expected: " << expectedType << endl;
+    // this cout segement should be removed for the final project output
+    cout << "Token at index " << currTokenIndex;
+    cout << " was type: " << tokenTypeToString(currTokenType());
+    cout << " expected: " << tokenTypeToString(expectedType) << endl;
+    
     if (currTokenType() == expectedType) {
 	// TODO: think about what should happen if the Parser matches an expected Token
     } else {
@@ -118,7 +130,7 @@ int main() {
 }
 ~~~
 
-`TODO: Take a screenshot of this output (s2)`
+`TODO: Take a screenshot of this output (s2). Hint: if nothing happens or you get stuck in an infinite loop make sure to finish the TODO's in the match functions.`
 
 ---
 ### Part 2 - Parsing

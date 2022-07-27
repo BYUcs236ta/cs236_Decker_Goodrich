@@ -120,21 +120,21 @@ protected:
     void next() {
         if (curr() == '\n') {
             newLinesRead++;
-	}
+		}
         numCharRead++;
     }
 
     char curr() {
-	if (endOfFile()) {
-            throw "Tried to read past the file, does your automaton state check for it as a transition?";
-	}
+		if (endOfFile()) {
+	            throw "Tried to read past the file, does your automaton state check for it as a transition?";
+		}
         return input.at(currCharIndex);
     }
 
     bool match(char c) {
-	if (endOfFile()) {
-	    throw "Tried to read past the file, does your automaton state check for it as a transition?";
-	}
+		if (endOfFile()) {
+		    throw "Tried to read past the file, does your automaton state check for it as a transition?";
+		}
         return (curr() == c);
     }
 
@@ -167,7 +167,7 @@ public:
     }
 
     TokenType getType() const {
-	return type;
+		return type;
     }
 };
 ```
@@ -275,9 +275,11 @@ Hint 2: When maxRead and currentAutomaton.run() are the same *do not* update max
  5) Create a token and delete the read section from the input.
 ```c++
 
-Token currToken = Token(maxAutomaton->getType(), input.substr(0, maxRead), 0/*defaults to 0, you will need to fix for the project*/); 
+Token currToken = Token(maxAutomaton->getType(), input.substr(0, maxRead), 0/*defaults to 0, you will need to fix this later the project*/); 
+input = input.substr(maxRead);
+
+// print and add to the tokens vector
 cout << currToken.toString() << endl;  
-input = input.substr(maxRead);  
 tokens.push_back(currToken);
 ```
 
@@ -306,7 +308,10 @@ public:
 	}
 private:
 	void s0() {
-		if (match(':')) {
+		if (endOfFile()) {  
+	        sError(); // this calls the error state
+	    }  
+		else if (match(':')) {
 			next();
 			return; // this represents accepting the input
 		}
@@ -337,7 +342,10 @@ public:
 	}
 private:
 	void s0() {
-		if (match(':')) {
+		if (endOfFile()) {  
+	        sError(); // this calls the error state
+	    }  
+		else if (match(':')) {
 			next();
 			s1(); // call s1 as the transition
 		}
@@ -346,7 +354,7 @@ private:
 	}
 	void s1() {
 		if (endOfFile()) {  
-		    sError();  
+		    sError(); // this calls the error state
 		}  
 		else if (match('-')) {
 			next();
@@ -375,10 +383,16 @@ public:
 	UndefinedCharAutomaton() {
 		type = TokenType::UNDEFINED; // set the type
 	}
+	
 private:
 	void s0() {
-		next(); // read next character
-		return; // accept the input
+		if (endOfFile()) {  
+	        sError(); // this calls the error state
+	    } 
+	    else {
+			next(); // read next character
+			return; // accept the input
+		}
 	}
 };
 ```
@@ -400,12 +414,16 @@ public:
 	}
 private:
 	void s0() {
-		if (isalpha(curr())) {
+		if (endOfFile()) {  
+	        sError(); // reject  
+	    }  
+		else if (isalpha(curr())) {
 			next();
 			s1();
 		}
-		else 
+		else {
 			sError();
+		}
 	}
 	void s1() {  
 	    if (endOfFile()) {  
@@ -429,6 +447,8 @@ Hint 1: There is a self loop.
 Hint 2: It may be helpful to include sError in your diagram but you are not required to do so. If you do write "error" as the state name to denote it. An error state has no outgoing transitions. 
 
 Hint 3: The following site may be helpful: [Finite State Machine Designer](https://www.madebyevan.com/fsm/)
+
+Hint 4: Make sure that every state checks for endOfFile() and that that check is the first branch in your if, else if chain.
 
 ### Part 6 - Add Automata to Lexer
 1) add the following includes to `Lexer.h`
