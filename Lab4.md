@@ -286,7 +286,7 @@ int main() {
     r2.addTuple(csg_t4);  
     r2.addTuple(csg_t5);  
   
-    cout << r1.natJoin(&r2)->toString() << endl << endl;  
+    cout << r1.naturalJoin(&r2)->toString() << endl << endl;  
 }
 ```
 
