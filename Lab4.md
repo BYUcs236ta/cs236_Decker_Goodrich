@@ -176,7 +176,7 @@ for every t1 in r1 and t2 in r2
 	// t2 is a tuple from r2
 	if isJoinable(t1, t2, overlap):
 		newTuple = combineTuples(t1, t2, uniqueCols)
-		add new tuple into the output relation*
+		add newTuple into the output relation*
 
 * consider making seperate functions for ifJoinable(t1, t2, overlap) and combineTuples(t1, t2, uniqueCols)
 ```
