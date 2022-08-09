@@ -87,18 +87,30 @@ Give the Strongly connected components after performing a `Depth First Search Fo
 ---
 ### Example 1
 ```datalog
+
+Schemes:
+Parent(p,c)
+Sibling(a,b)
+Ancestor(x,y)
+
+Facts:
+Parent('bob','ned').
+Parent('jim','bob').
+Sibling('sue','ned').
+
 Rules:
+#|0|# Sibling(x,y):-Sibling(y,x).
+#|1|# Ancestor(x,y):-Ancestor(x,z),Parent(z,y).
+#|2|# Ancestor(x,y):-Parent(x,y).
 
-#|0|# Sibling(x,y) :- Sibling(y,x).
-
-#|1|# Ancestor(x,y) :- Ancestor(x,z), Parent(z,y).
-
-#|2|# Ancestor(x,y) :- Parent(x,y).
+Queries:
+Ancestor(x,'ned')?
+Sibling('ned','sue')?
 ```
 
 #### Forward
 
-![](Lab5_Forward_SimpleExample.png)
+![](/assets/images/lab/Lab5_Forward_SimpleExample.png)
 
 | From | To   |
 | ---- | ---- |
@@ -108,7 +120,7 @@ Rules:
 
 #### Reverse
 
-![](Lab5_ReverseGraph_SimpleExample.png)
+![](/assets/images/lab/Lab5_ReverseGraph_SimpleExample.png)
 
 | From | To  |
 | ---- | --- |
@@ -134,6 +146,18 @@ Rules:
 ---
 ### Example 2
 ```datalog
+Schemes:
+Alpha(A, B, C)
+Bravo(E, F, G)
+Charlie(H, I, J)
+Delta(K, L, M)
+Echo(N, O, P)
+
+
+Facts:
+Bravo('a','a','a').
+Delta('a','a','a').
+
 Rules:
 
 #|0|# Alpha(x, y, z) :- Bravo(a, b, z), Charlie(x, y, c).
@@ -145,11 +169,14 @@ Rules:
 #|3|# Delta(x, y, z) :- Charlie(z, x, y).
 
 #|4|# Delta(x, y, z) :- Echo(y, z, x).
+
+Queries:
+Alpha('a', 'a', 'a')?
 ```
 
 #### Forward
 
-![](Lab5_Forward_ComplicatedExample.png)
+![](/assets/images/lab/Lab5_Forward_ComplicatedExample.png)
 
 | From | To   |
 | ---- | ---- |
@@ -161,7 +188,7 @@ Rules:
 
 #### Reverse
 
-![](Lab5_RevereGraph_ComplexExample.png)
+![](/assets/images/lab/Lab5_RevereGraph_ComplexExample.png)
 
 | From | To      |
 | ---- | ------- |
