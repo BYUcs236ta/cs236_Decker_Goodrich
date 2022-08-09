@@ -231,14 +231,14 @@ Test case:
 ```c++
 int main() {
 	Tuple t1;
-	t1.push_back("A");
-	t1.push_back("B");
-	t1.push_back("C");
+	t1.push_back("\'A\'");
+	t1.push_back("\'B\'");
+	t1.push_back("\'C\'");
 	
 	Tuple t2;
-	t2.push_back("1");
-	t2.push_back("2");
-	t2.push_back("1");
+	t2.push_back("\'1\'");
+	t2.push_back("\'2");
+	t2.push_back("\'1\'");
 
 	Header h1;
 	h1.push_back("col0");
@@ -258,10 +258,10 @@ int main() {
 
 Output:
 
-```c++
-col0="A",col1="B",col2="C"
+```
+col0='A',col1='B',col2='C'
 
-col0="1",col1="2",col2="1"
+col0='1',col1='2',col2='1'
 ```
 
 #### 2 - Rename
@@ -286,14 +286,14 @@ Test case:
 ```c++
 int main() {
 	Tuple t1;
-	t1.push_back("A");
-	t1.push_back("B");
-	t1.push_back("C");
+	t1.push_back("\'A\'");
+	t1.push_back("\'B\'");
+	t1.push_back("\'C\'");
 	
 	Tuple t2;
-	t2.push_back("1");
-	t2.push_back("2");
-	t2.push_back("1");
+	t2.push_back("\'1\'");
+	t2.push_back("\'2\'");
+	t2.push_back("\'1\'");
 
 	Header h1;
 	h1.push_back("col0");
@@ -318,9 +318,9 @@ int main() {
 
 Output:
 
-```c++
-colA="1",colB="2",colC="1"
-colA="A",colB="B",colC="C"
+```
+colA='1',colB='2',colC='1'
+colA='A',colB='B',colC='C'
 ```
 
 #### 3 - Project 
@@ -359,14 +359,14 @@ Test case:
 ```c++
 int main() {
 	Tuple t1;
-	t1.push_back("A");
-	t1.push_back("B");
-	t1.push_back("C");
+	t1.push_back("\'A\'");
+	t1.push_back("\'B\'");
+	t1.push_back("\'C\'");
 	
 	Tuple t2;
-	t2.push_back("1");
-	t2.push_back("2");
-	t2.push_back("1");
+	t2.push_back("\'1\'");
+	t2.push_back("\'2\'");
+	t2.push_back("\'1\'");
 
 	Header h1;
 	h1.push_back("col0");
@@ -392,9 +392,9 @@ int main() {
 
 Output:
 
-```c++
-col2="1",col0="1"
-col2="C",col0="A"
+```
+col2='1',col0='1'
+col2='C',col0='A'
 ```
 
 ---

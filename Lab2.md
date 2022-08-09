@@ -6,6 +6,8 @@
 - [Part 2 - Parsing](#Part-2---Parsing)
 - [Conclusion](#Conclusion)
 - [TODO for the project](#TODO-for-the-project)
+- [What is a datalog program](#What-is-a-datalog-program)
+
 
 ---
 
@@ -35,13 +37,13 @@ class Parser {
 };
 ```
 
-2. Add some support functions to the `Parser` class (Parser.h)  
+2. Add some helper functions to the `Parser` class, these should be public functions so we can test them in main. 
 
 The support functions will make the parsing routines simpler and easier to write. 
 
-The `currToken()` function should return the current token being looked at. (Hint: Use `currTokenIndex()` to identify which token from the tokens vector to return)
+The `currToken()` function should return the current token being looked at. (Hint: Use `currTokenIndex` to identify which token from the tokens vector to return)
 
-The `currTokenType()` function should returns the type of the current `Token` being looked at. 
+The `currTokenType()` function should returns the type of the current `Token` being looked at.  (Hint: Use `currToken()` to get the current token being looked at, then call `Token::getType()` to get the curr token type)
 
 The `advanceToken()` function should move to the next `Token` in `tokens`. 
 
@@ -89,10 +91,10 @@ int main() {
 
 `TODO: Take a screenshot of this output (s1)`
 
-4. Add match function to Parser class (Parser.h)
+4. Add `checkFor()` function to Parser class (Parser.h) this function will take an expected type and if it matches the current type it should advance to the next token. If it fails it will throw an error.
 
 ~~~c++
-  void match(TokenType expectedType) {
+  void checkFor(TokenType expectedType) {
     // this cout segement should be removed for the final project output
     cout << "Token at index " << currTokenIndex;
     cout << " was type: " << tokenTypeToString(currTokenType());
@@ -106,7 +108,7 @@ int main() {
   }
 ~~~
 
-5. Test `match` function (main.cpp)
+5. Test `checkFor` function (main.cpp)
 
 ~~~c++
 int main() {
@@ -119,10 +121,10 @@ int main() {
   
   try {
     Parser parser = Parser(tokens);
-    parser.match(ID);
-    parser.match(LEFT_PAREN);
-    parser.match(ID);         // intentional error
-    parser.match(RIGHT_PAREN);
+    parser.checkFor(ID);
+    parser.checkFor(LEFT_PAREN);
+    parser.checkFor(ID);         // intentional error
+    parser.checkFor(RIGHT_PAREN);
   }
   catch(Token errorToken) {
     cout << errorToken.toString();
@@ -130,12 +132,13 @@ int main() {
 }
 ~~~
 
-`TODO: Take a screenshot of this output (s2). Hint: if nothing happens or you get stuck in an infinite loop make sure to finish the TODO's in the match functions.`
+`TODO: Take a screenshot of this output (s2). Hint: if nothing happens or you get stuck in an infinite loop make sure to finish the TODO's in the checkFor function.`
 
+6. Move helper functions (`checkFor()`, `advanceToken()`, `throwError()`, `currToken()`, `currTokenType()`) to private
 ---
 ### Part 2 - Parsing
 
-1. Here is the grammar rule for 'idList' from the Project 2a description. Write a parsing function for 'idList' in the `Parser` class (Parser.h)
+1. Here is the grammar rule for `idList` from the Project 2a description. Write a parsing function for `idList` in the `Parser` class (Parser.h)
 
 *Grammar Rule:*
 
@@ -146,10 +149,10 @@ int main() {
 ~~~c++
   // Consider having a comment that tells you what the parsing rule is:
   //   idList -> COMMA ID idList | lambda
-  void idList() {
+  void parseIdList() {
     if (currTokenType() == COMMA) {
-      match(COMMA);
-      match(ID);
+      checkFor(COMMA);
+      checkFor(ID);
       idList();
     } else {
       // lambda
@@ -174,7 +177,7 @@ int main() {
   
   try {
     Parser parser = Parser(tokens);
-    parser.idList();
+    parser();
 	cout << "Success!";
   }
   catch(Token errorToken) {
@@ -241,162 +244,6 @@ int main() {
 5. Import your code from project 1 and pass the vector of tokens that code creates into the Parser
 6. Good Luck!
 
-
-### What is a datalog program
- **Not Required for the lab**
-
-1. A Datalog Program is composed of 5 parts. 
-	1. Schemes
-	2. Facts
-	3. Rules
-	4. Queries
-	5. Domain
-
-We will represent them using the following 4 classes: `DatalogProgram`, `Rule`, `Predicate`, `Parameter`
-
-Here is how those map onto each other:
-
-Schemes, facts, and queries are `Predicates`
-
-Rules are represented by our `Rule` class
-
-A Datalog Program has member variables:
-
-```c++
-vector<Predicate> schemes;
-vector<Predicate> facts;
-vector<Rule> rules;
-vector<Predicate> queries;
-set<string> domain;
-```
-	
-A Predicate has member variables:
-
-```c++
-vector<Parameter> parameters;
-string name;
-```
-
-Example:
-
-```
-snap(A, B, C)
-->
-name: snap
-Parameters: {A, B, C}
-```
-
-A Parameter has:
-
-```c++
-string value;
-```
-
-
-A Rule has:
-
-```
-Predicate head;
-vector<Predicate> body;
-```
-	
-Example:
-
-```
-snap(A, B, C) :- apple(e, f, g), orange(A, B, C, f)
-->
-head: snap(A, B, C)
-body: {apple(e, f, g), orange(A, B, C, f)}
-```
-
-
-`TODO:  write DatalogProgram, Rule, and Parameter classes. Your classes should include an empty constructor, setter, getter, adder, and toString() methods.`
-
-Here are some example classes:
-
-~~~c++
-class Bee {
-private:
-	string name;
-	unsigned int age;
-
-public:
-	// empty constructor
-	Bee() {} 
-	
-	// getters
-	string getName() {
-		return name;
-	}
-
-	unsigned int getAge() {
-		return age;
-	}
-
-	// setters
-	void setName(string newName) {
-		name = newName;
-	}
-
-	void setAge(unsgined int newAge) {
-		age = newAge;
-	}
-	
-	// no adder needed b/c this class does not have a container
-	
-	// toString
-	string toString() {
-		stringstream out;
-		out << name << ":" << age;
-		return out.str();
-	}
-};
-
-
-class Beehive {
-private:
-	set<Bee> bees;
-	string location;
-
-public:
-	// empty constructor
-	Beehive() {}
-
-	// getters
-	string getLocation() {
-		return location;
-	}
-	
-	set<Bee> getBees() {
-		return Bees
-	}
-	
-	// setters
-	void setLocation(string newLocation) {
-		location = newLocation;
-	}
-	
-	void setBees(set<Bee> newBees) {
-		bees = newBees;
-	}
-	
-	// adder
-	void addBee(Bee bee) {
-		bees.insert(bee);
-	}
-	
-	// toString
-	string toString() {
-		stringstream out;
-		out << location << " hive" << endl;
-		for (Bee currentBee : bees) {
-			out << "  " << currentBee.toString() << endl;
-		}
-		return out.str();
-	}
-};
-
-~~~
 
 
 [Top](#Lab2)
