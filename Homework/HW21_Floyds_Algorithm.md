@@ -4,4 +4,4 @@
 
 Assuming Floyd’s algorithm uses node 1 for its first pivot and node 2 as its second pivot, give the adjacency matrix after the first two iterations, i.e. after using both node 1 as a pivot and node 2 as a pivot.
 
-![](HW21_Graph_G.png)
+![](/assets/images/hw/HW21_Graph_G.png)

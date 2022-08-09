@@ -12,12 +12,12 @@ Give a parse table for the following grammar. (S is the start symbol.)
 6. B -> b
 ```
 
-![](HW04_EmptyParseTable.png)
+![](/assets/images/hw/HW04_EmptyParseTable.png)
 
 ---
 ### Question 2
 
 Using your parse table in Problem 1, give the state of the input string and stack at every iteration using the input string `dbbe`. *Is the string accepted or rejected?*
 
-![](HW04_Q2.png)
+![](/assets/images/hw/HW04_Q2.png)
 

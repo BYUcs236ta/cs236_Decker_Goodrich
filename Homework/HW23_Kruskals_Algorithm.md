@@ -4,7 +4,7 @@
 
 Consider graph G:
 
-![](HW22_Graph_G.png)
+![](/assets/images/hw/HW22_Graph_G.png)
 
 ---
 ### Question 1
