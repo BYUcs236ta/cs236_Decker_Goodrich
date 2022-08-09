@@ -38,7 +38,7 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 ---
 ## Resources
 
-1.  READ THE FOLLOWING: [Project 2 Guide](http://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=8c190154-JQVT-3lJ5-Zbnf-cw16d26d065d)
+1.  READ THE FOLLOWING: [Project 2 Guide](/Guides/Project2-Guide.pdf)
 2. [TA Help Slides](https://docs.google.com/presentation/d/12UhIebOcmX2tFdk_o9-3eMf50fR8xxrw/edit?usp=sharing&ouid=103259846004644167870&rtpof=true&sd=true)
 
 Write a parser that reads a datalog program from a text file, builds a data structure that represents the datalog program, and outputs the contents of the datalog program data structure. You will modify your Recursive Decent Parser from Project 2A.
