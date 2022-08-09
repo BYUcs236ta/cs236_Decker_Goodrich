@@ -1,6 +1,21 @@
 # Code_Testing
 
-The pass-off driver that is used to pass-off your labs uses this command in a Linux terminal.
+### Case Down
+Test Cases: [Cases](/Projects/cs236TestCases.zip)
+
+### Example Test Cases
+
+We provide example input and output files. These will help you test your code and answer any questions you have about input and output that are not answered in the specification. 
+
+If you are ever uncertain about how a particular edge case should be handled, you can look for example input and output that addresses it. 
+
+Additionally, these test cases generally serve as a good indicator for whether or not your code will pass the pass-off tests. However, these test cases are not comprehensive! If all of these files pass, it does not guarantee that your program will perfectly pass the pass-off driver. 
+
+**Also write your own test cases**; see if you can put something in that gets an incorrect output.
+
+### Pass off cases
+
+The pass-off driver that is used to pass-off your labs uses the provided cases and this command in a Linux terminal.
 
 Compile (replace 'nameOfExecutable' with the name you want for your executable):
 
@@ -12,7 +27,8 @@ Run (replace 'input.txt' with the name of the input file you are testing):
 
 After you run it, compare your output to the answer.txt of the corresponding input.
 
-[Cases](/Projects/cs236TestCases.zip)
+
+### Makefile Help
 
 We provide a makefile with each folder of cases. 
   

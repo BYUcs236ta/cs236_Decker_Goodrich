@@ -41,7 +41,9 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 1.  READ THE FOLLOWING: 
 	1. [Project 5 Guide](/Guides/Project5-Guide.pdf) 
 	2. [DFS Sudo Code](/Guide/Depth-FirstSearchForest_FindingStronglyConnectedComponents.pdf) This was mentioned in the guide
-3.  You may also find the [TA slides](https://docs.google.com/presentation/d/1yPzYzfQ8dj1O7YZdzfmKLsn-9L0LIny9ZsCcZ7tRS-Q/edit?usp=sharing) and [help video](https://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=65860bc0-gHqH-lThr-0Ttf-c93cfe9e422b) useful!
+2.  You may also find the [TA slides](https://docs.google.com/presentation/d/1yPzYzfQ8dj1O7YZdzfmKLsn-9L0LIny9ZsCcZ7tRS-Q/edit?usp=sharing) and [help video](https://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=65860bc0-gHqH-lThr-0Ttf-c93cfe9e422b) useful!
+3. [Test Cases](Code_Testing.md)
+4. [Project_Pass_Off_Instructions](/Guides/Project_Pass_Off_Instructions.md)
 
 **NOTE:** Do Lab 5, the written portion, _first_ (see the schedule on learning suite) before you start to code.
 
