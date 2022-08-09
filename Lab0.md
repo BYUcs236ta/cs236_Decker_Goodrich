@@ -38,61 +38,61 @@ It is best to have a simple main.cpp file open in CLion before you begin these s
 1.  Open your project in CLion.
 2.  Open the settings menu.
 
-![](Where_Is_Settings_Menu.png)
+![](lab0_Where_Is_Settings_Menu.png)
 
 3.  Choose "Preferences" or "Settings" from settings menu
 
-![](Choose_Preferences_from_Settings_Menu.png)
+![](lab0_Choose_Preferences_from_Settings_Menu.png)
 
 4.  Open the "Toolchains" sub-menu, and click the + to add a toolchain.  A "toolchain is a set of all the necessary tools required for building and running your application: the working environment, the CMake executable, the make tool and compliers, and the debugger." [See this CLion help page](https://www.jetbrains.com/help/clion/how-to-create-toolchain-in-clion.html). 
 
-![](01-Toolchans.png)
+![](ab0_01-Toolchans.png)
 
 5.  Select "Remote Host"
 
-![](02-RemoteHose.png)
+![](lab0_02-RemoteHose.png)
 
 6.  In "Name" enter something you'll recognize. I put "Schizo" because this is the name of the "macro" in the open labs that assigns you to a specific remote computer when you do remote access. 
 7.  Click the gear icon to add new remote credentials and hit "+" if necessary to create a new ssh configuration.
 
-![](03-NewCredential.png)
+![](lab0_03-NewCredential.png)
 
 8.  For host enter schizo.cs.byu.edu and for port enter 22
 9.  For user name and password, use your CS account credentials. Issues with your CS account can be resolved [here](https://docs.cs.byu.edu/doku.php?id=setting-up-your-account-with-the-cs-authentication-system)
 10.  Click "Test Connection" to make sure it's connecting to the lab machines (you may need to be using the [CS VPN](https://docs.cs.byu.edu/doku.php?id=VPN-Configuration-and-Use) if you're not on campus).
 
-![](04-CSAccount.png)
+![](lab0_04-CSAccount.png)
 11.  After clicking ok, you should see all fields filled in, and only green checks. You may have to wait a moment.
 
-![](05-GreenChecks.png)
+![](lab0_05-GreenChecks.png)
 
 12.  Open the CMake sub-menu, and for Toolchain select the toolchain you just created. Find the field that says "Toolchain", click the down arrow, and select the name of the toolchain that you just created. "CMake is a meta build system [in CLion] that uses scripts called **CMakeLists** to generate build files for a specific environment (for example, make files on [the] Unix machines [in the lab]). When you create a new CMake project in CLion, a **CMakeLists.txt** file is automatically generated under the project root." [From CLion help pages](https://www.jetbrains.com/help/clion/quick-cmake-tutorial.html).
 
-![](06-CMake.png)
+![](lab0_06-CMake.png)
 
 13.  Go down to the deployment menu
 
-![](01_LI2.jpg)
+![](lab0_01_LI2.jpg)
 
 14.  Click on the Remote Host Profile and set the Root Path. (Mike G. had to close the settings and reopen them to see the option for choosing the remote host. If you can't see the option, click ok and then reopen the settings-->preferences.) This must take you to the home directory of your account on the CS Department Lab Machines. The Auto Detect Button should work but if not the path is  _user/guest/[first letter of netID]/[netID]_
 
-![](02_LI.jpg)
+![](lab0_02_LI.jpg)
 
 15.  Click on the Mappings Tab and Verify that your Local Path takes you to the location that your project is stored on your _Local Machine_. Then adjust the deployment path, which is where your project is stored on the _Remote Host_. The deployment path MUST point to an empty folder on the Remote Host. You can add a new folder by right-clicking and selecting the new->Directory. (Mike G couldn't get the right-clicking to work from his Mac, but he was able to just type in a path.) Highlight the location of an empty blue folder by clicking on it. Then hit OK. This is where your code will be stored on the lab machines. Clion will copy it from your _local machine_ to the _remote host_ on the department lab computers whenever you build.
 
-![](05_LI.jpg)
+![](lab0_05_LI.jpg)
 
-![](04.png)
+![](lab0_04.png)
 
-![](03.png)
+![](lab0_03.png)
 
 16.  Once you click OK to save changes to your settings, you should see messages about uploads and such (CLion is getting things set up on the lab machine). You may need to wait a few minutes for this to finish.
 
-![](07-Syncing.png)
+![](lab0_07-Syncing.png)
 
 17.  When the syncing is finished, you should see messages saying so, and be able to run your code using the green play buttons or the debug button. If you don't see a green play button next to the main method of your program, you might have one of the problems listed in the section below.
 
-![](08-Finished.png)
+![](lab0_08-Finished.png)
 
 ---
 
@@ -100,30 +100,30 @@ It is best to have a simple main.cpp file open in CLion before you begin these s
 
 1.  "_CMake 3.17 or higher is required._" Once you have completed this tutorial, you may get an error that looks like this:
 
-![](CLion_Error_Message.PNG)
+![](lab0_CLion_Error_Message.png)
   
 To resolve this error, navigate to the CMakeLists.txt file by clicking on the down arrow next to the name of your project.
 
-![](Finding_CmakeList_txt.png)
+![](lab0_Finding_CmakeList_txt.png)
 
 Click on the link to open the file.
 
-![](Opening_CmakeList_txt.png)
+![](lab0_Opening_CmakeList_txt.png)
 
 On the first line of the file, change the required version to be the same as the version you are running.  Save the file.
 
 
 **Before** making the change.
 
-![](Wrong_CMake_version_--_before.png)
+![](lab0_Wrong_CMake_version_--_before.png)
 
 **After** making the change. 
 
-![](Wrong_CMake_version_--_after.png)
+![](lab0_Wrong_CMake_version_--_after.png)
 
 You might need to click "reload changes" before you'll see the green arrow next to main.
 
-![](Reload_Changes.png)
+![](lab0_Reload_Changes.png)
 
 
 `TODO: Take a screenshot of the hello-world program running! (name your file "s1" for screenshot 1 so it is easier for the TAs to grade)`
