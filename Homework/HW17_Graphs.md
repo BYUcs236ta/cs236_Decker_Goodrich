@@ -21,8 +21,8 @@ Give the adjacency list representation for the following graphs. Graph b is undi
 
 a.
 
-![](/assets/images/HW17_Q2a.png)
+![](HW17_Q2a.png)
 
 b.
 
-![](/assets/images/HW17_Q2b.png)
+![](HW17_Q2b.png)

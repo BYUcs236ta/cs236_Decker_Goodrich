@@ -298,7 +298,7 @@ tokens.push_back(currToken);
 
 As a reminder it looks like the following:
 
-![](/assets/images/colon_fsa.png)
+![](colon_fsa.png)
 
 Here is how that turns into code:
 
@@ -331,7 +331,7 @@ private:
 
 As a reminder it looks like the following:
 
-![](/assets/images/colondash_fsa.png)
+![](colondash_fsa.png)
 
 and the code:
 
@@ -376,7 +376,7 @@ every state has a function, and each transition is a case on the if/else chain (
 ##### Undefined Character Automaton
 3. Undefined Character Automaton
 
-![](/assets/images/undefined_fsa.png)
+![](undefined_fsa.png)
 
 Create the UndefinedCharAutomaton.h
 
