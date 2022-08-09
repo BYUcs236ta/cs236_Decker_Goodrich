@@ -1,6 +1,10 @@
 # README
 
-These are the BYU CS 236 Labs for Professor Decker Summer 2022. Full project specs can be found on Learning Suite under Content -> Projects
+Homework:
+
+Projects:
+
+Labs:
 
 [[Lab0]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab1.md)
 
@@ -16,7 +20,6 @@ These are the BYU CS 236 Labs for Professor Decker Summer 2022. Full project spe
 
 [[Lab5]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab5.md)
 
-
-Authors:
-- Walter DeGering
-- Brett Decker
+	Lab Authors:
+	- Walter DeGering
+	- Brett Decker

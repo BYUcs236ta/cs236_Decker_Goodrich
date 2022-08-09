@@ -1,4 +1,4 @@
-# General Project Guide
+# General-Project-Guide
 
 ---
 # Table of Contents
