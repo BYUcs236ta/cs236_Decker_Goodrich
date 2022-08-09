@@ -41,8 +41,8 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 
 ---
 ## Resources
-1.  READ THE FOLLOWING: [Project 4 Guide](https://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=04284229-Speh-BYoc-auA0-p59ec893ba07)
-2.  [Evaluating Rules: Project 4](https://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=6eca1430-opfX-RM3t-CM1q-vDf88b4d62f2)
+1.  READ THE FOLLOWING: [Project 4 Guide](/Guides/Project4-Guide.pdf)
+2.  [Evaluating Rules Project 4](/Guides/Evaluating_Rules_Project_4.pdf)
 3.  You may also find the [TA slides](https://docs.google.com/presentation/d/17Bz8ypKJMGWqW7uJKU26v6S4pc6exdOpbKAxA6j2ru8/edit?usp=sharing) and [help video](https://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=10ea88eb-b8QI-bHcV-hVJO-wB09b8e5ce10) useful!
 
 ---
@@ -275,7 +275,6 @@ You may assume the following about the datalog input:
     Evaluate the rules in the order they are given in the input file.
     
 4.  **Why is the code taking a long time to run?**
-    
     Are you running your code in Visual Studio? Visual Studio usually runs code in 'debug' mode. Debug mode may slow down the code significantly. Try running the code outside of Visual Studio (from the command line), or configure Visual Studio to run in release mode. (Microsoft explains how to configure release mode at this link: [https://docs.microsoft.com/en-us/visualstudio/debugger/how-to-set-debug-and-release-configurations](https://docs.microsoft.com/en-us/visualstudio/debugger/how-to-set-debug-and-release-configurations) )
     
     Other things that may impact running time include:
@@ -283,5 +282,6 @@ You may assume the following about the datalog input:
     1. The computer on which the code is running. (Run the code on the lab computers for the best approximation of how it will run on the TA computers.)
     
     2. Using a vector to store the tuples in a relation instead of a set. (Sorting vectors and searching vectors for duplicates are relatively slow operations.
+    3. See this guide for improving [speed issues](/Guides/Speeding_Up_Code.md)
 
 [Top](#Project4)

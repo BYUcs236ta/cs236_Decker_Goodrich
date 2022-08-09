@@ -33,15 +33,17 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 4.  Even though we provide the test cases, the definition of your project working is that it passes all tests on the _pass-off machine_
     -   If the test cases pass on your machine but not on the pass-off machine you should start by doing the following:
         -   Test your code and the official test cases on a Linux machine, where you should be able to replicate the error
-        -   Look at how you initialize object. IDEs perform default initialization, but building from commandline with g++ on Linux does not
+        -   Look at how you initialize object. IDEs perform default initialization, but building from command-line with g++ on Linux does not
 
 ---
 ## Resources
 
-1.  READ THE FOLLOWING: [Project 5 Guide](https://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=8660767e-DZgw-C8sl-uzFV-n7fddf41f879)
-2.  You may also find the [TA slides](https://docs.google.com/presentation/d/1yPzYzfQ8dj1O7YZdzfmKLsn-9L0LIny9ZsCcZ7tRS-Q/edit?usp=sharing) and [help video](https://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=65860bc0-gHqH-lThr-0Ttf-c93cfe9e422b) useful!
+1.  READ THE FOLLOWING: 
+	1. [Project 5 Guide](/Guides/Project5-Guide.pdf) 
+	2. [DFS Sudo Code](/Guide/Depth-FirstSearchForest_FindingStronglyConnectedComponents.pdf) This was mentioned in the guide
+3.  You may also find the [TA slides](https://docs.google.com/presentation/d/1yPzYzfQ8dj1O7YZdzfmKLsn-9L0LIny9ZsCcZ7tRS-Q/edit?usp=sharing) and [help video](https://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=65860bc0-gHqH-lThr-0Ttf-c93cfe9e422b) useful!
 
-**NOTE:** Do Project 5a, the written portion, _first_ (see the [Schedule](https://learningsuite.byu.edu/cid-hIjQucvqn-P3/student/calendar)) before you start to code.
+**NOTE:** Do Lab 5, the written portion, _first_ (see the schedule on learning suite) before you start to code.
 
 Build the dependency graph for the rules in a Datalog program and use depth-first search on the graph to improve the evaluation of the rules.
 

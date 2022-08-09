@@ -34,7 +34,7 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 
 ---
 ## Resources
-1.  READ THE FOLLOWING: [Project 3 Guide](https://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=680dbbb2-Blpa-2gOT-PzAP-p4d57580db0c)
+1.  READ THE FOLLOWING: [Project 3 Guide](/Guides/Project3-Guide.pdf)
 2.  You may also find the [TA slides](https://docs.google.com/presentation/d/1G2zYXPkVIvsY9fuSAidVYV4a1gfJW5L9nfvwSMq-Dqc/edit?usp=sharing) and [help video](https://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=d5492d6a-1ZMv-LGR3-CUYY-qi49e767c84b) useful!
 
 Write an interpreter that uses relational database operations to evaluate the queries in a Datalog Program. For this project, use only the facts to evaluate the queries. (The evaluation of rules will be added in the next project.)

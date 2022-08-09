@@ -53,6 +53,7 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 2.  Please Read:  [Project 1 Guide](/Guides/Project1-Guide.pdf)
 3.  Here is a resource about [Using Pointers](/Guides/UsingPointers.pdf)
 4.  [TA Help Slides](https://docs.google.com/presentation/d/1zDi6YQHHFZyIrt9Wm-WIxvWNizmpyOKIjHn1_tWDfUs/edit#slide=id.g1376e9015ce_0_100)
+5. [Test Cases](Code_Testing.md)
 
 Write a `Lexer` that reads a sequence of characters from a text file, identifies the `datalog language` tokens found in the file, and outputs each token.
 
