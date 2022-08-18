@@ -18,6 +18,6 @@ Labs:
 - [Lab4](/Labs/Lab4)
 - [Lab5](/Labs/Lab5)
 
-	Lab Authors:
-	- Walter DeGering
-	- Brett Decker
+Lab Authors:
+- Walter DeGering
+- Brett Decker
