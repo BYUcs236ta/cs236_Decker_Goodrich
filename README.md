@@ -4,6 +4,7 @@ Homework:
 - [List here](/Homework)
 
 Projects:
+Read this first before starting any of the projects: [General Project Guide](/Guides/General-Project-Guide.md)
 - [Project1](/Projects/Project1)
 - [Project2](/Projects/Project2)
 - [Project3](/Projects/Project3)

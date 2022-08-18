@@ -38,10 +38,11 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 ---
 ## Resources
 
-1.  READ THE FOLLOWING: [Project 2 Guide](/Guides/Project2-Guide.pdf)
-2. [TA Help Slides](https://docs.google.com/presentation/d/12UhIebOcmX2tFdk_o9-3eMf50fR8xxrw/edit?usp=sharing&ouid=103259846004644167870&rtpof=true&sd=true)
-3. [Test Cases](Code_Testing.md)
-4. [Project_Pass_Off_Instructions](/Guides/Project_Pass_Off_Instructions.md)
+1. Read this first before starting any of the projects: [General Project Guide](/Guides/General-Project-Guide.md) 
+2. READ THE FOLLOWING: [Project 2 Guide](/Guides/Project2-Guide.pdf)
+3. [TA Help Slides](https://docs.google.com/presentation/d/12UhIebOcmX2tFdk_o9-3eMf50fR8xxrw/edit?usp=sharing&ouid=103259846004644167870&rtpof=true&sd=true)
+4. [Test Cases](Code_Testing.md)
+5. [Project_Pass_Off_Instructions](/Guides/Project_Pass_Off_Instructions.md)
 
 Write a parser that reads a datalog program from a text file, builds a data structure that represents the datalog program, and outputs the contents of the datalog program data structure. You will modify your Recursive Decent Parser from Project 2A.
 

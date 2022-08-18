@@ -1,7 +1,4 @@
 # Project1
-
-UNDER CONSTRUCTION Currently hosted on learning suite
-
 ---
 # Table of Contents
 - [General Project Requirements](#General-Project-Requirements)
@@ -49,12 +46,13 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 
 ---
 ## Recourses
-1.  Video: Parallel and Max, [Applying Finite State Automata](https://www.dropbox.com/s/z04uim5gbah2o9g/Combining%20FSAs%20in%20Project%201.mp4?dl=0)
-2.  Please Read:  [Project 1 Guide](/Guides/Project1-Guide.pdf)
-3.  Here is a resource about [Using Pointers](/Guides/UsingPointers.pdf)
-4.  [TA Help Slides](https://docs.google.com/presentation/d/1zDi6YQHHFZyIrt9Wm-WIxvWNizmpyOKIjHn1_tWDfUs/edit#slide=id.g1376e9015ce_0_100)
-5. [Test Cases](Code_Testing.md)
-6. [Project_Pass_Off_Instructions](/Guides/Project_Pass_Off_Instructions.md)
+1. Read this first before starting any of the projects: [General Project Guide](/Guides/General-Project-Guide.md) 
+2. Video: Parallel and Max, [Applying Finite State Automata](https://www.dropbox.com/s/z04uim5gbah2o9g/Combining%20FSAs%20in%20Project%201.mp4?dl=0)
+3.  Please Read:  [Project 1 Guide](/Guides/Project1-Guide.pdf)
+4.  Here is a resource about [Using Pointers](/Guides/UsingPointers.pdf)
+5.  [TA Help Slides](https://docs.google.com/presentation/d/1zDi6YQHHFZyIrt9Wm-WIxvWNizmpyOKIjHn1_tWDfUs/edit#slide=id.g1376e9015ce_0_100)
+6. [Test Cases](Code_Testing.md)
+7. [Project_Pass_Off_Instructions](/Guides/Project_Pass_Off_Instructions.md)
 
 Write a `Lexer` that reads a sequence of characters from a text file, identifies the `datalog language` tokens found in the file, and outputs each token.
 

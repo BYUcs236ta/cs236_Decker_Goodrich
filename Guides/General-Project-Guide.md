@@ -20,20 +20,7 @@ This guide is intended to consolidate information concerning these projects: how
 
 ## Setting Up Your Programming Environment
 
-You are required to use CLion for this class. This IDE is cross-platform and was carefully chosen because of its excellent debugging functionality, ease of use, and ability to connect remotely to the lab machines. Using another IDE is not recommended and requires instructor approval.
-
-Setting up CLion requires the following steps:
-
-1.  [Create a JetBrains account with a student license](https://learningsuite.byu.edu/.asQP/cid-NFdVW06sO8ih/student/pages/id-TOXR)
-    
-2.  [Download and install CLion](https://www.jetbrains.com/clion/download/#section=windows)
-    
-3.  [Configure CLion to run on the CS lab machines](https://learningsuite.byu.edu/.asQP/cid-NFdVW06sO8ih/student/pages/id-eLya)
-    
-
-If you don’t yet have a CS account that allows you to access the lab machines, or if you forgot your login information, access [this page](https://docs.cs.byu.edu/doku.php?id=setting-up-your-account-with-the-cs-authentication-system) for the relevant instructions.
-
-Once you have completed these steps, verify that CLion is working properly by compiling and running a simple project. Get familiar with debugging on CLion. Make sure you know how to set a breakpoint, check the values of variables, and step through code. Learn how to set a watch variable and use a conditional breakpoint.
+Follow the [Lab0 Instructions](/Labs/Lab0.md)
 
 ## Project Requirements
 
@@ -54,9 +41,12 @@ As you design and code your projects, be aware that your end product will be a c
 
 For each project, there are resources provided to help you succeed as you begin to design and code. This section provides an overview of each resource, including information on how to access it and what it is intended to help you with.
 
+### Labs
+For each project we have a corresponding lab. Please attend the lab session where a TA will review the instructions and answer questions. Complete this **before** starting on the project.
+
 ### Project Guide
 
-There is a project guide for each project that is designed to supplement the project specification. They break the projects into manageable steps, give insight into how you might design and implement your program, and provide handy pseudocode. These guides are PDFs available on LearningSuite. You can access them using the link in the project specification.
+There is a project guide for each project that is designed to supplement the project specification. They break the projects into manageable steps, give insight into how you might design and implement your program, and provide handy pseudocode. These [guides](/Guides) are PDFs available on Github. You can access them using the link in the project specification.
 
 ### TA Help Videos and Slides
 
