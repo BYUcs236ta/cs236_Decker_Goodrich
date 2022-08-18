@@ -39,7 +39,7 @@ Make sure to read the Project 1 Guide (found in Learning Suite) and the specs so
 #include <sstream>
 using namespace std;
 enum TokenType {
-  COMMA, COLON, COLON_DASH, UNDEFINED, ID // add more here
+	COMMA, COLON, COLON_DASH, UNDEFINED, ID // add more here
 };
 ```
 
@@ -48,10 +48,10 @@ enum TokenType {
 ```c++
 
 class Token {
- private:
-  TokenType type;
-  string contents;
-  unsigned int line;
+private:
+	TokenType type;
+	string contents;
+	unsigned int line;
 };
 ```
 
@@ -65,11 +65,11 @@ Feel free to use your IDE to generate it. Your constructor should initialize the
 4. Write "toString" function for the "Token" class. *Make sure it is in public*
 
 ~~~c++
-  string toString() const {
-stringstream out;
-out << "(" << type << "," << "\"" << contents << "\"" << "," << line << ")";
-return out.str();
-  }
+string toString() const {
+	stringstream out;
+	out << "(" << type << "," << "\"" << contents << "\"" << "," << line << ")";
+	return out.str();
+}
 ~~~
 
 5. Create and print a `Token` in the `main` function (main.cpp) with the following values:
@@ -86,11 +86,11 @@ return out.str();
 
 ```c++
 string tokenTypeToString(TokenType type)  {
-  switch (type) {
-  case COMMA:
-return "COMMA";
-  ...
-  }
+	switch (type) {
+		case COMMA:
+			return "COMMA";
+		...
+	}
 }
 ```
 
