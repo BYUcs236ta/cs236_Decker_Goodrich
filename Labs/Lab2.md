@@ -24,16 +24,16 @@ Make sure to read the Project 2 Guide (found in Learning Suite) — and the spec
 ---
 ### Part 1 - Parser class and helper functions
 
-1. Make a `Parser` class (Parser.h)  
-The `Parser` is given a `vector` of `Tokens` that are typically provided by the `Lexer`.  (Don't forget to `#include <vector>`) (Don't forget to `#include "Token.h"`)
+1. Make a `Parser` class (Parser.h)
+The `Parser` is given a `vector` of `Tokens` that are typically provided by the `Lexer`.(Don't forget to `#include <vector>`) (Don't forget to `#include "Token.h"`)
 
 ```c++
 class Parser {
  private:
-  vector<Token> tokens;
-  unsigned int currTokenIndex = 0;
+vector<Token> tokens;
+unsigned int currTokenIndex = 0;
  public:
-  Parser(const vector<Token>& tokens) : tokens(tokens) { }
+Parser(const vector<Token>& tokens) : tokens(tokens) { }
 };
 ```
 
@@ -43,25 +43,25 @@ The support functions will make the parsing routines simpler and easier to write
 
 The `currToken()` function should return the current token being looked at. (Hint: Use `currTokenIndex` to identify which token from the tokens vector to return)
 
-The `currTokenType()` function should returns the type of the current `Token` being looked at.  (Hint: Use `currToken()` to get the current token being looked at, then call `Token::getType()` to get the curr token type)
+The `currTokenType()` function should returns the type of the current `Token` being looked at.(Hint: Use `currToken()` to get the current token being looked at, then call `Token::getType()` to get the curr token type)
 
 The `advanceToken()` function should move to the next `Token` in `tokens`. 
 
 The `throwError()` function is called when the Parser finds an error. You may want to add other support functions in addition to these. Notice how `throwError()` includes the keyword "throw". When this line is reached computation will be halted and your code will return to the nearest "catch block". If no "catch block" is available it will halt and report an error. If you haven't used exceptions before in C++, see this tutorial:[https://cplusplus.com/doc/tutorial/exceptions/](https://cplusplus.com/doc/tutorial/exceptions/).
 
 ```c++
-  Token currToken() const {
-    // TODO: add code for this helper function
-  }
-  TokenType currTokenType() const {
-    // TODO: add code for this helper function
-  }
-  void advanceToken() {
-    // TODO: add code for this helper function
-  }
-  void throwError() {
-    throw currToken();
-  }
+Token currToken() const {
+// TODO: add code for this helper function
+}
+TokenType currTokenType() const {
+// TODO: add code for this helper function
+}
+void advanceToken() {
+// TODO: add code for this helper function
+}
+void throwError() {
+	throw currToken();
+}
 ```
 
 3. Test support functions (main.cpp). Notice here how the `catch` block is in the `main` function and the "protected code" is surrounded by a `try` block.
@@ -69,23 +69,23 @@ The `throwError()` function is called when the Parser finds an error. You may wa
 ~~~c++
 int main() {
 
-  vector<Token> tokens = {
-    Token(ID,"Ned",2),
-    Token(LEFT_PAREN,"(",2),
-    Token(RIGHT_PAREN,")",2)
-  };
-  try {
-    Parser p = Parser(tokens);
-    cout << tokenTypeToString(p.currTokenType()) << endl;
-    p.advanceToken();
-    cout << tokenTypeToString(p.currTokenType()) << endl;
-    p.advanceToken();
-    cout << tokenTypeToString(p.currTokenType()) << endl;
-    p.throwError();
-  }
-  catch(Token errorToken) {
-    cout << errorToken.toString();
-  }
+	vector<Token> tokens = {
+		Token(ID,"Ned",2),
+		Token(LEFT_PAREN,"(",2),
+		Token(RIGHT_PAREN,")",2)
+	};
+	try {
+		Parser p = Parser(tokens);
+		cout << tokenTypeToString(p.currTokenType()) << endl;
+		p.advanceToken();
+		cout << tokenTypeToString(p.currTokenType()) << endl;
+		p.advanceToken();
+		cout << tokenTypeToString(p.currTokenType()) << endl;
+		p.throwError();
+	}
+	catch(Token errorToken) {
+		cout << errorToken.toString();
+	}
 }
 ~~~
 
@@ -94,41 +94,40 @@ int main() {
 4. Add `checkFor()` function to Parser class (Parser.h) this function will take an expected type and if it matches the current type it should advance to the next token. If it fails it will throw an error.
 
 ~~~c++
-  void checkFor(TokenType expectedType) {
-    // this cout segement should be removed for the final project output
-    cout << "Token at index " << currTokenIndex;
-    cout << " was type: " << tokenTypeToString(currTokenType());
-    cout << " expected: " << tokenTypeToString(expectedType) << endl;
-    
-    if (currTokenType() == expectedType) {
-	// TODO: think about what should happen if the Parser matches an expected Token
-    } else {
-	// TODO: think about what should happen if the Parser matches an UN-expected Token
-    }
-  }
+void checkFor(TokenType expectedType) {
+	// this cout segement should be removed for the final project output
+	cout << "Token at index " << currTokenIndex;
+	cout << " was type: " << tokenTypeToString(currTokenType());
+	cout << " expected: " << tokenTypeToString(expectedType) << endl;
+	
+	if (currTokenType() == expectedType) {
+		// TODO: think about what should happen if the Parser matches an expected Token
+	} else {
+		// TODO: think about what should happen if the Parser matches an UN-expected Token
+	}
+}
 ~~~
 
 5. Test `checkFor` function (main.cpp)
 
 ~~~c++
 int main() {
-
-  vector<Token> tokens = {
-    Token(ID,"Ned",2),
-    Token(LEFT_PAREN,"(",2),
-    Token(RIGHT_PAREN,")",2)
-  };
-  
-  try {
-    Parser parser = Parser(tokens);
-    parser.checkFor(ID);
-    parser.checkFor(LEFT_PAREN);
-    parser.checkFor(ID);         // intentional error
-    parser.checkFor(RIGHT_PAREN);
-  }
-  catch(Token errorToken) {
-    cout << errorToken.toString();
-  }
+	vector<Token> tokens = {
+		Token(ID,"Ned",2),
+		Token(LEFT_PAREN,"(",2),
+		Token(RIGHT_PAREN,")",2)
+	};
+	
+	try {
+		Parser parser = Parser(tokens);
+		parser.checkFor(ID);
+		parser.checkFor(LEFT_PAREN);
+		parser.checkFor(ID); // intentional error
+		parser.checkFor(RIGHT_PAREN);
+	}
+	catch(Token errorToken) {
+		cout << errorToken.toString();
+	}
 }
 ~~~
 
@@ -147,43 +146,41 @@ int main() {
 *Parsing Function:*
 
 ~~~c++
-  // Consider having a comment that tells you what the parsing rule is:
-  //   idList -> COMMA ID idList | lambda
-  void parseIdList() {
-    if (currTokenType() == COMMA) {
-      checkFor(COMMA);
-      checkFor(ID);
-      idList();
-    } else {
-      // lambda
-    }
-  }
+// Consider having a comment that tells you what the parsing rule is:
+// idList -> COMMA ID idList | lambda
+void parseIdList() {
+	if (currTokenType() == COMMA) {
+		checkFor(COMMA);
+		checkFor(ID);
+		idList();
+	} else {
+	// lambda
+	}
+}
 ~~~
 
-2. Test 'idList' with valid input (main.cpp)  
-(Compile and test)  
+2. Test 'idList' with valid input (main.cpp)
+(Compile and test)
 (No errors should be reported.)
 
 ~~~c++
 int main() {
+	vector<Token> tokens = {
+		Token(COMMA,",",2),
+		Token(ID,"Ted",2),
+		Token(COMMA,",",2),
+		Token(ID,"Zed",2),
+		Token(RIGHT_PAREN,")",2)
+	};
 
-  vector<Token> tokens = {
-    Token(COMMA,",",2),
-    Token(ID,"Ted",2),
-    Token(COMMA,",",2),
-    Token(ID,"Zed",2),
-    Token(RIGHT_PAREN,")",2)
-  };
-  
-  try {
-    Parser parser = Parser(tokens);
-    parser();
-	cout << "Success!";
-  }
-  catch(Token errorToken) {
-    cout << "Failure!" << endl << "  " << errorToken.toString(); 
-  }
-
+	try {
+		Parser parser = Parser(tokens);
+		parser();
+		cout << "Success!";
+	}
+	catch(Token errorToken) {
+		cout << "Failure!" << endl << "" << errorToken.toString(); 
+	}
 }
 ~~~
 
@@ -206,23 +203,23 @@ Hint: you do not need to wrap the function in an if statement because there is o
 ~~~c++
 int main() {
 
-  vector<Token> tokens = {
-    Token(ID,"Ned",2),
-    Token(LEFT_PAREN,"(",2),
-    Token(ID,"Ted",2),
-    Token(COMMA,",",2),
-    Token(ID,"Zed",2),
-    Token(RIGHT_PAREN,")",2)
-  };
-
-  try {
-    Parser parser = Parser(tokens);
-    parser.scheme();
-	cout << "Success!";
-  }
-  catch(Token errorToken) {
-    cout << "Failure!" << endl << "  " << errorToken.toString(); 
-  }
+	vector<Token> tokens = {
+		Token(ID,"Ned",2),
+		Token(LEFT_PAREN,"(",2),
+		Token(ID,"Ted",2),
+		Token(COMMA,",",2),
+		Token(ID,"Zed",2),
+		Token(RIGHT_PAREN,")",2)
+	};
+	
+	try {
+		Parser parser = Parser(tokens);
+		parser.scheme();
+		cout << "Success!";
+	}
+	catch(Token errorToken) {
+		cout << "Failure!" << endl << "" << errorToken.toString(); 
+	}
 
 }
 ~~~
