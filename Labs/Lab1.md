@@ -66,9 +66,9 @@ Feel free to use your IDE to generate it. Your constructor should initialize the
 
 ~~~c++
   string toString() const {
-    stringstream out;
-    out << "(" << type << "," << "\"" << contents << "\"" << "," << line << ")";
-    return out.str();
+stringstream out;
+out << "(" << type << "," << "\"" << contents << "\"" << "," << line << ")";
+return out.str();
   }
 ~~~
 
@@ -88,7 +88,7 @@ Feel free to use your IDE to generate it. Your constructor should initialize the
 string tokenTypeToString(TokenType type)  {
   switch (type) {
   case COMMA:
-    return "COMMA";
+return "COMMA";
   ...
   }
 }
@@ -106,71 +106,70 @@ string tokenTypeToString(TokenType type)  {
 
 class Automaton {
 protected:
-    // This tracks the number of newLines ('\n') we have read
-    unsigned int newLinesRead = 0;
+	// This tracks the number of newLines ('\n') we have read
+	unsigned int newLinesRead = 0;
 
 	TokenType type = TokenType::UNDEFINED;
-	// This tracks the total number of characters consumed
-	// This is different from currCharIndex to let you "peek" at the next input without consuming it
-    unsigned int numCharRead = 0;
-    std::string input = "";
+	// This tracks the total number of characters read
+	unsigned int numCharRead = 0;
+	std::string input = "";
 
-    // All children of this class must define this function
-    virtual void s0() = 0;
+	// All children of this class must define this function
+	virtual void s0() = 0;
 
-    // Helper functions
-    void next() {
-        if (curr() == '\n') {
-            newLinesRead++;
+	// Helper functions
+	void next() {
+		if (curr() == '\n') {
+			newLinesRead++;
 		}
-        numCharRead++;
-    }
+		numCharRead++;
+	}
 
-    char curr() {
+	char curr() {
 		if (endOfFile()) {
-	            throw "Tried to read past the file, does your every automaton state check for endOfFile() as its first transition?";
+			throw "Tried to read past the file, does your every automaton state check for endOfFile() as its first transition?";
 		}
-        return input.at(currCharIndex);
-    }
+		return input.at(currCharIndex);
+	}
 
-    bool match(char c) {
+	bool match(char c) {
 		if (endOfFile()) {
-		    throw "Tried to read past the file, does your every automaton state check for endOfFile() as its first transition?";
+			throw "Tried to read past the file, does your every automaton state check for endOfFile() as its first transition?";
 		}
-        return (curr() == c);
-    }
+		return (curr() == c);
+	}
 
-    // Call this function to check if you have reached the end of file
-    bool endOfFile() {
-        return (currCharIndex >= input.size());
-    }
+	// Call this function to check if you have reached the end of file
+	bool endOfFile() {
+		return (currCharIndex >= input.size());
+	}
 
-    // This is the error state call it when the token is invalid
-    void sError() {
-        numCharRead = 0;
-    }
+	// This is the error state call it when the token is invalid
+	void sError() {
+		numCharRead = 0;
+	}
 
 public:
-    Automaton() {}
-    // best practice is to create a 'virtual' deconstructor for base classes
-    virtual ~Automaton() {}
+	Automaton() {}
+	// best practice is to create a 'virtual' deconstructor for base classes
+	virtual ~Automaton() {}
 
-    unsigned int run(std::string input) {
-        this->input = input;
-        currCharIndex = 0;
-        newLinesRead = 0;
-        numCharRead = 0;
-        s0();
-        return numCharRead;
-    }
+	unsigned int run(std::string input) {
+		this->input = input;
+		currCharIndex = 0;
+		newLinesRead = 0;
+		numCharRead = 0;
+		s0();
+		return numCharRead;
+	}
 
-    unsigned int getNewLines() const {
-        return newLinesRead;
-    }
+	unsigned int getNewLines() const {
+		return newLinesRead;
+	}
 
-    TokenType getType() const {
+	TokenType getType() const {
 		return type;
-    }
+	}
 };
 ```
 
@@ -217,12 +216,12 @@ The next big step here now that we have the architecture created is to implement
 
 We are trying to define the syntax for a programming language. We have a list of desired patterns. Here is a partial list of them:
 
-| Type       | Symbol     | Example         | Description                                                           |
+| Type   | Symbol | Example | Description   |
 | ---------- | ---------- | --------------- | --------------------------------------------------------------------- |
-| Colon      | COLON      | :               | The character ':'                                                     |
-| Colon dash | COLON_DASH | :-              | The string ":-"                                                       |
-| Identifier | ID         | See table below | An identifier is a letter followed by zero or more letters or digits. |
-| Undefined  | UNDEFINED  | \#\&\%          | Any unrecognized single charcter                                                                      |
+| Colon  | COLON  | :   | The character ':' |
+| Colon dash | COLON_DASH | :-  | The string ":-"   |
+| Identifier | ID | See table below | An identifier is a letter followed by zero or more letters or digits. |
+| Undefined  | UNDEFINED  | \#\&\%  | Any unrecognized single charcter  |
 
 ID Example:
 
@@ -313,8 +312,8 @@ public:
 private:
 	void s0() {
 		if (endOfFile()) {  
-	        sError(); // this calls the error state
-	    }  
+			sError(); // this calls the error state
+		}  
 		else if (match(':')) {
 			next();
 			return; // this represents accepting the input
@@ -347,18 +346,19 @@ public:
 private:
 	void s0() {
 		if (endOfFile()) {  
-	        sError(); // this calls the error state
-	    }  
+			sError(); // this calls the error state
+		}  
 		else if (match(':')) {
 			next();
 			s1(); // call s1 as the transition
 		}
-		else
+		else {
 			sError(); // this calls the error state
+		}
 	}
 	void s1() {
 		if (endOfFile()) {  
-		    sError(); // this calls the error state
+			sError(); // this calls the error state
 		}  
 		else if (match('-')) {
 			next();
@@ -391,9 +391,9 @@ public:
 private:
 	void s0() {
 		if (endOfFile()) {  
-	        sError(); // this calls the error state
-	    } 
-	    else {
+			sError(); // this calls the error state
+		} 
+		else {
 			next(); // read next character
 			return; // accept the input
 		}
@@ -419,8 +419,8 @@ public:
 private:
 	void s0() {
 		if (endOfFile()) {  
-	        sError(); // reject  
-	    }  
+			sError(); // reject  
+		}  
 		else if (isalpha(curr())) {
 			next();
 			s1();
@@ -430,16 +430,16 @@ private:
 		}
 	}
 	void s1() {  
-	    if (endOfFile()) {  
-	        return; // accept  
-	    }  
-	    else if (isalnum(curr())) {  
-	        next();  
-	        s1();  
-	    }  
-	    else {
-	        return; //accept  
-	    }
+		if (endOfFile()) {  
+			return; // accept  
+		}  
+		else if (isalnum(curr())) {  
+			next();  
+			s1();  
+		}  
+		else {
+			return; //accept  
+		}
 	}
 };
 ```
