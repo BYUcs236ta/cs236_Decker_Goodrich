@@ -1,25 +1,24 @@
 # README
 
 Homework:
+[List here](/Homework)
 
 Projects:
+[Project1](/Projects/Project1)
+[Project2](/Projects/Project2)
+[Project3](/Projects/Project3)
+[Project4](/Projects/Project4)
+[Project5](/Projects/Project5)
 
 Labs:
-
-[[Lab0]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab1.md)
-
-[[Lab1]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab1.md)
-
-[[Lab2a]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab2a.md)
-
-[[Lab2b]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab2b.md)
-
-[[Lab3]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab3.md)
-
-[[Lab4]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab4.md)
-
-[[Lab5]](https://github.com/BYUcs236ta/cs236Labs_Decker/blob/main/Lab5.md)
+[Lab0](/Labs/Lab0)
+[Lab1](/Labs/Lab1)
+[Lab2](/Labs/Lab2)
+[Lab3](/Labs/Lab3)
+[Lab4](/Labs/Lab4)
+[Lab5](/Labs/Lab5)
 
 	Lab Authors:
 	- Walter DeGering
 	- Brett Decker
+
