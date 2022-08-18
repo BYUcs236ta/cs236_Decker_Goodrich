@@ -201,7 +201,6 @@ Hint: you do not need to wrap the function in an if statement because there is o
 
 ~~~c++
 int main() {
-
     vector<Token> tokens = {
         Token(ID,"Ned",2),
         Token(LEFT_PAREN,"(",2),
