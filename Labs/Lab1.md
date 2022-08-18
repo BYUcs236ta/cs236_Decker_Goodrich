@@ -80,7 +80,7 @@ Feel free to use your IDE to generate it. Your constructor should initialize the
 
 `line`=42
 
-`TODO: Take a screenshot of the code you wrote to test this and the resulted print (name your file "s2" for screenshot 2 so it is easier for the TAs to grade)
+`TODO: Take a screenshot of the code you wrote to test this and the resulted print (name your file "s2" for screenshot 2 so it is easier for the TAs to grade)`
 
 6. Notice how the output has a number in place of the COMMA enum-type. We need to fix this. Add the following function to Token.h (above the class, but below the TokenType enum). You will need to call this function in `Token::toString()` 
 
