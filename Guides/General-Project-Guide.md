@@ -5,6 +5,7 @@
 - [Setting Up Your Programming Environment](#Setting-Up-Your-Programming-Environment)
 - [Project Requirements](#Project-Requirements)
 - [Project Resources](#Project-Resources)
+	- [Labs](#Labs)
 	- [Project Guide](#Project-Guide)
 	- [TA Help Videos and Slides](#TA-Help-Videos-and-Slides)
 	- [Example Input and Output Files](#Example-Input-and-Output-Files)
@@ -12,6 +13,7 @@
 	- [Other Resources](#Other-Resources)
 - [Testing Your Code](#Testing-Your-Code)
 - [Passing Off A Project](#Passing-Off-A-Project)
+
 ---
 
 This semester, you will complete several coding projects. Each of them will build on the functionality of the previous ones until you have a complete, functional, and efficient Datalog interpreter.
@@ -83,7 +85,6 @@ To use these makefiles on the lab machines, you will need to complete the follow
 2.  Use a terminal to ssh into the lab machines and then compile and run your code
     
 
-Video tutorials for how to complete these steps are provided [here](https://learningsuite.byu.edu/.asQP/cid-NFdVW06sO8ih/pages/id-vxru).
 
 When testing your code, be sure that the command you are using to compile it is as follows:
 

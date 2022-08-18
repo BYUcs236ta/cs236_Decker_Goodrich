@@ -29,6 +29,5 @@ It is expected that you re-enter the queue each time you wish to pass off your p
 
 Tips:
 
-- Testing your code as outlined on []()
-    - The "Project 0 -- Tutorials" page is a good start for guidance on how to access the lab machines and transfer your projects there.
+- Testing your code as outlined on [Code_Testing](/Guides/Code_Testing.md)
 - On days that projects are due, those passing off will have priority over other people in the Help Queue. This means that the position in line that the Queue will tell you is probably incorrect and you may be helped sooner than you think. This also means that on pass off days, getting other help will most likely be faster over Slack.
