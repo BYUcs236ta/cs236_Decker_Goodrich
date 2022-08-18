@@ -29,11 +29,11 @@ The `Parser` is given a `vector` of `Tokens` that are typically provided by the 
 
 ```c++
 class Parser {
- private:
-vector<Token> tokens;
-unsigned int currTokenIndex = 0;
- public:
-Parser(const vector<Token>& tokens) : tokens(tokens) { }
+private:
+	vector<Token> tokens;
+	unsigned int currTokenIndex = 0;
+public:
+	Parser(const vector<Token>& tokens) : tokens(tokens) { }
 };
 ```
 
@@ -51,13 +51,13 @@ The `throwError()` function is called when the Parser finds an error. You may wa
 
 ```c++
 Token currToken() const {
-// TODO: add code for this helper function
+	// TODO: add code for this helper function
 }
 TokenType currTokenType() const {
-// TODO: add code for this helper function
+	// TODO: add code for this helper function
 }
 void advanceToken() {
-// TODO: add code for this helper function
+	// TODO: add code for this helper function
 }
 void throwError() {
 	throw currToken();
