@@ -1,6 +1,6 @@
 # Code_Testing
 
-### Case Downloads
+### Test Case Downloads
 Test Cases: [Cases](/Projects/cs236TestCases.zip)
 
 ### Example Test Cases
