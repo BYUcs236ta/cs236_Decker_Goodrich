@@ -33,11 +33,11 @@
 class Header {
 
 private:
-  vector<string> attributes;
+	vector<string> attributes;
 
 public:
-  Header() { }
-  Header(vector<string> attributes) : attributes(attributes) { }
+	Header() { }
+	Header(vector<string> attributes) : attributes(attributes) { }
 
 };
 ~~~
@@ -49,18 +49,18 @@ class Tuple {
 
 private:
 
-  vector<string> values;
+	vector<string> values;
 
 public:
-  Tuple() { }
-  Tuple(vector<string> values) : values(values) { }
+	Tuple() { }
+	Tuple(vector<string> values) : values(values) { }
+	
+	//You must define this to allow tuples to be put into a set
+	bool operator<(const Tuple t) const {
+		return values < t.values;
+	}
 
-  //You must define this to allow tuples to be put into a set
-  bool operator<(const Tuple t) const {
-    return values < t.values;
-  }
-
-  // TODO: add more delegation functions as needed
+	// TODO: add more delegation functions as needed
 
 };
 ~~~
@@ -71,45 +71,45 @@ Add helper methods:
 ~~~c++
 // Tuple :
 unsigned int size() const {
-    return values.size();
+	return values.size();
 }
  
 string at(unsigned int index) const {
-    return values.at(index);
+	return values.at(index);
 }
 
 void push_back(string value) {
-    values.push_back(value);
+	values.push_back(value);
 }
 
 // Header :
 unsigned int size() const {
-    return attributes.size();
+	return attributes.size();
 }
  
 string at(unsigned int index) const {
-    return attributes.at(index);
+	return attributes.at(index);
 }
 
 void push_back(string value) {
-    attributes.push_back(value);
+	attributes.push_back(value);
 }
 
 ~~~
 
 ~~~c++
-  // This goes in your tuple class, note that tuple must include Header.h
-  string toString(Header header) const {
-    stringstream out;
-    string sep = "";
-    for (unsigned i = 0; i < size(); i++) {
-      string name = header.at(i);
-      string value = at(i);
-      out << sep << name << "=" << value;
-	  sep = ",";
-    }
-    return out.str();
-  }
+// This goes in your tuple class, note that tuple must include Header.h
+string toString(Header header) const {
+	stringstream out;
+	string sep = "";
+	for (unsigned i = 0; i < size(); i++) {
+		string name = header.at(i);
+		string value = at(i);
+		out << sep << name << "=" << value;
+		sep = ",";
+	}
+	return out.str();
+}
 ~~~
 
 6. Optional: Add error checking to `Tuple::toString()`, `Header::at()`, `Tuple::at()`. Write your own error message.
@@ -117,12 +117,12 @@ void push_back(string value) {
 ~~~c++
 // for the toString
 if (size() != header.size()) {
-    throw "CUSTOM ERROR MESSAGE HERE";
+	throw "CUSTOM ERROR MESSAGE HERE";
 }
 
 // for at methods
 if (index >= size()) {
-    throw "CUSTOM ERROR MESSAGE HERE";
+	throw "CUSTOM ERROR MESSAGE HERE";
 }
 ~~~
 
@@ -159,13 +159,13 @@ void addTuple(Tuple t) {
 
 ```c++
 string toString() const {
-    stringstream out;
-    for (Tuple t : tuples) {
-        if (t.size() > 0) {
-		    out << "  " << t.toString(header) << endl;
-        }
-    }
-    return out.str();
+	stringstream out;
+	for (Tuple t : tuples) {
+		if (t.size() > 0) {
+			out << "" << t.toString(header) << endl;
+		}
+	}
+	return out.str();
 }
 ```
 
@@ -173,7 +173,7 @@ string toString() const {
 
 ```c++
 unsigned int numTuples() const {
-    return tuples.size();
+	return tuples.size();
 }
 ```
 
@@ -181,11 +181,11 @@ unsigned int numTuples() const {
 
 Name: Snap
 
-| S       | N         | A              | P          |
+| S | N | A| P|
 | ------- | --------- | -------------- | ---------- |
 | '12345' | 'Charlie' | '12 Apple St.' | '555-1234' |
-| '67890' | 'Lucy'    | '34 Pear Ave.' | '555-5678' |
-| '33333' | 'Snoopy'  | '12 Apple St.' | '555-1234' |
+| '67890' | 'Lucy'| '34 Pear Ave.' | '555-5678' |
+| '33333' | 'Snoopy'| '12 Apple St.' | '555-1234' |
 
  `TODO take a screenshot of your test case in main and the output. (s1)`
 
@@ -331,18 +331,18 @@ Relation* project(vector<unsigned int> indiciesToKeep) {
 	Relation* output = new Relation();
 	// copy over the old name
 	
-	// set header  
-	// make a new empty header  
-	// for each int i in colsToKeep  
-	    // add this->header.at(i) to new header
-	// add new header to output relation*  
-	  
-	// set tuples  
-	// for each tuple t  
-	    // make a new empty tuple   
-		     // for each int i in colsToKeep        
-			     // add t.at(i) into the new empty tuple    
-		     // add newTuple into output relation*
+	// set header
+	// make a new empty header
+	// for each int i in colsToKeep
+	// add this->header.at(i) to new header
+	// add new header to output relation*
+	
+	// set tuples
+	// for each tuple t
+	// make a new empty tuple 
+		 // for each int i in colsToKeep
+			 // add t.at(i) into the new empty tuple
+		 // add newTuple into output relation*
 
 	return output;
 }
@@ -406,7 +406,7 @@ col2='C',col0='A'
 ### TODO for the project 
 
 **(NOT REQUIRED FOR THE LAB)**
-1.  Import your code from project 2b
+1.Import your code from project 2b
 2. Create database class
 	1. A database should have a map\<string,Relation*\> in it to store the relation
 	2. Questions:
