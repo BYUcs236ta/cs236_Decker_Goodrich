@@ -128,14 +128,14 @@ protected:
 
     char curr() {
 		if (endOfFile()) {
-	            throw "Tried to read past the file, does your automaton state check for it as a transition?";
+	            throw "Tried to read past the file, does your every automaton state check for endOfFile() as its first transition?";
 		}
         return input.at(currCharIndex);
     }
 
     bool match(char c) {
 		if (endOfFile()) {
-		    throw "Tried to read past the file, does your automaton state check for it as a transition?";
+		    throw "Tried to read past the file, does your every automaton state check for endOfFile() as its first transition?";
 		}
         return (curr() == c);
     }
@@ -479,10 +479,19 @@ The order you choose to write these matters. This is your tie breaker. If an Aut
 Run the following code in main:
 ```c++
 #include "Lexer.h"
+#include <iostream>
+#include <string>
+using namespace std;
+
 int main() {
-	Lexer lexer;
-	lexer.run("::-onePerson");
-	return 0;
+	try {
+		Lexer lexer;
+		lexer.run("::-onePerson");
+		return 0;
+	} catch(const char* error) {
+		cout << error << endl;
+		return 1;
+	}
 }
 ```
 
