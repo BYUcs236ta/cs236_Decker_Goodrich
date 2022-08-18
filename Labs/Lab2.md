@@ -68,7 +68,6 @@ void throwError() {
 
 ~~~c++
 int main() {
-
     vector<Token> tokens = {
         Token(ID,"Ned",2),
         Token(LEFT_PAREN,"(",2),
