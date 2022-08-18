@@ -4,14 +4,14 @@
 # Table of Contents
 - [Part 0 - Recap](#Part-0---Recap)
 - [Natural Join Algorithm](#Natural-Join-Algorithm)
-	- [Natural Join Signature](#Natural-Join-Signature)
-	- [Example Tables](#Example-Tables)
-	- [Step 1 - Calculate header overlap](#Step-1---Calculate-header-overlap)
-		- [Overlap Pseudocode](#Overlap-Pseudocode)
-	- [Step 2 - Create new Header](#Step-2---Create-new-Header)
-		- [Combine Header Pseudocode](#Combine-Header-Pseudocode)
-	- [Step 3 - Find Tuples](#Step-3---Find-Tuples)
-		- [Tuple Section Pseudocode](#Tuple-Section-Pseudocode)
+    - [Natural Join Signature](#Natural-Join-Signature)
+    - [Example Tables](#Example-Tables)
+    - [Step 1 - Calculate header overlap](#Step-1---Calculate-header-overlap)
+        - [Overlap Pseudocode](#Overlap-Pseudocode)
+    - [Step 2 - Create new Header](#Step-2---Create-new-Header)
+        - [Combine Header Pseudocode](#Combine-Header-Pseudocode)
+    - [Step 3 - Find Tuples](#Step-3---Find-Tuples)
+        - [Tuple Section Pseudocode](#Tuple-Section-Pseudocode)
 - [Test Case](#Test-Case)
 - [Conclusion](#Conclusion)
 
@@ -31,20 +31,20 @@ For this lab we will implement the natural join algorithm. This will be a member
 #### Natural Join Signature
 ~~~c++
 Relation* naturalJoin(Relation* other) {
-	// give clearer names to the this and other relations
-	Relation* r1 = this; 
-	Relation* r2 = other;
+    // give clearer names to the this and other relations
+    Relation* r1 = this; 
+    Relation* r2 = other;
 
-	Relation* output = new Relation();
+    Relation* output = new Relation();
 
-	// set name of output relation
+    // set name of output relation
 
-	// calculate header overlap of 'this' and 'other' relations
-	
-	// combine headers -- will be the header for 'output'
-	
-	// combine tuples -- will be the tuples for 'output'
-	return output;
+    // calculate header overlap of 'this' and 'other' relations
+    
+    // combine headers -- will be the header for 'output'
+    
+    // combine tuples -- will be the tuples for 'output'
+    return output;
 }
 ~~~
 
@@ -92,18 +92,18 @@ initialize overlap (what type should this be? maybe a map or 2 vectors?)
 initialize uniqueCols (what type should this be? maybe a vector or set)
 
 for index2 = 0 to h2.size():
-	found = false
-	
-	for index1 = 0 to h1.size():
-		if (h1[index1] == h2[index2]):
-			found = true
-			add index1, index2 to your overlap structure
-		end if
-	end index1 for loop
-		
-	if (not found):
-		add index2 to uniqueCols
-	end if
+    found = false
+    
+    for index1 = 0 to h1.size():
+        if (h1[index1] == h2[index2]):
+            found = true
+            add index1, index2 to your overlap structure
+        end if
+    end index1 for loop
+        
+    if (not found):
+        add index2 to uniqueCols
+    end if
 end index2 for loop
 ~~~
 
@@ -122,14 +122,14 @@ This step is best done as a separate function, which you can then test to make s
 ~~~
 // don't forget to pass by refrence to avoid making unecessary copies
 function combineHeaders (Header h1, Header h2, uniqueCols):
-	let newHeader be a new empty header
-	
-	copy all values from h1 into newHeader
-	
-	for i in uniqueCols:
-		copy h2[i] into newHeader
-	
-	return newHeader
+    let newHeader be a new empty header
+    
+    copy all values from h1 into newHeader
+    
+    for i in uniqueCols:
+        copy h2[i] into newHeader
+    
+    return newHeader
 ~~~
 
 #### Step 3 - Find Tuples that can join
@@ -172,11 +172,11 @@ In `naturalJoin()`
 ```
 // Join tables r1 and r2
 for every t1 in r1 and t2 in r2
-	// t1 is a tuple from r1
-	// t2 is a tuple from r2
-	if isJoinable(t1, t2, overlap):
-		newTuple = combineTuples(t1, t2, uniqueCols)
-		add newTuple into the output relation*
+    // t1 is a tuple from r1
+    // t2 is a tuple from r2
+    if isJoinable(t1, t2, overlap):
+        newTuple = combineTuples(t1, t2, uniqueCols)
+        add newTuple into the output relation*
 
 * consider making seperate functions for ifJoinable(t1, t2, overlap) and combineTuples(t1, t2, uniqueCols)
 ```
@@ -190,23 +190,23 @@ Helper functions:
 ~~~
 function isJoinable (Tuple t1, Tuple t2, overlap):
 
-	for each pair (index1, index2) from overlap:
-		if (t1[index1] != t2[index2]):
-			return FALSE
-			
-	return TRUE
+    for each pair (index1, index2) from overlap:
+        if (t1[index1] != t2[index2]):
+            return FALSE
+            
+    return TRUE
 ~~~
 
 ~~~
 function combineTuples (Tuple t1, Tuple t2, uniqueCols):
-	let newTuple be a new empty tuple
-	
-	copy all values from t1 into newTuple
-	
-	for i in uniqueCols:
-		copy t2[i] into newTuple
-	
-	return newTuple
+    let newTuple be a new empty tuple
+    
+    copy all values from t1 into newTuple
+    
+    for i in uniqueCols:
+        copy t2[i] into newTuple
+    
+    return newTuple
 ~~~
 
 `Take a screenshot of your natural join function, if you used helper functions take additional screenshots of each function. Also include your Big-O analysis of the Natural Join Function.`

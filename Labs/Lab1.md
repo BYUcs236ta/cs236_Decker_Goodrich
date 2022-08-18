@@ -7,10 +7,10 @@
 - [Part 3 - Lexer](#Part-3---Lexer)
 - [Part 4 - Parallel and Max](#Part-4---Parallel-and-Max)
 - [Part 5 - Create Automata](#Part-5---Create-Automata)
-	- [Colon Automaton](#Colon-Automaton)
-	- [Colon Dash Automaton](#Colon-Dash-Automaton)
-	- [Undefined Character Automaton](#Undefined-Character-Automaton)
-	- [Identifier Automaton](#Identifier-Automaton)
+    - [Colon Automaton](#Colon-Automaton)
+    - [Colon Dash Automaton](#Colon-Dash-Automaton)
+    - [Undefined Character Automaton](#Undefined-Character-Automaton)
+    - [Identifier Automaton](#Identifier-Automaton)
 - [Part 6 - Add Automata to Lexer](#Part-6---Add-Automata-to-Lexer)
 - [Part 7 - Test](#Part-7---Test)
 - [Conclusion](#Conclusion)
@@ -39,7 +39,7 @@ Make sure to read the Project 1 Guide (found in Learning Suite) and the specs so
 #include <sstream>
 using namespace std;
 enum TokenType {
-	COMMA, COLON, COLON_DASH, UNDEFINED, ID // add more here
+    COMMA, COLON, COLON_DASH, UNDEFINED, ID // add more here
 };
 ```
 
@@ -49,9 +49,9 @@ enum TokenType {
 
 class Token {
 private:
-	TokenType type;
-	string contents;
-	unsigned int line;
+    TokenType type;
+    string contents;
+    unsigned int line;
 };
 ```
 
@@ -66,9 +66,9 @@ Feel free to use your IDE to generate it. Your constructor should initialize the
 
 ~~~c++
 string toString() const {
-	stringstream out;
-	out << "(" << type << "," << "\"" << contents << "\"" << "," << line << ")";
-	return out.str();
+    stringstream out;
+    out << "(" << type << "," << "\"" << contents << "\"" << "," << line << ")";
+    return out.str();
 }
 ~~~
 
@@ -86,11 +86,11 @@ string toString() const {
 
 ```c++
 string tokenTypeToString(TokenType type)  {
-	switch (type) {
-		case COMMA:
-			return "COMMA";
-		...
-	}
+    switch (type) {
+        case COMMA:
+            return "COMMA";
+        ...
+    }
 }
 ```
 
@@ -106,70 +106,70 @@ string tokenTypeToString(TokenType type)  {
 
 class Automaton {
 protected:
-	// This tracks the number of newLines ('\n') we have read
-	unsigned int newLinesRead = 0;
+    // This tracks the number of newLines ('\n') we have read
+    unsigned int newLinesRead = 0;
 
-	TokenType type = TokenType::UNDEFINED;
-	// This tracks the total number of characters read
-	unsigned int numCharRead = 0;
-	std::string input = "";
+    TokenType type = TokenType::UNDEFINED;
+    // This tracks the total number of characters read
+    unsigned int numCharRead = 0;
+    std::string input = "";
 
-	// All children of this class must define this function
-	virtual void s0() = 0;
+    // All children of this class must define this function
+    virtual void s0() = 0;
 
-	// Helper functions
-	void next() {
-		if (curr() == '\n') {
-			newLinesRead++;
-		}
-		numCharRead++;
-	}
+    // Helper functions
+    void next() {
+        if (curr() == '\n') {
+            newLinesRead++;
+        }
+        numCharRead++;
+    }
 
-	char curr() {
-		if (endOfFile()) {
-			throw "Tried to read past the file, does your every automaton state check for endOfFile() as its first transition?";
-		}
-		return input.at(currCharIndex);
-	}
+    char curr() {
+        if (endOfFile()) {
+            throw "Tried to read past the file, does your every automaton state check for endOfFile() as its first transition?";
+        }
+        return input.at(currCharIndex);
+    }
 
-	bool match(char c) {
-		if (endOfFile()) {
-			throw "Tried to read past the file, does your every automaton state check for endOfFile() as its first transition?";
-		}
-		return (curr() == c);
-	}
+    bool match(char c) {
+        if (endOfFile()) {
+            throw "Tried to read past the file, does your every automaton state check for endOfFile() as its first transition?";
+        }
+        return (curr() == c);
+    }
 
-	// Call this function to check if you have reached the end of file
-	bool endOfFile() {
-		return (currCharIndex >= input.size());
-	}
+    // Call this function to check if you have reached the end of file
+    bool endOfFile() {
+        return (currCharIndex >= input.size());
+    }
 
-	// This is the error state call it when the token is invalid
-	void sError() {
-		numCharRead = 0;
-	}
+    // This is the error state call it when the token is invalid
+    void sError() {
+        numCharRead = 0;
+    }
 
 public:
-	Automaton() {}
-	// best practice is to create a 'virtual' deconstructor for base classes
-	virtual ~Automaton() {}
+    Automaton() {}
+    // best practice is to create a 'virtual' deconstructor for base classes
+    virtual ~Automaton() {}
 
-	unsigned int run(std::string input) {
-		this->input = input;
-		currCharIndex = 0;
-		newLinesRead = 0;
-		numCharRead = 0;
-		s0();
-		return numCharRead;
-	}
+    unsigned int run(std::string input) {
+        this->input = input;
+        currCharIndex = 0;
+        newLinesRead = 0;
+        numCharRead = 0;
+        s0();
+        return numCharRead;
+    }
 
-	unsigned int getNewLines() const {
-		return newLinesRead;
-	}
+    unsigned int getNewLines() const {
+        return newLinesRead;
+    }
 
-	TokenType getType() const {
-		return type;
-	}
+    TokenType getType() const {
+        return type;
+    }
 };
 ```
 
@@ -200,12 +200,12 @@ vector<Token> tokens;
 
 ```c++
 void initializeAutomata() { // this should be private
-	// Here you will create and add each automaton to your automata vector
+    // Here you will create and add each automaton to your automata vector
 }
 vector<Token> run(string input) { // this should be in public
-	initializeAutomata();
-	// TODO:: write the parallel and max logic
-	return tokens;
+    initializeAutomata();
+    // TODO:: write the parallel and max logic
+    return tokens;
 }
 
 ```
@@ -256,7 +256,7 @@ unsigned int maxRead = 0;
 
 ```c++
 for (unsigned int i = 0; i < automata.size(); i++) {
-	Automaton* currentAutomaton = automata.at(i);
+    Automaton* currentAutomaton = automata.at(i);
 }
 ```
 
@@ -306,22 +306,22 @@ Create ColonAutomaton.h
 #include "Automaton.h"
 class ColonAutomaton : public Automaton {
 public:
-	ColonAutomaton() {
-		type = TokenType::COLON; // set the type
-	}
+    ColonAutomaton() {
+        type = TokenType::COLON; // set the type
+    }
 private:
-	void s0() {
-		if (endOfFile()) {  
-			sError(); // this calls the error state
-		}  
-		else if (match(':')) {
-			next();
-			return; // this represents accepting the input
-		}
-		else {
-			sError(); // this calls the error state
-		}
-	}
+    void s0() {
+        if (endOfFile()) {  
+            sError(); // this calls the error state
+        }  
+        else if (match(':')) {
+            next();
+            return; // this represents accepting the input
+        }
+        else {
+            sError(); // this calls the error state
+        }
+    }
 };
 ```
 
@@ -340,34 +340,34 @@ Create ColonDashAutomaton.h
 #include "Automaton.h"
 class ColonDashAutomaton : public Automaton {
 public:
-	ColonDashAutomaton() {
-		type = TokenType::COLON_DASH; // set the type
-	}
+    ColonDashAutomaton() {
+        type = TokenType::COLON_DASH; // set the type
+    }
 private:
-	void s0() {
-		if (endOfFile()) {  
-			sError(); // this calls the error state
-		}  
-		else if (match(':')) {
-			next();
-			s1(); // call s1 as the transition
-		}
-		else {
-			sError(); // this calls the error state
-		}
-	}
-	void s1() {
-		if (endOfFile()) {  
-			sError(); // this calls the error state
-		}  
-		else if (match('-')) {
-			next();
-			return; // this represents accepting the input
-		}
-		else {
-			sError(); // this calls the error state
-		}
-	}
+    void s0() {
+        if (endOfFile()) {  
+            sError(); // this calls the error state
+        }  
+        else if (match(':')) {
+            next();
+            s1(); // call s1 as the transition
+        }
+        else {
+            sError(); // this calls the error state
+        }
+    }
+    void s1() {
+        if (endOfFile()) {  
+            sError(); // this calls the error state
+        }  
+        else if (match('-')) {
+            next();
+            return; // this represents accepting the input
+        }
+        else {
+            sError(); // this calls the error state
+        }
+    }
 };
 ```
 
@@ -384,20 +384,20 @@ Create the UndefinedCharAutomaton.h
 #include "Automaton.h"
 class UndefinedCharAutomaton : public Automaton {
 public:
-	UndefinedCharAutomaton() {
-		type = TokenType::UNDEFINED; // set the type
-	}
-	
+    UndefinedCharAutomaton() {
+        type = TokenType::UNDEFINED; // set the type
+    }
+    
 private:
-	void s0() {
-		if (endOfFile()) {  
-			sError(); // this calls the error state
-		} 
-		else {
-			next(); // read next character
-			return; // accept the input
-		}
-	}
+    void s0() {
+        if (endOfFile()) {  
+            sError(); // this calls the error state
+        } 
+        else {
+            next(); // read next character
+            return; // accept the input
+        }
+    }
 };
 ```
 
@@ -412,35 +412,35 @@ Create IDAutomaton.h
 #include <stdio.h> 
 #include <ctype.h>
 class IDAutomaton : public Automaton {
-public:	
-	IDAutomaton() {
-		type = TokenType::ID; // set the type
-	}
+public:    
+    IDAutomaton() {
+        type = TokenType::ID; // set the type
+    }
 private:
-	void s0() {
-		if (endOfFile()) {  
-			sError(); // reject  
-		}  
-		else if (isalpha(curr())) {
-			next();
-			s1();
-		}
-		else {
-			sError();
-		}
-	}
-	void s1() {  
-		if (endOfFile()) {  
-			return; // accept  
-		}  
-		else if (isalnum(curr())) {  
-			next();  
-			s1();  
-		}  
-		else {
-			return; //accept  
-		}
-	}
+    void s0() {
+        if (endOfFile()) {  
+            sError(); // reject  
+        }  
+        else if (isalpha(curr())) {
+            next();
+            s1();
+        }
+        else {
+            sError();
+        }
+    }
+    void s1() {  
+        if (endOfFile()) {  
+            return; // accept  
+        }  
+        else if (isalnum(curr())) {  
+            next();  
+            s1();  
+        }  
+        else {
+            return; //accept  
+        }
+    }
 };
 ```
 
@@ -466,10 +466,10 @@ Hint 4: Make sure that every state checks for endOfFile() and that that check is
 2) in the Lexer's initilizeAutomata method `Lexer::initilizeAutomata()` add the following code:
 ```c++
 void initializeAutomata() {
-	automata.push_back(new ColonAutomaton());
-	automata.push_back(new ColonDashAutomaton());
-	automata.push_back(new IDAutomaton());
-	automata.push_back(new UndefinedCharAutomaton());
+    automata.push_back(new ColonAutomaton());
+    automata.push_back(new ColonDashAutomaton());
+    automata.push_back(new IDAutomaton());
+    automata.push_back(new UndefinedCharAutomaton());
 }
 ```
 The order you choose to write these matters. This is your tie breaker. If an Automaton is earlier in the list it will have higher precedence when both return the same value.
@@ -484,14 +484,14 @@ Run the following code in main:
 using namespace std;
 
 int main() {
-	try {
-		Lexer lexer;
-		lexer.run("::-onePerson");
-		return 0;
-	} catch(const char* error) {
-		cout << error << endl;
-		return 1;
-	}
+    try {
+        Lexer lexer;
+        lexer.run("::-onePerson");
+        return 0;
+    } catch(const char* error) {
+        cout << error << endl;
+        return 1;
+    }
 }
 ```
 
@@ -512,11 +512,11 @@ It should produce the following as output:
 
 **(NOT REQUIRED FOR THE LAB)**
 1. Write and test all of the Automata on the lab specs
-	1. Start with the easy ones
-	2. Test as you go
-	3. Draw the automaton before writing code
-	4. When you have problems make sure your drawing matches your code and that your automaton drawing is correct
-	5. You may consider writing a matcher automaton for the simpler token types.
+    1. Start with the easy ones
+    2. Test as you go
+    3. Draw the automaton before writing code
+    4. When you have problems make sure your drawing matches your code and that your automaton drawing is correct
+    5. You may consider writing a matcher automaton for the simpler token types.
 2. Write separate Automata for SingleLineComment, BlockComment, UndefinedBlockComment, String and UndefinedString tokens.
 3. Add newline tracking
 4. Read in input from a file whose name is passed in from a command line argument and print output to the standard output (cout)

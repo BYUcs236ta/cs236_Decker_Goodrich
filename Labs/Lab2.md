@@ -30,10 +30,10 @@ The `Parser` is given a `vector` of `Tokens` that are typically provided by the 
 ```c++
 class Parser {
 private:
-	vector<Token> tokens;
-	unsigned int currTokenIndex = 0;
+    vector<Token> tokens;
+    unsigned int currTokenIndex = 0;
 public:
-	Parser(const vector<Token>& tokens) : tokens(tokens) { }
+    Parser(const vector<Token>& tokens) : tokens(tokens) { }
 };
 ```
 
@@ -51,16 +51,16 @@ The `throwError()` function is called when the Parser finds an error. You may wa
 
 ```c++
 Token currToken() const {
-	// TODO: add code for this helper function
+    // TODO: add code for this helper function
 }
 TokenType currTokenType() const {
-	// TODO: add code for this helper function
+    // TODO: add code for this helper function
 }
 void advanceToken() {
-	// TODO: add code for this helper function
+    // TODO: add code for this helper function
 }
 void throwError() {
-	throw currToken();
+    throw currToken();
 }
 ```
 
@@ -69,23 +69,23 @@ void throwError() {
 ~~~c++
 int main() {
 
-	vector<Token> tokens = {
-		Token(ID,"Ned",2),
-		Token(LEFT_PAREN,"(",2),
-		Token(RIGHT_PAREN,")",2)
-	};
-	try {
-		Parser p = Parser(tokens);
-		cout << tokenTypeToString(p.currTokenType()) << endl;
-		p.advanceToken();
-		cout << tokenTypeToString(p.currTokenType()) << endl;
-		p.advanceToken();
-		cout << tokenTypeToString(p.currTokenType()) << endl;
-		p.throwError();
-	}
-	catch(Token errorToken) {
-		cout << errorToken.toString();
-	}
+    vector<Token> tokens = {
+        Token(ID,"Ned",2),
+        Token(LEFT_PAREN,"(",2),
+        Token(RIGHT_PAREN,")",2)
+    };
+    try {
+        Parser p = Parser(tokens);
+        cout << tokenTypeToString(p.currTokenType()) << endl;
+        p.advanceToken();
+        cout << tokenTypeToString(p.currTokenType()) << endl;
+        p.advanceToken();
+        cout << tokenTypeToString(p.currTokenType()) << endl;
+        p.throwError();
+    }
+    catch(Token errorToken) {
+        cout << errorToken.toString();
+    }
 }
 ~~~
 
@@ -95,16 +95,16 @@ int main() {
 
 ~~~c++
 void checkFor(TokenType expectedType) {
-	// this cout segement should be removed for the final project output
-	cout << "Token at index " << currTokenIndex;
-	cout << " was type: " << tokenTypeToString(currTokenType());
-	cout << " expected: " << tokenTypeToString(expectedType) << endl;
-	
-	if (currTokenType() == expectedType) {
-		// TODO: think about what should happen if the Parser matches an expected Token
-	} else {
-		// TODO: think about what should happen if the Parser matches an UN-expected Token
-	}
+    // this cout segement should be removed for the final project output
+    cout << "Token at index " << currTokenIndex;
+    cout << " was type: " << tokenTypeToString(currTokenType());
+    cout << " expected: " << tokenTypeToString(expectedType) << endl;
+    
+    if (currTokenType() == expectedType) {
+        // TODO: think about what should happen if the Parser matches an expected Token
+    } else {
+        // TODO: think about what should happen if the Parser matches an UN-expected Token
+    }
 }
 ~~~
 
@@ -112,22 +112,22 @@ void checkFor(TokenType expectedType) {
 
 ~~~c++
 int main() {
-	vector<Token> tokens = {
-		Token(ID,"Ned",2),
-		Token(LEFT_PAREN,"(",2),
-		Token(RIGHT_PAREN,")",2)
-	};
-	
-	try {
-		Parser parser = Parser(tokens);
-		parser.checkFor(ID);
-		parser.checkFor(LEFT_PAREN);
-		parser.checkFor(ID); // intentional error
-		parser.checkFor(RIGHT_PAREN);
-	}
-	catch(Token errorToken) {
-		cout << errorToken.toString();
-	}
+    vector<Token> tokens = {
+        Token(ID,"Ned",2),
+        Token(LEFT_PAREN,"(",2),
+        Token(RIGHT_PAREN,")",2)
+    };
+    
+    try {
+        Parser parser = Parser(tokens);
+        parser.checkFor(ID);
+        parser.checkFor(LEFT_PAREN);
+        parser.checkFor(ID); // intentional error
+        parser.checkFor(RIGHT_PAREN);
+    }
+    catch(Token errorToken) {
+        cout << errorToken.toString();
+    }
 }
 ~~~
 
@@ -149,13 +149,13 @@ int main() {
 // Consider having a comment that tells you what the parsing rule is:
 // idList -> COMMA ID idList | lambda
 void parseIdList() {
-	if (currTokenType() == COMMA) {
-		checkFor(COMMA);
-		checkFor(ID);
-		idList();
-	} else {
-	// lambda
-	}
+    if (currTokenType() == COMMA) {
+        checkFor(COMMA);
+        checkFor(ID);
+        idList();
+    } else {
+    // lambda
+    }
 }
 ~~~
 
@@ -165,22 +165,22 @@ void parseIdList() {
 
 ~~~c++
 int main() {
-	vector<Token> tokens = {
-		Token(COMMA,",",2),
-		Token(ID,"Ted",2),
-		Token(COMMA,",",2),
-		Token(ID,"Zed",2),
-		Token(RIGHT_PAREN,")",2)
-	};
+    vector<Token> tokens = {
+        Token(COMMA,",",2),
+        Token(ID,"Ted",2),
+        Token(COMMA,",",2),
+        Token(ID,"Zed",2),
+        Token(RIGHT_PAREN,")",2)
+    };
 
-	try {
-		Parser parser = Parser(tokens);
-		parser();
-		cout << "Success!";
-	}
-	catch(Token errorToken) {
-		cout << "Failure!" << endl << "" << errorToken.toString(); 
-	}
+    try {
+        Parser parser = Parser(tokens);
+        parser();
+        cout << "Success!";
+    }
+    catch(Token errorToken) {
+        cout << "Failure!" << endl << "" << errorToken.toString(); 
+    }
 }
 ~~~
 
@@ -203,23 +203,23 @@ Hint: you do not need to wrap the function in an if statement because there is o
 ~~~c++
 int main() {
 
-	vector<Token> tokens = {
-		Token(ID,"Ned",2),
-		Token(LEFT_PAREN,"(",2),
-		Token(ID,"Ted",2),
-		Token(COMMA,",",2),
-		Token(ID,"Zed",2),
-		Token(RIGHT_PAREN,")",2)
-	};
-	
-	try {
-		Parser parser = Parser(tokens);
-		parser.scheme();
-		cout << "Success!";
-	}
-	catch(Token errorToken) {
-		cout << "Failure!" << endl << "" << errorToken.toString(); 
-	}
+    vector<Token> tokens = {
+        Token(ID,"Ned",2),
+        Token(LEFT_PAREN,"(",2),
+        Token(ID,"Ted",2),
+        Token(COMMA,",",2),
+        Token(ID,"Zed",2),
+        Token(RIGHT_PAREN,")",2)
+    };
+    
+    try {
+        Parser parser = Parser(tokens);
+        parser.scheme();
+        cout << "Success!";
+    }
+    catch(Token errorToken) {
+        cout << "Failure!" << endl << "" << errorToken.toString(); 
+    }
 
 }
 ~~~

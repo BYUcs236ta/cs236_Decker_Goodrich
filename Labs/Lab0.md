@@ -3,8 +3,8 @@
 # Table of Contents
 - [Part 0 - TA Recommendations](#Part-0---TA-Recommendations)
 - [Part 1 - Installing Clion](#Part-1---Installing-Clion)
-		- [Part 1a - License Creation](#Part-1a---License-Creation)
-		- [Part 1b - Download](#Part-1b---Download)
+    - [Part 1a - License Creation](#Part-1a---License-Creation)
+    - [Part 1b - Download](#Part-1b---Download)
 - [Part 2 - Setting up clion project](#Part-2---Setting-up-clion-project)
 - [Part 3 - Hello World Program](#Part-3---Hello-World-Program)
 - [Conclusion](#Conclusion)
