@@ -45,7 +45,7 @@ UNDER CONSTRUCTION Currently hosted on learning suite
 2. READ THE FOLLOWING: [Project 4 Guide](/Guides/Project4-Guide.pdf)
 3.  [Evaluating Rules Project 4](/Guides/Evaluating_Rules_Project_4.pdf)
 4.  You may also find the [TA slides](https://docs.google.com/presentation/d/17Bz8ypKJMGWqW7uJKU26v6S4pc6exdOpbKAxA6j2ru8/edit?usp=sharing) and [help video](https://learningsuite.byu.edu/plugins/Upload/fileDownload.php?fileId=10ea88eb-b8QI-bHcV-hVJO-wB09b8e5ce10) useful!
-5. [Test Cases](Code_Testing.md)
+5. [Test Cases](/Guides/Code_Testing.md)
 6. [Project_Pass_Off_Instructions](/Guides/Project_Pass_Off_Instructions.md)
 
 ---
