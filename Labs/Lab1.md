@@ -266,7 +266,7 @@ for (unsigned int i = 0; i < automata.size(); i++) {
 
 6. It may be worth including the following line of code as a helpful debug statement
 ```c++
-cout << tokenTypeToString(currAutomaton->getType()) << ": read " << numRead << " characters" << endl;
+cout << "The " << tokenTypeToString(currAutomaton->getType()) << " automaton read " << numRead << " characters" << endl;
 ```
 
 `TODO: Write the code described in this step and take a screenshot (name your file "s4" for screenshot 4 so it is easier for the TAs to grade, we will note this as just "(s4)" in future).`
