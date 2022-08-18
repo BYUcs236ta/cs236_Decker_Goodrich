@@ -32,5 +32,5 @@ Please give good mnemonic names for concepts such as \<Time of Day\>, which is t
 
 Additionally you may use a notation shorthand for lists such as:
 
-`01 | 02 | 03 | \.\.\. | 21 | 22 | 23`
+`01 | 02 | 03 | ... | 21 | 22 | 23`
 
