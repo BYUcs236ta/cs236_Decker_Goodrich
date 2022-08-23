@@ -5,24 +5,24 @@
 Use the Truth Table Method to show that the following arguments are sound
 
 a.
->1. $P \rightarrow Q$
->2. $P \rightarrow R$
->$\therefore P \rightarrow (Q \lor R)$
+>1. P → Q
+>2. P → R
+>∴ P → (Q ∨ R)
 
 b.
->1. $P \lor Q$
->2. $P \rightarrow R$
->3. $Q \rightarrow R$
->$\therefore R$
+>1. P ∨ Q
+>2. P → R
+>3. Q → R
+>∴ R
 
 ---
 ### Question 2
 
 Do the following proofs deductively. Justify each step in your proof with a law or inference rule
 
-1. if $(P \rightarrow Q) \land (\lnot R \rightarrow \lnot Q) \land P$ then prove $R$
+1. if (P → Q) ∧ (¬R → ¬Q) ∧ P then prove R
 
-2. if $(P \rightarrow (Q \land R)) \land (\lnot R \land Q)$ then prove $\lnot P$
+2. if (P → (Q ∧ R)) ∧ (¬R ∧ Q) then prove ¬P
 
 ---
 ### Question 3
@@ -39,7 +39,7 @@ Prove the following conclusion: “the earth is flat.” Justify each step in yo
 
 For each of the following scenarios, indicate which of the rules of inference are used (Modus ponens, Disjunctive syllogism, etc.)
 
-a. If Mr. Smith or Mrs. Smith earns more than $30,000 per year, the Smith family can afford holidays in Hawaii. Since I know that either Mr. Smith or his wife earns more than $30,000, I conclude that the family can afford a holiday in Hawaii.
+a. If Mr. Smith or Mrs. Smith earns more than 30,000 per year, the Smith family can afford holidays in Hawaii. Since I know that either Mr. Smith or his wife earns more than 30,000, I conclude that the family can afford a holiday in Hawaii.
 
 b. If John was at the party yesterday, he will sleep in. John did not sleep in. Consequently, he was not at the party.
 
