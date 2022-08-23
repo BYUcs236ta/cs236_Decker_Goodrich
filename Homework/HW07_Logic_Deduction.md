@@ -7,12 +7,14 @@ Use the Truth Table Method to show that the following arguments are sound
 a.
 >1. P → Q
 >2. P → R
+
 ∴ P → (Q ∨ R)
 
 b.
 >1. P ∨ Q
 >2. P → R
 >3. Q → R
+
 ∴ R
 
 ---
