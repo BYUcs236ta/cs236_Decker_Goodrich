@@ -61,4 +61,4 @@ Find the truth value of the each of the following (Hint: substitute then solve):
 
  b. $$(P \leftrightarrow R) \land (\lnot Q \rightarrow S)$$ 
 
-c. $$(P \lor (Q \rightarrow (R \land \lnot P))) \leftrightarrow (Q \lor \lnot S)$$
+c. $$ (P \lor (Q \rightarrow (R \land \lnot P))) \leftrightarrow (Q \lor \lnot S) $$
