@@ -14,12 +14,7 @@ queryList
 
 Project 2 Grammar (lowercase words represent a single non-terminal, upper case words represent a single terminal, lambda is the empty string)
 ```
-datalogProgram 
--> 
-SCHEMES COLON scheme schemeList 
-FACTS COLON factList
-RULES COLON ruleList 
-QUERIES COLON query queryList EOF
+datalogProgram -> SCHEMES COLON scheme schemeList FACTS COLON factList RULES COLON ruleList QUERIES COLON query queryList EOF
 
 schemeList -> scheme schemeList | lambda
 factList -> fact factList | lambda
