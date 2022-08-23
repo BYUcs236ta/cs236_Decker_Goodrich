@@ -45,12 +45,12 @@ $$P \rightarrow ((Q \land R) \leftrightarrow S)$$
 
 Justify every step with the law (or laws) you use for the step.
 
-Hint:
+Hints
+
+biconditional equivalence:
 
 $$A \leftrightarrow B \equiv ((A \rightarrow B) \land (B \rightarrow A))$$
 
-this is called a biconditional equivalence
+CDE (conditional disjunctive equivalence):
  
 $$A \rightarrow B \equiv \lnot A \lor B$$
-
-is called CDE (conditional disjunctive equivalence)
