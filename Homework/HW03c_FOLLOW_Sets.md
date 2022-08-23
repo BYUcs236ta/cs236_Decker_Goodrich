@@ -4,12 +4,14 @@
 
 Find the FOLLOW sets for all of the productions with the following non-terminals (on the left-hand side) from Project 2:
 ```
-rule
-query
 schemeList
 factList
 ruleList
-queryList
+queryList	
+predicateList
+parameterList
+stringList
+idList
 ```
 
 Project 2 Grammar (lowercase words represent a single non-terminal, upper case words represent a single terminal, lambda is the empty string)
