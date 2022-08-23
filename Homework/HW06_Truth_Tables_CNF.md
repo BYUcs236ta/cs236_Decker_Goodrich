@@ -51,6 +51,6 @@ Biconditional Equivalence:
 
 $$A \leftrightarrow B \equiv ((A \rightarrow B) \land (B \rightarrow A))$$
 
-CDE (conditional disjunctive equivalence):
+CDE (Conditional Disjunctive Equivalence):
  
 $$A \rightarrow B \equiv \lnot A \lor B$$
