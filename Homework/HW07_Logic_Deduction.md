@@ -20,15 +20,9 @@ b.
 
 Do the following proofs deductively. Justify each step in your proof with a law or inference rule
 
-a. if 
+1. if $(P \rightarrow Q) \land (\lnot R \rightarrow \lnot Q) \land P$ then prove $R$
 
-$(P \rightarrow Q) \land (\lnot R \rightarrow \lnot Q) \land P$ then prove $R$
-
-b. if 
-
-$(P \rightarrow (Q \land R)) \land (\lnot R \land Q)$ 
-
-then prove $\lnot P$
+2. if $(P \rightarrow (Q \land R)) \land (\lnot R \land Q)$ then prove $\lnot P$
 
 ---
 ### Question 3
