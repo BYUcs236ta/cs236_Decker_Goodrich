@@ -36,9 +36,8 @@ First assign each clause a propositional symbol then write each of the following
 - “L = you leave” 
 - “Q = house is quiet”
 
-Then re-write: 
-L $\rightarrow$ Q
-
+Then re-write as: 
+L -> Q
 
 a. If you do not leave, I will call the police. 
 
