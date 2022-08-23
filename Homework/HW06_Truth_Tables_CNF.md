@@ -47,7 +47,7 @@ Justify every step with the law (or laws) you use for the step.
 
 Hints
 
-biconditional equivalence:
+Biconditional Equivalence:
 
 $$A \leftrightarrow B \equiv ((A \rightarrow B) \land (B \rightarrow A))$$
 
