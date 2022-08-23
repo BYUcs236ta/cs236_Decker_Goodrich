@@ -46,6 +46,7 @@ $$P \rightarrow ((Q \land R) \leftrightarrow S)$$
 Justify every step with the law (or laws) you use for the step.
 
 Hint:
+
 $$A \leftrightarrow B \equiv ((A \rightarrow B) \land (B \rightarrow A))$$
 
 this is called a biconditional equivalence
