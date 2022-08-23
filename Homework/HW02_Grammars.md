@@ -7,6 +7,8 @@ the grammar. S is the start symbol. (Recall that a language is a subset of V\*, 
 alphabet.)
 
  S $\rightarrow$ a | aTb | aTbTc
+
+ S $\rightarrow$ a | aTb | aTbTc
  
  T $\rightarrow$ x | xy | xyz 
 
