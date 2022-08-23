@@ -11,18 +11,6 @@ For example `( [ ] ( [ ( ) ] ) )` is in the language but `[ ( ] )` is not.
 ---
 ### Question 2
 
-The following grammar for a fictitious operator '$' is ambiguous.
-```
-<number> ::= 0|1|2|3
-<expression> ::= <number>
-<expression> ::= <expression>$<expression>
-```
-
-Demonstrate the ambiguity by creating two parse trees for the expression 2 $ 3 $ 0.
-
----
-### Question 3
-
 Demonstrate that the following grammar is ambiguous. Create your own ambiguous case. (`<S>` is the start symbol.)
 
 ```
@@ -33,6 +21,19 @@ Demonstrate that the following grammar is ambiguous. Create your own ambiguous c
 ```
 
 ---
+### Question 3
+
+The following grammar for a fictitious operator '$' is ambiguous.
+```
+<number> ::= 0|1|2|3
+<expression> ::= <number>
+<expression> ::= <expression>$<expression>
+```
+
+Demonstrate the ambiguity by creating two parse trees for the expression 2 $ 3 $ 0.
+
+
+---
 ### Question 4
 
-Fix the grammar in Problem #2 so that it is not ambiguous. Is your grammar left associative or right associative?
+Fix the grammar in Problem #3 so that it is not ambiguous. Is your grammar left associative or right associative?
