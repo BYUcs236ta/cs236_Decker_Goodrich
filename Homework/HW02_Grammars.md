@@ -6,9 +6,9 @@ Give each possible string described by the following grammar. This is called the
 the grammar. S is the start symbol. (Recall that a language is a subset of V\*, where V is the
 alphabet.)
 
- S -> a | aTb | aTbTc
- 
- T -> x | xy | xyz 
+ >S -> a | aTb | aTbTc
+ >
+ >T -> x | xy | xyz 
 
 ---
 ### Question 2
