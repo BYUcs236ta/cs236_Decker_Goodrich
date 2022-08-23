@@ -57,8 +57,8 @@ S is false
 
 Find the truth value of the each of the following (Hint: substitute then solve):
 
-> a. $(\lnot (P \land Q) \lor \lnot R) \lor ((Q \leftrightarrow \lnot P) \rightarrow (R \lor \lnot S))$
+> a. $$(\lnot (P \land Q) \lor \lnot R) \lor ((Q \leftrightarrow \lnot P) \rightarrow (R \lor \lnot S))$$
 > 
-> b. $(P \leftrightarrow R) \land (\lnot Q \rightarrow S)$
+> b. $$(P \leftrightarrow R) \land (\lnot Q \rightarrow S)$$
 > 
-> c. $(P \lor (Q \rightarrow (R \land \lnot P))) \leftrightarrow (Q \lor \lnot S)$
+> c. $$(P \lor (Q \rightarrow (R \land \lnot P))) \leftrightarrow (Q \lor \lnot S)$$
