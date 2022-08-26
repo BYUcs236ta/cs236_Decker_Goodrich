@@ -156,13 +156,15 @@ Grading note: We advise students to use CLion. The reason for this is that is ha
 
 ![](/assets/images/lab/lab0_toolchainFinal.png)
 
-To Swap between running remote an running locally select the drop-down tab here: 
+To Swap between running remote and running locally select the drop-down tab here: 
 
 ![](/assets/images/lab/lab0_dropdown.png)
 
 and then select the option you want:
 
 ![](/assets/images/lab/lab0_selectBuildOption.png)
+
+Remote means your coding being run on the lab machines in the same environment we run you code for the project submission. Running locally means that your machine is running the code.
 
 ---
 ### Part 4 - Hello World Program
