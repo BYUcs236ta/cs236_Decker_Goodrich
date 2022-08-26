@@ -131,7 +131,38 @@ You might need to click "reload changes" before you'll see the green arrow next 
 Grading note: We advise students to use CLion. The reason for this is that is has good debugging tools and the TAs are familiar with it. You may choose to use a different IDE if you wish but be warned that the TAs won't be able to help with IDE specific issues as effectively. If you are making this choice submit a screenshot of the hello-world program running in your IDE/programming environment and you will receive full credit for this lab!
 
 ---
-### Part 3 - Hello World Program
+### Part 3 - Setting up a local build profile
+
+1.  Open your project in CLion.
+2.  Open the settings menu.
+
+![](/assets/images/lab/lab0_Where_Is_Settings_Menu.png)
+
+3.  Choose "Preferences" or "Settings" from settings menu
+
+![](/assets/images/lab/lab0_Choose_Preferences_from_Settings_Menu.png)
+
+4.  Open the "Toolchains" sub-menu, and click the + to add a toolchain.  A "toolchain is a set of all the necessary tools required for building and running your application: the working environment, the CMake executable, the make tool and compliers, and the debugger." [See this CLion help page](https://www.jetbrains.com/help/clion/how-to-create-toolchain-in-clion.html). 
+
+![](/assets/images/lab/lab0_01-Toolchans.png)
+
+5.  On mac/linux you should have an option for "system or default" (In blue). On windows if you do not have a "System or Default" option we recommend installing WSL using [this guide](/Guides/WSL_Tutorial/wsl_tutorial.md), after getting this installed select WSL (Red box).
+
+![](/assets/images/lab/lab0_WSL.png)
+
+6. Select the CMake tab which is right beneath Toolchains and create a new toolchain by clicking the "+" button. Add a new toolchain and name it "Debug-Local". Ensure that the Build type is "Debug" and that the Toolchain is set to "System", "Default", or "WSL"
+
+![](/assets/images/lab/lab0_toolchainFinal.png)
+
+To Swap between running remote an running locally select the drop-down tab here: 
+
+![](/assets/images/lab/lab0_dropdown.png)
+
+and then select the option you want:
+![](/assets/images/lab/lab0_selectBuildOption.png)
+
+---
+### Part 4 - Hello World Program
 ```c++
 #include <iostream>  
   
