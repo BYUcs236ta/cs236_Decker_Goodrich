@@ -40,4 +40,5 @@ In the terminal/command-line, you can use the command "make run" to run your pro
 
 In the terminal/command-line, you can use the command "make zip" to compress up all the .h and .cpp files into a .zip folder
 
-To install make and for more information on make and makefiles, click [here](https://www.gnu.org/software/make/) (or [here](http://gnuwin32.sourceforge.net/packages/make.htm) for Windows).
+to use makefile on windows we recommend installing WSL: [Guide here](/Guides/WSL_Tutorial/wsl_tutorial.md)
+[Makefile tutorial](/Guides/Makefile_Tutorial/Makefile_Tutorial.md)
