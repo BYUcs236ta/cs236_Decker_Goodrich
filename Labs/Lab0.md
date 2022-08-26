@@ -161,6 +161,7 @@ To Swap between running remote an running locally select the drop-down tab here:
 ![](/assets/images/lab/lab0_dropdown.png)
 
 and then select the option you want:
+
 ![](/assets/images/lab/lab0_selectBuildOption.png)
 
 ---
